@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe Villada - UX Design Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #faf0f0;
+      color: #150f19;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      color: #150f19;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: bold;
+      display: block;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(250, 240, 240, 0.8);
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      max-width: 600px; /* Reduced width */
+      margin-left: auto; /* Center the navigation */
+      margin-right: auto;
+    }
+
+    nav ul li {
+      list-style: none;
+      text-align: center; 
+    }
+
+    nav ul li a,
+    nav ul li button {
+      color: #150f19;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+      padding: 8px 12px;  /* Added padding for better click area */
+    }
+
+    nav a:hover,
+    nav button:hover {
+      color: #FC360E;
+    }
+
+    nav button {
+      background: none;
+      border: none; 
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    /* Hero Section */
+    .hero-content {
+      z-index: 20;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+      color: #150f19;
+      letter-spacing: 0.1rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      color: #150f19;
+      margin-bottom: 4rem;
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    /* Sections */
+    section {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    /* Smooth Fade-in effect for sections */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* About Me Section */
+    #about {
+      padding-top: 1rem;
+    }
+
+    #about h2 {
+      color: #FC360E;
+      margin-bottom: 1rem;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      color: #150f19;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Projects Grid */
+    #projects h2,
+    #contact h2 {
+      color: #FC360E;
+    }
+
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .project-item {
+      background: #150f19;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: left;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .project-item * {
+      transition: all 0.3s ease;
+    }
+
+    .project-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .project-item h3 {
+      color: #FC360E;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-item p {
+      color: #faf0f0;
+    }
+
+    .project-item button {
+      display: block;
+      background-color: #FC360E;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+      background-color: #faf0f0;
+    }
+
+    #contact h2 {
+      color: #FC360E;
+    }
+
+    #contact p {
+      font-size: 1.2rem;
+      color: #150f19;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background-color: #150f19;
+      color: #faf0f0;
+    }
+
+    /* Particle Container */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+
+    /* Language Switch Button */
+    .language-switch {
+      background-color: transparent;
+      color: #150f19;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .language-switch:hover {
+      transform: scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      section {
+        padding: 2rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <nav>
+    <ul id="nav-list">
+      <!-- English Navigation (Default) -->
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="language-switch" onclick="switchLanguage()">EN/SP</button></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 lang="en">FELIPE VILLADA</h1>
+      <h1 lang="es" style="display: none;">FELIPE VILLADA</h1>
+      <p lang="en">Solving Problems, Enhancing Lives</p>
+      <p lang="es" style="display: none;">Resolviendo Problemas, Mejorando Vidas</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="about" class="fade-in">
+      <h2 lang="en">About Me</h2>
+      <h2 lang="es" style="display: none;">Sobre Mí</h2>
+      <p lang="en">I am a UX Designer dedicated to crafting seamless and enjoyable digital experiences. My will is bridging the gap between product and user, creating intuitive interfaces that not only meet but exceed user expectations.</p>
+      <p lang="es" style="display: none;">Soy un Diseñador UX dedicado a crear experiencias digitales que sean claras y que se disfruten. Es mi voluntad unir la brecha que se encuentra entre el producto y el usuario, creando interfaces intuitivas que no solo cumplen con las expectativas sino que las superan.</p>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2 lang="en">Projects</h2>
+      <h2 lang="es" style="display: none;">Proyectos</h2>
+      <div class="projects-grid">
+        <div class="project-item">
+          <img src="assets/images/project1-thumbnail.jpg" alt="Project 1">
+          <h3 lang="en">Project Title 1</h3>
+          <h3 lang="es" style="display: none;">Título del Proyecto 1</h3>
+          <p lang="en">Brief description of the project...</p>
+          <p lang="es" style="display: none;">Breve descripción del proyecto...</p>
+          <button onclick="window.location.href='case-study-1.html'" lang="en">View Case Study</button>
+          <button onclick="window.location.href='case-study-1.html'" lang="es" style="display: none;">Ver Caso de Estudio</button>
+        </div>
+
+        <div class="project-item">
+          <img src="assets/images/project2-thumbnail.jpg" alt="Project 2">
+          <h3 lang="en">Project Title 2</h3>
+          <h3 lang="es" style="display: none;">Título del Proyecto 2</h3>
+          <p lang="en">Brief description of the project...</p>
+          <p lang="es" style="display: none;">Breve descripción del proyecto...</p>
+          <button onclick="window.location.href='case-study-2.html'" lang="en">View Case Study</button>
+          <button onclick="window.location.href='case-study-2.html'" lang="es" style="display: none;">Ver Caso de Estudio</button>
+        </div>
+
+        <!-- Add more project items as needed -->
+      </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2 lang="en">Contact</h2>
+      <h2 lang="es" style="display: none;">Contacto</h2>
+      <p lang="en">Feel free to reach out through any of the following methods:</p>
+      <p lang="es" style="display: none;">Siéntete libre de contactarme por cualquiera de los siguientes métodos:</p>
+      <ul>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p lang="en">© 2024 Felipe Villada UX Design Portfolio. All Rights Reserved.</p>
+    <p lang="es" style="display: none;">© 2024 Portafolio de Diseño UX de Felipe Villada. Todos los Derechos Reservados.</p> 
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+        // Particle Configuration
+        const particleConfig = {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#150f19" /* Dark Particles for Light Mode */
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 5,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#150f19",
+                    "opacity": 0.3,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "bubble": {
+                        "distance": 250,
+                        "size": 3.2,
+                        "duration": 2,
+                        "opacity": 1,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    }
+                }
+            },
+            "retina_detect": true
+        };
+
+        particlesJS('particles-js', particleConfig);
+
+    const navList = document.getElementById('nav-list'); // Get navList element
+
+    // Function to create navigation links
+    function createNavLinks(lang) {
+      const links = [
+        { href: '#about', text: lang === 'en' ? 'About Me' : 'Sobre Mí' },
+        { href: '#projects', text: lang === 'en' ? 'Projects' : 'Proyectos' },
+        { href: '#contact', text: lang === 'en' ? 'Contact' : 'Contacto' },
+      ];
+
+      return links.map(link => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = link.href;
+        a.textContent = link.text; 
+        li.appendChild(a);
+        return li;
+      });
+    }
+
+    // Language Switching
+    function switchLanguage() {
+      const newLang = document.documentElement.lang === 'en' ? 'es' : 'en';
+      document.documentElement.lang = newLang; 
+
+      // Clear existing navigation links
+      navList.innerHTML = '';
+
+      // Create new links based on the selected language 
+      const newLinks = createNavLinks(newLang);
+      newLinks.forEach(link => navList.appendChild(link));
+
+      // Add the language switch button 
+      const langSwitchButton = document.createElement('li');
+      langSwitchButton.innerHTML = '<button class="language-switch" onclick="switchLanguage()">EN/SP</button>';
+      navList.appendChild(langSwitchButton); 
+
+      // Toggle other elements 
+      document.querySelectorAll('h1[lang], h2[lang], p[lang], button[lang]').forEach(elem => {
+        elem.style.display = elem.lang === newLang ? 'block' : 'none'; 
+      });
+    }
+
+    // Fade-in Effect for Sections with Intersection Observer
+    function fadeInEffect() {
+      const sections = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.3
+        /* Adjust threshold as needed */
+      });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    }
+
+    // Initialize Scripts
+    document.addEventListener('DOMContentLoaded', () => {
+      fadeInEffect();
+      document.documentElement.lang = 'en'; // Default to English
+    });
+  </script>
+</body>
+
+</html>
