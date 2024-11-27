@@ -1,520 +1,1327 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Felipe Villada - UX Design Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f8f7f7;
-      color: #150f19;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Felipe Villada - Creative Technologist</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+:root {
+    --primary-color: #abc000;
+    --text-color: #fafde6;
+    --background-color: #010100;
+    --section-bg-color: #11120c;
+    --circle-color: #fafde6;
+    --font-family: 'Space Mono', monospace;
+    --highlight-color: #abc000;
+    --transition-speed: 0.3s;
+}
+.ux-project.nefer {
+            --project-color: #06664e; /* Greenish blue for Nefer */
+        }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+.ux-project.theatron {
+            --project-color: #FF331F; /* Reddish orange for Theatron */
+        }
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+#galaxy-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.936);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+.nav-content {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 501;
+    transition: color 0.3s ease;
+}
+.nav a:hover {
+    color: var(--highlight-color);
+}
+#langToggle {
+    font-size: 0.7rem;
+    background: none;
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+#langToggle:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Hero Section */
+.hero {
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0px;
+}
 
-    a {
-      color: #150f19;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+.hero-container {
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
 
-    h1,
-    h2,
-    h3 {
-      font-weight: bold;
-      display: block;
-    }
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    z-index: 2;
+}
 
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: rgba(250, 246, 246, 0.8);
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+.hero h2 {
+    font-size: 1.65rem;
+    font-weight: 501;
+    margin-bottom: 1rem;
+    color: var(--section-bg-color);
+    z-index: 2;
+    
+}
 
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      margin: 0;
-      max-width: 600px; /* Reduced width */
-      margin-left: auto; /* Center the navigation */
-      margin-right: auto;
-    }
+.hero-circle {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 195%;
+    height: 240%;
+    background-color: var(--circle-color);
+    border-radius: 50%;
+    z-index: -7;
+}
 
-    nav ul li {
-      list-style: none;
-      text-align: center; 
-    }
+.short-intro {
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 501;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background-color: var(--section-bg-color);
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
 
-    nav ul li a,
-    nav ul li button {
-      color: #150f19;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-      padding: 8px 12px;  /* Added padding for better click area */
-    }
 
-    nav a:hover,
-    nav button:hover {
-      color: #FC360E;
-    }
+/* Binah (Main Content Container) */
+.binah {
+    background-color:rgba(6, 6, 5, 0.96);
+    padding: 60px;
+    z-index: 2;
+    margin-top: 65px;
+}
 
-    nav button {
-      background: none;
-      border: none; 
-      cursor: pointer;
-      font-family: inherit;
-      font-size: inherit;
-    }
 
-    /* Hero Section */
-    .hero-content {
-      z-index: 20;
-      text-align: center;
-      padding-top: 80px;
+/* Sections */
+.section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* UX/UI Portfolio Section */
+.ux-projects {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.ux-project {
+    background-color: var(--section-bg-color);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 900px; /* Consistent max-width */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas: "info image";
+    margin-bottom: 20px;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    align-items: start;
+    text-align: left;
+}
+
+.ux-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.ux-project img {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform var(--transition-speed) ease;
+    grid-area: image;
+    margin-top: 20px;
+}
+
+.ux-intro-text {
+    background-color: var(--section-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ux-intro-text p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.ux-project .project-info {
+    text-align: left;
+    grid-area: info;
+    max-width: 390px;
+}
+
+.ux-project h3 {
+    color: var(--project-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.ux-projects p {
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: var(--section-bg-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    max-width: 860px;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Added transition */
+}
+
+
+.ux-project .cta {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: var(--project-color);
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 80%;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.ux-project .cta:hover {
+    background-color: var(--project-color);
+    transform: translateY(-3px);
+}
+
+.ux-cta-container {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.ux-cta-container .cta {
+    margin-top: 20px;
+    background-color: var(--highlight-color);
+    color: #000;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.ux-cta-container .cta:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-skills .skill-tag {
+    background-color: transparent;
+    font-size: 0.8rem;
+    border: 2px solid var(--project-color);
+    color: var(--text-color);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+
+/* Reverse Order Utility */
+.reverse-order {
+    grid-template-areas: "image info";
+}
+
+.reverse-order img {
+    grid-area: image;
+}
+
+.reverse-order .project-info {
+    grid-area: info;
+}
+
+
+/* Personal Projects Section */
+.personal-projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+/* Personal Projects Section */
+.personal-projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.personal-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.personal-project-image {
+    width: 48.8%;
+    aspect-ratio: 16/9;
+    background-color: var(--section-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.personal-project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.personal-project-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.personal-project-image h3 {
+    color: var(--highlight-color);
+    transition: color var(--transition-speed) ease;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+}
+
+.personal-project-image:hover h3 {
+    color: #d4e861;
+}
+
+.personal-projects-text {
+    background-color: var(--section-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+/* My Art Section */
+.art-illustrations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.art-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--section-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.art-item img,
+.art-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-speed) ease;
+}
+
+.art-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.art-item:hover img {
+    transform: scale(1.1);
+}
+
+.art-cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.art-cta-container p {
+    background-color: var(--section-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 860px; /* Ensuring the same max-width */
+    margin: 0 auto;  /* Center horizontally */
+    text-align: left;
+}
+
+.art-cta-container .cta {
+    margin-top: 20px;
+    background-color: var(--highlight-color);
+    color: #000;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.art-cta-container .cta:hover {
+    background-color: #c4d200;
+    transform: translateY(-3px);
+}
+
+
+/* Call to Action Buttons */
+.cta {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.cta:hover {
+    background-color: #c4d200;
+    transform: translateY(-3px);
+}
+
+.final-cta {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 300px;
+}
+
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.skill-tag {
+    background-color: transparent;
+    border: 2px solid var(--highlight-color);
+    color: var(--text-color);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-column {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--highlight-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+
+
+@media (min-width: 769px) { /* Adjust breakpoint as needed */
+    .art-illustrations {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        height: 120vh;
     }
 
     .hero h1 {
-      font-size: 4rem;
-      margin: 0 0 1rem;
-      text-transform: uppercase;
-      color: #150f19;
-      letter-spacing: 0.1rem;
-      animation: fadeInUp 1s ease-out;
+        font-size: 2.5rem;
     }
 
-    .hero p {
-      font-size: 1.4rem;
-      color: #150f19;
-      margin-bottom: 4rem;
-      animation: fadeInUp 1.5s ease-out;
+    .hero h2 {
+        font-size: 1.5rem;
     }
 
-    /* Sections */
-    section {
-      padding: 3rem 0;
-      text-align: center;
+    .short-intro, 
+    .ux-intro-text, 
+    .personal-projects-text, 
+    .art-cta-container p, 
+    .other-content {
+        max-width: 90%;  /* Ensure text containers shrink properly */
+        padding: 15px;  /* Slightly reduce padding on mobile */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center; /* Improve readability on mobile */
     }
 
-    /* Smooth Fade-in effect for sections */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+    .ux-project {
+        grid-template-columns: 1fr;
+        grid-template-areas: "info" "image";
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .ux-project img {
+        grid-column: 1;
+        margin-bottom: 20px;
     }
 
-    /* About Me Section */
-    #about {
-      padding-top: 1rem;
+    .ux-project .project-info {
+        grid-column: 1;
+        text-align: center;
     }
 
-    #about h2 {
-      color: #FC360E;
-      margin-bottom: 1rem;
+    .ux-project .project-icons {
+        justify-content: center;
     }
 
-    #about p {
-      font-size: 1.2rem;
-      color: #150f19;
-      text-align: center;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+    .personal-projects {
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Projects Grid */
-    #projects h2,
-    #contact h2 {
-      color: #FC360E;
+    .personal-project-image {
+        width: 100%;
+        max-width: 100%;
     }
 
-    .projects-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-      align-items: center;
+    .art-illustrations {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    .project-item {
-      background: #150f19;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: left;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      overflow: hidden;
+    .art-cta-container .cta {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 
-    .project-item:hover {
-      transform: translateY(-5px) scale(1.02);
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .project-item * {
-      transition: all 0.3s ease;
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
     }
+}
 
-    .project-item img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 60px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/* Language Toggle */
+#langToggle {
+    background: none;
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+#langToggle:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+/* Particle Container */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Loader styles */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid var(--highlight-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
-
-    .project-item h3 {
-      color: #FC360E;
-      margin-bottom: 0.5rem;
+    100% {
+        transform: rotate(360deg);
     }
+}
+</style>
 
-    .project-item p {
-      color: #fbf6f6;
+<style>
+:root {
+    --primary-color-nefer: #06664e;
+    --primary-color-theatron: #FF331F;
+    --text-color: #fafde6;
+    --background-color: #010100;
+    --section-bg-color: #11120c;
+    --font-family: 'Space Mono', monospace;
+    --transition-speed: 0.3s;
+}
+
+/* Global styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.936);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 501;
+    transition: color 0.3s ease;
+}
+.nav a:hover {
+    color: var(--highlight-color);
+}
+
+.cta {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.cta:hover {
+    background-color: var(--highlight-color);
+    transform: translateY(-3px);
+}
+
+/* Vertical Timeline Navigation for Case Study */
+.vertical-nav {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    padding: 10px;
+    z-index: 100;
+    background-color: rgba(17, 18, 12, 0.9);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.vertical-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-nav li {
+    margin: 10px 0;
+}
+
+.vertical-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.vertical-nav a:hover,
+.vertical-nav a.active {
+    color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+    /* Adjust for small screens */
+    .hero h1 {
+        font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
     }
-
-    .project-item button {
-      display: block;
-      background-color: #FC360E;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
-    /* Contact Section */
-
-    #contact h2 {
-      color: #FC360E;
-    }
-
-    #contact p {
-      font-size: 1.2rem;
-      color: #150f19;
-      text-align: center;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      background-color: #150f19;
-      color: #fbf6f6;
-    }
-
-    /* Particle Container */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 5;
-    }
-
-    /* Language Switch Button */
-    .language-switch {
-      background-color: transparent;
-      color: #150f19;
-      padding: 5px 10px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: transform 0.2s ease;
-    }
-
-    .language-switch:hover {
-      transform: scale(1.1);
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Media Queries for Responsiveness */
-    @media (max-width: 768px) {
-
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-      }
-
-      section {
-        padding: 2rem 0;
-      }
-    }
-  </style>
+}
+</style>
 </head>
-
 <body>
-  <div id="particles-js"></div>
-
-  <nav>
-    <ul id="nav-list">
-      <!-- English Navigation (Default) -->
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button class="language-switch" onclick="switchLanguage()">EN/SP</button></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1 lang="en">FELIPE VILLADA</h1>
-      <h1 lang="es" style="display: none;">FELIPE VILLADA</h1>
-      <p lang="en">Solving Problems, Enhancing Lives</p>
-      <p lang="es" style="display: none;">Resolviendo Problemas, Mejorando Vidas</p>
+<div class="loader-container">
+<div class="loader"></div>
+</div>
+<canvas id="galaxy-canvas"></canvas>
+      
+<nav class="nav">
+    <div class="nav-content">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">UX/UI</a>
+            <a href="index.html#personal-projects">Art</a>
+            <a href="mailto:villadafelipe28@gmail.com">Contact</a> 
+            <a href="https://www.linkedin.com/in/felipevillada/">LinkedIn</a>
+        </div>
+        <button id="langToggle"><i class="fas fa-globe"></i> EN/SP</button>
     </div>
-  </section>
+</nav>
 
-  <main class="container">
-    <section id="about" class="fade-in">
-      <h2 lang="en">About Me</h2>
-      <h2 lang="es" style="display: none;">Sobre Mí</h2>
-      <p lang="en">I am a UX Designer dedicated to crafting seamless and enjoyable digital experiences. My will is bridging the gap between product and user, creating intuitive interfaces that not only meet but exceed user expectations.</p>
-      <p lang="es" style="display: none;">Soy un Diseñador UX dedicado a crear experiencias digitales que sean claras y que se disfruten. Es mi voluntad unir la brecha que se encuentra entre el producto y el usuario, creando interfaces intuitivas que no solo cumplen con las expectativas del usuario sino que las superan.</p>
-    </section>
+    
+<div class="hero">
+<div class="hero-container">
+<div class="hero-circle"></div>
+<h1>FELIPE VILLADA</h1>
+<h2>Creative Technologist &amp; Multi-Disciplinary Designer</h2>
+</div>
+<div class="container short-intro">
+<p id="introText">Welcome to my website! Here is where I’ll be updating my portfolios, from UX/UI to my art and other projects.</p>
+</div>
+</div>
+<div class="binah">
+<section class="section ux-projects" id="projects">
+<h2>UX/UI Portfolio</h2>
+<div class="ux-intro-text">
+<p>I designed the following solo projects as opportunities to practice real-world UX/UI design processes, including user testing, research, prototyping, and even development. These projects showcase my approach to solving UX challenges.</p>
+</div>
+<div class="ux-project nefer">
+<img alt="Nefer Museum Mockup" loading="lazy" src="images/Mockup-Nefer.webp"/>
+<div class="project-info">
+<h3>Nefer Museum Website</h3>
+<p>A UX/UI design case study for a tiny museum website. Explores Website Design, Responsive Design, and Website Development. </p>
+<div class="project-skills">
+<span class="skill-tag">Website Desing</span>
+<span class="skill-tag">Wireframes</span>
+<span class="skill-tag">Visual Design</span>
+<span class="skill-tag">Website Development</span>
+</div>
+<a class="cta" href="Nefer-CaseStudy.html" target="_blank">View Case Study</a>
+</div>
+</div>
+<div class="ux-project reverse-order theatron">
+<img alt="Theatron App Mockup" loading="lazy" src="images/Mockup2.webp"/>
+<div class="project-info">
+<h3>Theatron Movie App</h3>
+<p>A UX/UI design case study for a modern movie theater mobile app. Focuses on App design and UX core concepts (this was my first UX project).</p>
+<div class="project-skills">
+<span class="skill-tag">Mobile UX</span>
+<span class="skill-tag">User Research</span>
+<span class="skill-tag">User Testing</span>
+<span class="skill-tag">Wireframes</span>
+<span class="skill-tag">Prototyping</span>
+</div>
+<a class="cta" href="Theatron-CaseStudy.html" target="_blank">View Case Study</a>
+</div>
+</div>
+<div class="ux-intro-text">
+<p>*I also completely designed and developed this website and its case studies, from sketches to Figma, and finally to HTML, CSS, and JavaScript. I consider it to be my most significant website design and development project yet.*</p>
+</div>
+<div class="ux-cta-container">
+<a class="cta" href="#contact">Contact Me for UX/UI or Related Projects</a>
+</div>
+</section>
+<section class="section" id="skills">
+<h2>Skills</h2>
+<div class="skills-list">
+<span class="skill-tag">UX/UI Design</span>
+<span class="skill-tag">Prototyping &amp; Wireframing</span>
+<span class="skill-tag">User Research</span>
+<span class="skill-tag">Usability Testing</span>
+<span class="skill-tag">Product Design</span>
+<span class="skill-tag">Branding &amp; Marketing</span>
+<span class="skill-tag">Digital Art &amp; Illustration</span>
+<span class="skill-tag">Web Development</span>
+<span class="skill-tag">HTML, CSS, JavaScript</span>
+<span class="skill-tag">Accessibility</span>
+<span class="skill-tag">Responsive Design</span>
+<span class="skill-tag">Visual Design</span>
+<span class="skill-tag">Figma</span>
+<span class="skill-tag">Adobe Creative Suite</span>
+<span class="skill-tag">3D Modeling</span>
+<span class="skill-tag">Unity &amp; Godot</span>
+</div>
+</section>
+<section class="section personal-projects-container" id="personal-projects">
+<h2>Personal Projects</h2>
+<div class="personal-projects-text">
+    <p id="personalProjectsText">Over the years, I've followed my creative impulses across a range of projects, from digital art and product design to game development. Each pursuit has been a unique learning experience, allowing me to connect seemingly disparate skills in unexpected ways. This small game prototype, for example, represents a solo deep dive into Unity, C#, asset creation, and animation. I'm currently working on several projects, including game ideas, prototypes, and apps, sometimes going as far as robotics and music, which I'll be showcasing more of soon.</p>
 
-    <section id="projects" class="fade-in">
-      <h2 lang="en">Projects</h2>
-      <h2 lang="es" style="display: none;">Proyectos</h2>
-      <div class="projects-grid">
-        <div class="project-item">
-          <img src="assets/images/project1-thumbnail.jpg" alt="Project 1">
-          <h3 lang="en">Project Title 1</h3>
-          <h3 lang="es" style="display: none;">Título del Proyecto 1</h3>
-          <p lang="en">Brief description of the project...</p>
-          <p lang="es" style="display: none;">Breve descripción del proyecto...</p>
-          <button onclick="window.location.href='case-study-1.html'" lang="en">View Case Study</button>
-          <button onclick="window.location.href='case-study-1.html'" lang="es" style="display: none;">Ver Caso de Estudio</button>
-        </div>
+    <p>All of these solo ventures have been enjoyable and valuable for building a foundation, but I recognize the importance of collaboration for further growth. I feel that it’s time to join a team, learn from others, and contribute my own cultivated skills to create something impactful. This next step will allow my creative vision to grow, combining everything I’ve learned and offering it up in service to something greater. I look forward to seeing how these skills can come together within a larger project.</p>    
+</div>
+<div class="personal-projects">
+<div class="personal-project-image">
+<video autoplay="" id="myVideo" loop="" muted="" playsinline="">
+<source src="images/1.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="personal-project-image">
+<video autoplay="" id="myVideo" loop="" muted="" playsinline="">
+<source src="images/2.mp4" type="video/mp4"/>
+</video>
+</div>
+</div>
+</section>
+<section class="section" id="my-art">
+<h2>My Art</h2>
+<div class="art-illustrations">
+<div class="art-item">
+<img alt="Art 1" loading="lazy" src="images/Art/0.jpg"/>
+</div>
+<div class="art-item">
+<img alt="Art 2 (GIF)" loading="lazy" src="images/Art/0.gif"/>
+</div>
+<div class="art-item">
+<img alt="Art 3" loading="lazy" src="images/Art/1.jpg"/>
+</div>
+<div class="art-item">
+<img alt="Art 4" loading="lazy" src="images/Art/4.jpg"/>
+</div>
+<div class="art-item">
+<img alt="Art 5" loading="lazy" src="images/Art/5.jpg"/>
+</div>
+<div class="art-item">
+<img alt="Art 6" loading="lazy" src="images/Art/6.jpg"/>
+</div>
+</div>
+<div class="art-cta-container">
+    <p>The artwork displayed here comes from a few years ago, with the newest piece dating back to late 2021. While these works represent an earlier stage in my journey, the core elements of my style are still present. I’m currently working on a new wave of illustrations that reflect my vision and style as they are today, and I’m excited to update this portfolio soon.</p>
+</div>
+</section>
+<div class="h2" id="about">
+<h2>About Me</h2>
+</div> 
+<div class="personal-projects-text">
+<p>I’m Felipe Villada, a 21-year-old artist from Argentina. This website/portfolio is a kind of talisman of a part of my work up until now, reflecting my journey as a creative. It will only grow and get better from here.</p>
+<p>I've always been drawn to creating in some kind of way, whether through code, design, or art.  I love to give life to ideas, from drawing tiny creatures as a kid and recognizing their unique personalities to going a step further and learning 2D animation, then 3D modeling, game development, and even robotics.</p>
+<p>My interests span from biology and ecology (I grew up in a small town, where I spent my infancy immersed in nature) to caring for plants and animals, and ultimately, caring for myself. I delve into different teachings in philosophy, psychology and other studies of Nature, seeking to understand the world and to smoothly express and enjoy my place in it. I like taking apart old electronics, collecting rocks and fossils, the color green, frogs and exploring new ideas that brake apart my old perspectives.</p>
+<p>Around 2020, during the COVID-19 pandemic, I collapsed under some long growing deep issues that culminated with agoraphobia and really severe depression. Today I could say that I am trully grateful of having been through so much, It forced me to bring everything out and to eventually learn to truly listen to myself and to move forwards, and hitting rock bottom, I had nowhere else to go but upwards. Now I must say that I haven't felt depressed in over 2 years, I would even say that I never felt so alive, finding joy in everyday life. so I would now add that my perspective is genuinely optimistic.</p>
+<p>I'm excited to continue learning, exploring, and creating, and I’m eager to make a living through my work. I look forward to collaborating with others who share my passion for bringing meaningful projects to life. I really am.</p>
+</div>
+<div class="ux-cta-container">
+    <a class="cta" href="#contact">Reach out, I'm available</a>
+    </div>
+</div>
+<footer class="footer">
+<div class="container footer-content">
+<div class="footer-column">
+<h4>About Me</h4>
+<ul>
+<li><a href="#">Bio</a></li>
+<li><a href="#">Resume</a></li>
+<li><a href="#">Skills</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h4>Work</h4>
+<ul>
+<li><a href="#">UX/UI Portfolio</a></li>
+<li><a href="#">Personal Projects</a></li>
+<li><a href="#">Art &amp; Illustrations</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h4>Contact</h4>
+<ul>
+<li><a href="mailto:your.email@example.com">villadafelipe28@gmail.com</a></li>
+<li><a href="#">LinkedIn</a></li>
+<li><a href="#">Behance</a></li>
+</ul>
+</div>
+<div class="footer-bottom">
+<p>Ready to take on meaningful projects that inspire and challenge? <a href="#contact">Let’s Collaborate</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2024 Felipe Villada. All Rights Reserved.</p>
+</div>
+</footer>
+<a aria-label="Scroll to top" class="scroll-to-top" href="#">↑</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+<script>
+        const canvas = document.getElementById('galaxy-canvas');
+        const ctx = canvas.getContext('2d');
+        const simplex = new SimplexNoise();
 
-        <div class="project-item">
-          <img src="assets/images/project2-thumbnail.jpg" alt="Project 2">
-          <h3 lang="en">Project Title 2</h3>
-          <h3 lang="es" style="display: none;">Título del Proyecto 2</h3>
-          <p lang="en">Brief description of the project...</p>
-          <p lang="es" style="display: none;">Breve descripción del proyecto...</p>
-          <button onclick="window.location.href='case-study-2.html'" lang="en">View Case Study</button>
-          <button onclick="window.location.href='case-study-2.html'" lang="es" style="display: none;">Ver Caso de Estudio</button>
-        </div>
-
-        <!-- Add more project items as needed -->
-      </div>
-    </section>
-
-    <section id="contact" class="fade-in">
-      <h2 lang="en">Contact</h2>
-      <h2 lang="es" style="display: none;">Contacto</h2>
-      <p lang="en">Feel free to reach out through any of the following methods:</p>
-      <p lang="es" style="display: none;">Siéntete libre de contactarme por cualquiera de los siguientes métodos:</p>
-      <ul>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p lang="en">© 2024 Felipe Villada UX Design Portfolio. All Rights Reserved.</p>
-    <p lang="es" style="display: none;">© 2024 Portafolio de Diseño UX de Felipe Villada. Todos los Derechos Reservados.</p> 
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-        // Particle Configuration
-        const particleConfig = {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#150f19" /* Dark Particles for Light Mode */
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 5,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#150f19",
-                    "opacity": 0.3,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "bubble"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "bubble": {
-                        "distance": 250,
-                        "size": 3.2,
-                        "duration": 2,
-                        "opacity": 1,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    }
-                }
-            },
-            "retina_detect": true
+        // Configuration
+        const config = {
+            particleCount: 300,
+            particleSize: 80,
+            maxRange: 600,
+            minRange: 50,
+            branches: 12,
+            retroColors: ['#abc000', '#fffde6', '#abc000', '#fafde6',],
+            backgroundColor: '#11120c',
+            rotationSpeed: 0.0000015,
+            pixelSize: 8
         };
 
-        particlesJS('particles-js', particleConfig);
+        let particles = [];
+        let time = 0;
 
-    const navList = document.getElementById('nav-list'); // Get navList element
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
 
-    // Function to create navigation links
-    function createNavLinks(lang) {
-      const links = [
-        { href: '#about', text: lang === 'en' ? 'About Me' : 'Sobre Mí' },
-        { href: '#projects', text: lang === 'en' ? 'Projects' : 'Proyectos' },
-        { href: '#contact', text: lang === 'en' ? 'Contact' : 'Contacto' },
-      ];
+        function createGalaxy() {
+            particles = [];
+            for (let i = 0; i < config.particleCount; i++) {
+                const radius = Math.random() * (config.maxRange - config.minRange) + config.minRange;
+                const branchAngle = (i % config.branches) / config.branches * Math.PI * 2;
+                const spinAngle = radius * 0.01;
+                
+                particles.push({
+                    x: Math.cos(branchAngle + spinAngle) * radius,
+                    y: Math.sin(branchAngle + spinAngle) * radius,
+                    color: config.retroColors[Math.floor(Math.random() * config.retroColors.length)],
+                    angle: branchAngle,
+                    radius: radius
+                });
+            }
+        }
 
-      return links.map(link => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = link.href;
-        a.textContent = link.text; 
-        li.appendChild(a);
-        return li;
-      });
-    }
+        function drawPixel(x, y, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(
+                Math.floor(x / config.pixelSize) * config.pixelSize,
+                Math.floor(y / config.pixelSize) * config.pixelSize,
+                config.pixelSize,
+                config.pixelSize
+            );
+        }
 
-    // Language Switching
-    function switchLanguage() {
-      const newLang = document.documentElement.lang === 'en' ? 'es' : 'en';
-      document.documentElement.lang = newLang; 
+        function updateAndDrawParticles() {
+            ctx.fillStyle = config.backgroundColor;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Clear existing navigation links
-      navList.innerHTML = '';
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
 
-      // Create new links based on the selected language 
-      const newLinks = createNavLinks(newLang);
-      newLinks.forEach(link => navList.appendChild(link));
+            particles.forEach((particle, index) => {
+                // Update position
+                particle.angle += config.rotationSpeed * particle.radius;
+                const x = centerX + particle.x * Math.cos(particle.angle) - particle.y * Math.sin(particle.angle);
+                const y = centerY + particle.x * Math.sin(particle.angle) + particle.y * Math.cos(particle.angle);
 
-      // Add the language switch button 
-      const langSwitchButton = document.createElement('li');
-      langSwitchButton.innerHTML = '<button class="language-switch" onclick="switchLanguage()">EN/SP</button>';
-      navList.appendChild(langSwitchButton); 
+                // Draw particle
+                drawPixel(x, y, particle.color);
+            });
+        }
 
-      // Toggle other elements 
-      document.querySelectorAll('h1[lang], h2[lang], p[lang], button[lang]').forEach(elem => {
-        elem.style.display = elem.lang === newLang ? 'block' : 'none'; 
-      });
-    }
+        function animate() {
+            time++;
+            updateAndDrawParticles();
+            requestAnimationFrame(animate);
+        }
 
-    // Fade-in Effect for Sections with Intersection Observer
-    function fadeInEffect() {
-      const sections = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+        createGalaxy();
+        animate();
+
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-      }, {
-        threshold: 0.3
-        /* Adjust threshold as needed */
-      });
 
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    }
+       
+        // Language toggle functionality
+        const langToggle = document.getElementById('langToggle');
+        const translations = {
+            en: {
+                introText: "I am a multidisciplinary creative with a passion for crafting engaging and meaningful experiences. My work blends artistry, design thinking, and technical expertise to bring ideas to life.",
+                neferDesc: "A UX/UI case study exploring the design of an engaging and immersive website for a fictional museum dedicated to ancient Egyptian artifacts.",
+                neferLink: "View Case Study",
+                theatronDesc: "A UX/UI case study focusing on the design and development of a mobile app for a modern movie theater experience.",
+                theatronLink: "View Case Study",
+                contactText: "Interested in collaborating on a UX/UI project? Let's connect!",
+                artCTA: "Explore My Art",
+                otherText: "This portfolio is a work in progress. More projects showcasing my skills in robotics, music, and game development will be added soon. Stay tuned!",
+                about: "About Me",
+                projects: "Projects",
+                contact: "Contact"
+            },
+            sp: {
+                introText: "Soy un creativo multidisciplinario apasionado por crear experiencias atractivas y significativas. Mi trabajo combina el arte, el pensamiento de diseño y la experiencia técnica para dar vida a las ideas.",
+                neferDesc: "Un caso de estudio de UX/UI que explora el diseño de un sitio web atractivo e inmersivo para un museo ficticio dedicado a los artefactos del antiguo Egipto.",
+                neferLink: "Ver Caso de Estudio",
+                theatronDesc: "Un caso de estudio de UX/UI centrado en el diseño y desarrollo de una aplicación móvil para una experiencia moderna de cine.",
+                theatronLink: "Ver Caso de Estudio",
+                contactText: "¡Interesado en colaborar en un proyecto de UX/UI? ¡Conectemos!",
+                artCTA: "Explora Mi Arte",
+                otherText: "Este portafolio es un trabajo en progreso. Pronto se agregarán más proyectos que muestren mis habilidades en robótica, música y desarrollo de juegos. ¡Estén atentos!",
+                about: "Sobre Mí",
+                projects: "Proyectos",
+                contact: "Contacto"
+            }
+        };
 
-    // Initialize Scripts
-    document.addEventListener('DOMContentLoaded', () => {
-      fadeInEffect();
-      document.documentElement.lang = 'en'; // Default to English
+        let currentLang = 'en';
+
+        function updateLanguage(lang) {
+            document.getElementById('introText').textContent = translations[lang].introText;
+            document.getElementById('neferDesc').textContent = translations[lang].neferDesc;
+            document.getElementById('neferLink').textContent = translations[lang].neferLink;
+            document.getElementById('theatronDesc').textContent = translations[lang].theatronDesc;
+            document.getElementById('theatronLink').textContent = translations[lang].theatronLink;
+            document.getElementById('contactText').textContent = translations[lang].contactText;
+            document.getElementById('artCTA').textContent = translations[lang].artCTA;
+            document.getElementById('otherText').textContent = translations[lang].otherText;
+
+            // Update navigation links
+            document.querySelectorAll('.lang-link').forEach(link => {
+                link.textContent = translations[lang][link.dataset.section];
+            });
+        }
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'sp' : 'en';
+            updateLanguage(currentLang);
+            langToggle.textContent = currentLang === 'en' ? 'EN/SP' : 'SP/EN';
+        });
+
+        // Loader
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader-container');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
+        // Simple lightbox for art items
+        const artItems = document.querySelectorAll('.art-item');
+        artItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                const lightbox = document.createElement('div');
+                lightbox.innerHTML = `
+                    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000;">
+                        <img src="${img.src}" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                    </div>
+                `;
+                document.body.appendChild(lightbox);
+                lightbox.addEventListener('click', () => {
+                    document.body.removeChild(lightbox);
+                });
+            });
+        });
+
+        // Animate elements on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.ux-project, .personal-project, .art-item, .skill-tag');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                if (isVisible) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Initial check on load
+
+        // Add this to your existing CSS for animation
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                .ux-project, .personal-project, .art-item, .skill-tag {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.5s ease, transform 0.5s ease;
+                }
+            </style>
+        `);
+
+        // Scroll to top button 
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.add('visible');
+            } else {
+                scrollToTopButton.classList.remove('visible');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+
+    const video = document.getElementById('myVideo');
+
+    const options = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.5 // Trigger when at least 50% of the video is visible
+    };
+
+    const callback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play(); // Play video when in view
+            } else {
+                video.pause(); // Pause when out of view
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(video);
+
+    </script>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-  </script>
-</body>
+});
 
+// Active section highlighting for vertical nav
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".vertical-nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 50;
+        if (scrollY >= sectionTop) current = section.getAttribute("id");
+    });
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) link.classList.add("active");
+    });
+});
+</script>
+</body>
 </html>
