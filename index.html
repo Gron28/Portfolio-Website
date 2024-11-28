@@ -599,7 +599,7 @@ h2 {
 /* Media Queries */
 @media (max-width: 768px) {
     .hero {
-        height: 120vh;
+        height: 95vh;
     }
 
     .hero h1 {
@@ -610,7 +610,6 @@ h2 {
         font-size: 1.5rem;
     }
 
-    .short-intro, 
     .ux-intro-text, 
     .personal-projects-text, 
     .art-cta-container p, 
@@ -619,6 +618,34 @@ h2 {
         padding: 15px;  /* Slightly reduce padding on mobile */
         margin: 0 auto; /* Center horizontally */
         text-align: center; /* Improve readability on mobile */
+    }
+
+     /* Reduce font sizes for all text elements */
+    h1 {
+        font-size: 2rem; /* Slightly smaller h1 */
+    }
+
+    h2 {
+        font-size: 1.6rem; /* Slightly smaller h2 */
+    }
+
+    h3 {
+        font-size: 1.3rem; /* Slightly smaller h3 */
+    }
+
+    h4 {
+        font-size: 1.1rem; /* Slightly smaller h4 */
+    }
+
+    p, ul, ol, li, .skill-tag, .empathy-map-item, /* Add other text-based classes */
+    .user-persona p, .user-story p, .value-prop p, .competitor p, .point p,
+    .method p, .finding p, .quote p, .other-content p, .prototype-details-text p {
+        font-size: 0.9rem; /* Smaller body text, list items, etc. */
+        line-height: 1.4; /* Slightly tighter line height */
+    }
+
+    .binah {
+        padding: 15px;
     }
 
 
@@ -660,6 +687,10 @@ h2 {
         padding: 10px 20px;
     }
 
+    .ux-cta-container {
+        font-size: 1rem;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -699,22 +730,6 @@ h2 {
 
 .scroll-to-top:hover {
     transform: translateY(-5px);
-}
-
-/* Language Toggle */
-#langToggle {
-    background: none;
-    border: 1px solid var(--text-color);
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: var(--font-family);
-    color: var(--text-color);
-}
-
-#langToggle:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
 }
 
 /* Particle Container */
@@ -876,12 +891,12 @@ body {
             <a href="#personal-projects" data-es="Mi Arte">Art</a>
             <a href="mailto:villadafelipe28@gmail.com" data-es="Contacto">Contact</a>
             <a class="contact-link" href="https://www.linkedin.com/in/felipevillada/" target="_blank">LinkedIn</a>
-            <a href="#" data-es="CV">CV</a>
+            <a href="Google-UX-Certificate.pdf" data-es="Certificado" target="_blank">Certificate</a>
+            <a href="FelipeVillada-CurriculumVitae.pdf" data-es="CV">CV</a>
         </div>
         <button id="langToggle"><i class="fas fa-globe"></i> EN/SP</button>
     </div>
 </nav>
-
     
 <div class="hero">
     <div class="hero-container">
