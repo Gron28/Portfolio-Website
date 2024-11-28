@@ -335,12 +335,6 @@ img, video {
         transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     }
 
-    .empathy-map-quadrant:hover {
-        transform: translateY(-5px); /* Lift up on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-    }
-
-
     .empathy-map h4 {
         color: var(--primary-color);
         font-size: 1.2rem; /* Larger font size */
@@ -380,10 +374,6 @@ img, video {
     max-width: 400px; /* Set a maximum width for personas */
 }
 
-    .user-persona:hover {
-        transform: translateY(-5px); /* Lift up on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-    }
 
     .user-persona h3 {
         margin-bottom: 15px;
@@ -460,14 +450,6 @@ img, video {
 }
 
 
-
-.value-prop:hover {
-    transform: translateY(-5px); /* Smooth hover effect */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-
-}
-
-
 .value-prop img {
     width: 50px;
     height: 50px;
@@ -504,14 +486,6 @@ img, video {
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Added smooth transition */
 }
 
-.competitor:hover {
-    transform: translateY(-5px); /* Lift up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-
-}
-
-
-
 .competitor h4 {
     margin-bottom: 10px;
     color: var(--primary-color);
@@ -540,14 +514,6 @@ img, video {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Added smooth transition */
 }
-
-
-.point:hover {
-    transform: translateY(-5px); /* Lift up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-
-}
-
 
 .point img {
     width: 50px;
@@ -600,13 +566,6 @@ img, video {
     align-items: center;
     justify-content: center;
 }
-
-
-.user-flow-step:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
 
 .user-flow-arrow {
     font-size: 2rem;
@@ -736,12 +695,6 @@ img, video {
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-#testing .method:hover,
-#testing .finding:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
 #testing h4 {
     color: var(--primary-color); /* Primary color for subheadings */
     margin-bottom: 10px;
@@ -769,13 +722,6 @@ img, video {
     border-radius: 0 10px 10px 0; /* Rounded corners on one side */
     transition: transform var(--transition-speed) ease; /* Smooth transition */
 }
-
-
-#testing .quote:hover {
-    transform: translateX(5px);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-}
-
 
 #testing .quote p {
     margin: 0; /* No margin for quote text */
@@ -1183,484 +1129,518 @@ body {
         font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
     }
 }
+
+/* Loader styles */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid var(--highlight-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 </style>
 </head>
-
-<body class="theatron-page">  </body>
 <body>
-<nav class="vertical-nav">
-<ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#empathize">Empathize</a></li>
-<li><a href="#define">Define</a></li>
-<li><a href="#ideate">Ideate</a></li>
-<li><a href="#prototype">Prototype</a></li>
-<li><a href="#testing">Testing</a></li>
-<li><a href="#design">Final Design</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
-</ul>
-</nav>
+<div class="loader-container">
+<div class="loader"></div>
+</div>
 <canvas id="galaxy-canvas"></canvas>
       
 <nav class="nav">
     <div class="nav-content">
         <div>
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#projects">UX/UI</a>
-            <a href="index.html#personal-projects">Art</a>
-            <a href="mailto:villadafelipe28@gmail.com">Contact</a> 
-            <a href="https://www.linkedin.com/in/felipevillada/">LinkedIn</a>
+            <a href="index.html" data-es="Inicio">Home</a>
+            <a href="#about" data-es="Sobre Mí">About</a>
+            <a href="#projects" data-es="UX/UI">UX/UI</a>
+            <a href="#personal-projects" data-es="Mi Arte">Art</a>
+            <a href="mailto:villadafelipe28@gmail.com" data-es="Contacto">Contact</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/felipevillada/" target="_blank">LinkedIn</a>
+            <a href="#" data-es="CV">CV</a>
         </div>
         <button id="langToggle"><i class="fas fa-globe"></i> EN/SP</button>
     </div>
 </nav>
+<nav class="vertical-nav">
+    <ul>
+        <li><a href="#overview" data-es="Resumen">Overview</a></li>
+        <li><a href="#empathize" data-es="Empatizar">Empathize</a></li>
+        <li><a href="#define" data-es="Definir">Define</a></li>
+        <li><a href="#ideate" data-es="Idear">Ideate</a></li>
+        <li><a href="#prototype" data-es="Prototipo">Prototype</a></li>
+        <li><a href="#testing" data-es="Pruebas">Testing</a></li>
+        <li><a href="#design" data-es="Diseño final">Final Design</a></li>
+        <li><a href="#conclusion" data-es="Conclusión">Conclusion</a></li>
+    </ul>
+</nav>
 
-    
 <div class="hero">
-<div class="hero-container">
-<div class="hero-circle"></div>
-<h1>THEATRON</h1>
-<h2>a Movie Ticketing App Case Study</h2>
+    <div class="hero-container">
+        <div class="hero-circle"></div>
+        <h1 data-es="THEATRON">THEATRON</h1>
+        <h2 data-es="Un estudio de caso sobre una app de venta de entradas de cine">A Movie Ticketing App Case Study</h2>
+    </div>
+    <div class="container short-intro">
+        <p id="introText" data-es="Theatron es un concepto de aplicación móvil diseñada para un cine moderno e independiente. Este estudio de caso explora el proceso de diseño UX/UI detrás de la creación de una solución de venta de entradas fluida e intuitiva, desde la investigación del usuario hasta el prototipo final.">Theatron is a mobile app concept designed for a modern, independent cinema. This case study explores the UX/UI design process behind creating a seamless and intuitive ticketing solution, from user research to final prototype.</p>
+    </div>
 </div>
-<div class="container short-intro">
-<p id="introText">Theatron is a mobile app concept designed for a modern, independent cinema. This case study explores the UX/UI design process behind creating a seamless and intuitive ticketing solution, from user research to final prototype.</p>
-</div>
-</div>
+
 <div class="binah">
-<div class="container">
-<section class="section" id="overview">
-<h2>Understanding The Project</h2>
-<div class="case-study-intro">
-<div class="intro-mockups">
-<figure class="intro-mockup">
-<img alt="Mockup 1" src="images/Mockup1.webp"/>
-</figure>
-</div>
-<h3>Overview</h3>
-<p>This case study details my full design process for the Theatron mobile app. The project focuses on creating a user-friendly experience for a diverse audience, allowing users to easily browse movies, purchase tickets, and select seats. We will explore the phases: Empathize, Define, Ideate, Prototype, Testing, and Final Design.</p>
-<div class="overview-details">
-<div class="skills">
-<h3>Skills</h3>
-<div class="project-skills">
-<span class="skill-tag">User Personas</span>
-<span class="skill-tag">User Pain Points</span>
-<span class="skill-tag">Interaction Design</span>
-<span class="skill-tag">Visual Design</span>
-<span class="skill-tag">Wireframing</span>
-<span class="skill-tag">Prototyping</span>
-</div>
-</div>
-<div class="role">
-<h3>My Role</h3>
-<div class="project-skills">
-<span class="skill-tag">UX/UI Designer</span>
-<span class="skill-tag">UX Researcher</span>
-<span class="skill-tag">Prototyper</span>
-</div>
-</div>
-</div>
+    <div class="container">
+        <section class="section" id="overview">
+            <h2 data-es="Descripción del Proyecto">Understanding The Project</h2>
+            <div class="case-study-intro">
+                <div class="intro-mockups">
+                    <figure class="intro-mockup">
+                        <img alt="Mockup 1" src="images/Mockup1.webp" />
+                    </figure>
+                </div>
+
+                <h3 data-es="Resumen">Overview</h3>
+                <p data-es="Este estudio de caso detalla mi proceso de diseño completo para la aplicación móvil Theatron. El proyecto se centra en crear una experiencia fácil de usar para una audiencia diversa, lo que permite a los usuarios explorar películas, comprar boletos y seleccionar asientos fácilmente. Exploraremos las fases: Empatizar, Definir, Idear, Prototipo, Pruebas y Diseño Final.">This case study details my full design process for Theatron mobile app. The project focuses on creating a user-friendly experience for a diverse audience, allowing users to easily browse movies, purchase tickets, and select seats. We will explore the phases: Empathize, Define, Ideate, Prototype, Testing, and Final Design.</p>
+                <div class="overview-details">
+                    <div class="skills">
+                        <h3 data-es="Habilidades">Skills</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag" data-es="Personajes de usuario">User Personas</span>
+                            <span class="skill-tag" data-es="Puntos débiles del usuario">User Pain Points</span>
+                            <span class="skill-tag" data-es="Diseño de interacción">Interaction Design</span>
+                            <span class="skill-tag" data-es="Diseño visual">Visual Design</span>
+                            <span class="skill-tag">Wireframing</span>
+                            <span class="skill-tag">Prototyping</span>
+                        </div>
+                    </div>
+                    <div class="role">
+                        <h3 data-es="Mi Rol">My Role</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag" data-es="Diseñador UX/UI">UX/UI Designer</span>
+                            <span class="skill-tag" data-es="Investigador UX">UX Researcher</span>
+                            <span class="skill-tag">Prototyper</span>
+                        </div>
+                    </div>
+                </div>
 <div class="timeline">
-<h3>Timeline</h3>
-<p>April 2024 - May 2024 (around 3-4 weeks)</p>
+    <h3 data-es="Duración">Timeline</h3>
+    <p data-es="Abril 2024 - Mayo 2024 (alrededor de 3-4 semanas)">April 2024 - May 2024 (around 3-4 weeks)</p>
 </div>
-<p>Since this was a skill-building project and Theatron is a fictional theater, I designed the entire app from the ground up. I first needed to clearly understand possible real users and explore the basic ecosystem of this kind of application through competitive audits and looking at references for similar apps.</p>
+
+<p data-es="Dado que este era un proyecto de desarrollo de habilidades y Theatron es un cine ficticio, diseñé toda la aplicación desde cero. Primero necesitaba comprender claramente a los posibles usuarios reales y explorar el ecosistema básico de este tipo de aplicación a través de auditorías competitivas y buscando referencias para aplicaciones similares.">Since this was a skill-building project and Theatron is a fictional theater, I designed the entire app from the ground up. I first needed to clearly understand possible real users and explore the basic ecosystem of this kind of application through competitive audits and looking at references for similar apps.</p>
 </div>
 </section>
+
 <section class="section" id="empathize">
-<h2>Understanding the User</h2>
+<h2 data-es="Empatizar: comprendiendo al Usuario">Empathize: Understanding the User</h2>
 <div class="case-study-intro">
-<div class="project-info">
-<h3>Empathy</h3>
-<p>Before diving into design, I needed to deeply understand the target audience: moviegoers. My goal was to uncover their needs, motivations, and pain points when it comes to buying tickets and attending movies. To achieve this, I employed several user research methods, like creating an empathy map and developing user personas. These tools helped me step into the shoes of my users and gain valuable insights that informed the entire design process.</p>
-<h3>User Personas</h3>
-<p>To represent the target audience, I created two distinct user personas: Sarah, a tech-savvy marketing manager, and David, a busy parent. These personas helped me focus on the specific needs and frustrations of different user groups.
-                    </p>
+
+<h3 data-es="Empatía">Empathy</h3>
+    <p data-es="Antes de sumergirme en el diseño, necesitaba comprender profundamente al público objetivo. Mi objetivo era descubrir sus necesidades, motivaciones y puntos débiles a la hora de comprar entradas y asistir a películas. Para lograrlo, empleé varios métodos de investigación de usuarios, como la creación de un mapa de empatía y el desarrollo de personajes de usuario. Estas herramientas me ayudaron a ponerme en el lugar de mis usuarios y obtener información valiosa que informó todo el proceso de diseño.">Before diving into design, I needed to deeply understand the target audience: moviegoers. My goal was to uncover their needs, motivations, and pain points when it comes to buying tickets and attending movies. To achieve this, I employed several user research methods, like creating an empathy map and developing user personas. These tools helped me step into the shoes of my users and gain valuable insights that informed the entire design process.</p>
+
+
+<h3 data-es="Personajes de Usuario">User Personas</h3>
+<p data-es="Para representar al público objetivo, creé dos personajes de usuario distintos: Sarah, una gerente de marketing experta en tecnología, y David, un padre ocupado. Estos personajes me ayudaron a centrarme en las necesidades y frustraciones específicas de los diferentes grupos de usuarios.">To represent the target audience, I created two distinct user personas: Sarah, a tech-savvy marketing manager, and David, a busy parent. These personas helped me focus on the specific needs and frustrations of different user groups.</p>
 <div class="user-personas-container">
-<div class="user-persona">
-<h3>Sarah</h3>
-<p><strong>Age:</strong> 28</p>
-<p><strong>Occupation:</strong> Marketing Manager</p>
-<p><strong>Tech Proficiency:</strong>High</p>
-<p><strong>Movie Habits:</strong> Frequent moviegoer (3-5 times/month), enjoys various genres, prefers watching with friends.</p>
-<p><strong>Goals:</strong> Quickly find showtimes, easily purchase tickets, avoid lines, select specific seats, discover new movies.</p>
-<p><strong>Frustrations:</strong> Long lines at the box office, difficulty finding good seats, confusing or outdated theater websites.</p>
-<p><strong>Quote:</strong> "I love catching a movie with friends, but the ticketing process can be a real hassle. I want something quick and easy."</p>
+    <div class="user-persona">
+        <h3 data-es="Sarah">Sarah</h3>
+        <p><strong data-es="Edad:">Age:</strong> 28</p>
+        <p><strong data-es="Ocupación:">Occupation:</strong> Marketing Manager</p>
+        <p><strong data-es="Competencia tecnológica:">Tech Proficiency:</strong> <span data-es="Alta">High</span></p>
+        <p><strong data-es="Hábitos cinematográficos:">Movie Habits:</strong> <span data-es="Asistente frecuente al cine (3-5 veces al mes), disfruta de varios géneros, prefiere ver películas con amigos.">Frequent moviegoer (3-5 times/month), enjoys various genres, prefers watching with friends.</span></p>
+        <p><strong data-es="Objetivos:">Goals:</strong> <span data-es="Encontrar horarios de películas rápidamente, comprar boletos fácilmente, evitar filas, seleccionar asientos específicos, descubrir nuevas películas.">Quickly find showtimes, easily purchase tickets, avoid lines, select specific seats, discover new movies.</span></p>
+        <p><strong data-es="Frustraciones:">Frustrations:</strong> <span data-es="Largas filas en la taquilla, dificultad para encontrar buenos asientos, sitios web de cines confusos u obsoletos.">Long lines at the box office, difficulty finding good seats, confusing or outdated theater websites.</span></p>
+        <p><strong data-es="Cita:">Quote:</strong> "<span data-es="Me encanta ver una película con amigos, pero el proceso de compra de boletos puede ser una verdadera molestia. Quiero algo rápido y fácil.">"I love catching a movie with friends, but the ticketing process can be a real hassle. I want something quick and easy."</span></p>
+    </div>
+    <div class="user-persona">
+        <h3 data-es="David">David</h3>
+        <p><strong data-es="Edad:">Age:</strong> 42</p>
+        <p><strong data-es="Ocupación:">Occupation:</strong> Software Engineer</p>
+        <p><strong data-es="Competencia tecnológica:">Tech Proficiency:</strong> <span data-es="Mediana">Medium</span></p>
+        <p><strong data-es="Hábitos cinematográficos:">Movie Habits:</strong> <span data-es="Asistente ocasional al cine (1-2 veces al mes), principalmente asiste a películas familiares con su esposa y dos hijos.">Occasional moviegoer (1-2 times/month), primarily attends family-friendly movies with his wife and two children.</span></p>
+        <p><strong data-es="Objetivos:">Goals:</strong> <span data-es="Encontrar fácilmente películas apropiadas para su edad, comprar varias entradas a la vez, elegir asientos juntos, tener una experiencia fluida y sin estrés con su familia.">Easily find age-appropriate movies, purchase multiple tickets at once, choose seats together, have a smooth, stress-free experience with his family.</span></p>
+        <p><strong data-es="Frustraciones:">Frustrations:</strong> <span data-es="Selección limitada de películas para niños, dificultad para encontrar asientos juntos, procesos complicados de venta de entradas en línea.">Limited selection of children's movies, difficulty finding seats together, complicated online ticketing processes.</span></p>
+        <p><strong data-es="Cita:">Quote:</strong> "<span data-es="Ir al cine con los niños puede ser caótico. Necesito una aplicación que facilite la planificación y la compra de entradas para todos.">"Going to the movies with the kids can be chaotic. I need an app that makes it easy to plan and purchase tickets for everyone."</span></p>
+    </div>
 </div>
-<div class="user-persona">
-<h3>David</h3>
-<p><strong>Age:</strong> 42</p>
-<p><strong>Occupation:</strong> Software Engineer</p>
-<p><strong>Tech Proficiency:</strong>Medium</p>
-<p><strong>Movie Habits:</strong> Occasional moviegoer (1-2 times/month), primarily attends family-friendly movies with his wife and two children.</p>
-<p><strong>Goals:</strong> Easily find age-appropriate movies, purchase multiple tickets at once, choose seats together, have a smooth, stress-free experience with his family.</p>
-<p><strong>Frustrations:</strong> Limited selection of children's movies, difficulty finding seats together, complicated online ticketing processes.</p>
-<p><strong>Quote:</strong> "Going to the movies with the kids can be chaotic. I need an app that makes it easy to plan and purchase tickets for everyone."</p>
-</div>
-</div>
-<h3>User Stories</h3>
-<p>To clearly define user needs, I framed them as user stories, focusing on the "who," "what," and "why" of each interaction with the app.</p>
-<div class="user-stories">
-<div class="user-story">
-<h4>Browsing Movies</h4>
-<p>As a moviegoer, I want to easily browse current and upcoming movies, filter by genre or
-                                other criteria, and quickly find showtimes so I can plan my cinema visit.</p>
-</div>
-<div class="user-story">
-<h4>Buying Tickets</h4>
-<p>As a busy individual, I want to purchase tickets quickly and securely on my phone so I can
-                                skip the box office line, avoid any hassle, and manage my tickets digitally.</p>
-</div>
-<div class="user-story">
-<h4>Selecting Seats</h4>
-<p>As a movie enthusiast, I want to be able to choose my preferred seats using a clear and
-                                interactive seat map to guarantee a great viewing experience and sit with my friends or
-                                family.</p>
-</div>
-</div>
-<h3>Empathy Map</h3>
-<p>The empathy map served as a powerful tool to synthesize my research and visualize the user's experience. It helped me understand not only *what* users do and say but also *how* they think and feel. This perspective was crucial for developing a truly user-centered design.</p>
+<h3 data-es="Historias de Usuario">User Stories</h3>
+                <p data-es="Para definir claramente las necesidades de los usuarios, las enmarqué como historias de usuario, centrándome en el "quién", el "qué" y el "por qué" de cada interacción con la aplicación.">To clearly define user needs, I framed them as user stories, focusing on the "who," "what," and "why" of each interaction with the app.</p>
+                <div class="user-stories">
+                    <div class="user-story">
+                        <h4 data-es="Explorar películas">Browsing Movies</h4>
+                        <p data-es="Como cinéfilo, quiero explorar fácilmente las películas actuales y futuras, filtrar por género u otros criterios y encontrar rápidamente los horarios para poder planificar mi visita al cine.">As a moviegoer, I want to easily browse current and upcoming movies, filter by genre or other criteria, and quickly find showtimes so I can plan my cinema visit.</p>
+                    </div>
+                    <div class="user-story">
+                        <h4 data-es="Comprar entradas">Buying Tickets</h4>
+                        <p data-es="Como persona ocupada, quiero comprar boletos de forma rápida y segura en mi teléfono para poder evitar la fila de la taquilla, evitar cualquier molestia y administrar mis boletos digitalmente.">As a busy individual, I want to purchase tickets quickly and securely on my phone so I can skip the box office line, avoid any hassle, and manage my tickets digitally.</p>
+                    </div>
+                    <div class="user-story">
+                        <h4 data-es="Seleccionar asientos">Selecting Seats</h4>
+                        <p data-es="Como entusiasta del cine, quiero poder elegir mis asientos preferidos utilizando un mapa de asientos claro e interactivo para garantizar una excelente experiencia visual y sentarme con mis amigos o familiares.">As a movie enthusiast, I want to be able to choose my preferred seats using a clear and interactive seat map to guarantee a great viewing experience and sit with my friends or family.</p>
+                    </div>
+                </div>
+<h3 data-es="Mapa de Empatía">Empathy Map</h3>
+<p data-es="El mapa de empatía sirvió como una herramienta poderosa para sintetizar mi investigación y visualizar la experiencia del usuario. Me ayudó a comprender no solo *qué* hacen y dicen los usuarios, sino también *cómo* piensan y sienten. Esta perspectiva holística fue crucial para desarrollar un diseño verdaderamente centrado en el usuario.">The empathy map served as a powerful tool to synthesize my research and visualize the user's experience. It helped me understand not only *what* users do and say but also *how* they think and feel. This perspective was crucial for developing a truly user-centered design.</p>
 <div class="empathy-map">
 <div class="empathy-map-quadrant">
-<h3>Says</h3>
-<p>"I love the immersive experience of watching movies on the big screen."</p>
-<p>"Waiting in long lines at the theater is a major mood killer."</p>
-<p>"I like to check reviews and ratings before buying a ticket."</p>
+    <h3 data-es="Dice">Says</h3>
+    <p data-es="“Me encanta la experiencia inmersiva de ver películas en la pantalla grande“.">“I love the immersive experience of watching movies on the big screen.”</p>
+    <p data-es="“Esperar en largas filas en el cine arruina un poco mi experiencia“.">“Waiting in long lines at the theater is a major mood killer.”</p>
+    <p data-es="“Me gusta consultar reseñas y calificaciones antes de comprar un boleto“.">“I like to check reviews and ratings before buying a ticket.”</p>
 </div>
 <div class="empathy-map-quadrant">
-<h3>Thinks</h3>
-<p>"It's frustrating when I can't get the seats I want, especially for popular movies."</p>
-<p>"I wish buying tickets and concessions was quicker and more convenient."</p>
-<p>"Having everything on my phone would make the whole process so much smoother."</p>
+    <h3 data-es="Piensa">Thinks</h3>
+    <p data-es="“Es frustrante cuando no puedo conseguir los asientos que quiero, especialmente para películas populares“.">“It's frustrating when I can't get the seats I want, especially for popular movies.”</p>
+    <p data-es="“Ojalá comprar boletos y concesiones fuera más rápido y conveniente“.">“I wish buying tickets and concessions was quicker and more convenient.”</p>
+    <p data-es="“Tener todo en mi teléfono haría que todo el proceso fuera mucho más fluido“.">“Having everything on my phone would make the whole process so much smoother.”</p>
 </div>
 <div class="empathy-map-quadrant">
-<h3>Does</h3>
-<p>Watches movies regularly, both at the theater and at home.</p>
-<p>Uses mobile apps for various purchases, including food delivery, ride-sharing, and online
-                                shopping.</p>
-<p>Actively reads movie reviews and engages in online discussions about films.</p>
+    <h3 data-es="Hace">Does</h3>
+    <p data-es="Ve películas con regularidad, tanto en el cine como en casa.">Watches movies regularly, both at the theater and at home.</p>
+    <p data-es="Utiliza aplicaciones móviles para diversas compras, incluyendo entrega de comida, viajes compartidos y compras en línea.">Uses mobile apps for various purchases, including food delivery, ride-sharing, and online shopping.</p>
+    <p data-es="Lee activamente reseñas de películas y participa en debates en línea sobre películas.">Actively reads movie reviews and engages in online discussions about films.</p>
 </div>
 <div class="empathy-map-quadrant">
-<h3>Feels</h3>
-<p>Excited and enthusiastic about new movie releases and cinematic experiences.</p>
-<p>Frustrated and annoyed by long lines, complicated processes, and limited seat
-                                availability.</p>
-<p>Appreciates convenience, good value, and a seamless, hassle-free movie-going
-                                experience.</p>
-</div>
+    <h3 data-es="Siente">Feels</h3>
+    <p data-es="Emocionado y entusiasmado con los nuevos estrenos de películas y las experiencias cinematográficas.">Excited and enthusiastic about new movie releases and cinematic experiences.</p>
+    <p data-es="Frustrado y molesto por las largas filas, los procesos complicados y la disponibilidad limitada de asientos.">Frustrated and annoyed by long lines, complicated processes, and limited seat availability.</p>
+    <p data-es="Aprecia la comodidad, la buena relación calidad-precio y una experiencia cinematográfica fluida y sin complicaciones.">Appreciates convenience, good value, and a seamless, hassle-free movie-going experience.</p>
 </div>
 </div>
 </div>
 </section>
 <section class="section" id="define">
-<h2>Define</h2>
-<div class="case-study-intro">
-<div class="project-info">
-<p>The Define phase involved synthesizing the research insights to clearly articulate the core
-                        problems and user needs. This included crafting a concise problem statement, a testable hypothesis
-                        statement, and a compelling value proposition to guide the design process.</p>
-<h3>Problem Statement</h3>
-<p>Moviegoers, regardless of their age or tech-savviness, often experience frustration with outdated
-                        and inconvenient ticketing methods. They desire a more streamlined, efficient, and enjoyable way to
-                        browse movies, purchase tickets, and manage their entire movie-going experience, including seat
-                        selection and concessions.</p>
-<h3>Hypothesis Statement</h3>
-<p>A user-friendly mobile app can significantly improve the movie-going experience. By offering
-                        seamless browsing, simplified ticket purchasing, intuitive seat selection, and convenient concession
-                        pre-ordering, Theatron will address user pain points and increase satisfaction. This hypothesis is
-                        based on the assumption that users value convenience, speed, and control over their movie-going
-                        experience.</p>
-<h3>Value Proposition</h3>
-<p>
-                                Theatron provides a hassle-free and enjoyable movie ticketing experience. It eliminates the need for
-                                physical tickets and long lines, offering a streamlined process accessible at any time, right from
-                                your mobile device. Users can browse movies, select seats, and make secure purchases with ease,
-                                allowing them to focus on the excitement of the movie itself.
-                            </p>
-<h3>Competitive Audit</h3>
-<p>To understand the competitive landscape, I conducted a competitive audit of existing movie ticketing apps and websites. This analysis helped me identify opportunities to differentiate Theatron and provide a unique value proposition.</p>
+    <h2 data-es="Definir">Define</h2>
+    <div class="case-study-intro">
+        <p data-es="La fase de definición implicó sintetizar la información de la investigación para articular claramente los problemas centrales y las necesidades de los usuarios. Esto incluyó la elaboración de una declaración de problema concisa, una declaración de hipótesis comprobable y una propuesta de valor convincente para guiar el proceso de diseño.">The Define phase involved synthesizing the research insights to clearly articulate the core problems and user needs. This included crafting a concise problem statement, a testable hypothesis statement, and a compelling value proposition to guide the design process.</p>
+
+        <h3 data-es="Declaración del problema">Problem Statement</h3>
+        <p data-es="Los cinéfilos, independientemente de su edad o conocimientos tecnológicos, a menudo experimentan frustración con los métodos de venta de entradas obsoletos e inconvenientes. Desean una forma más optimizada, eficiente y agradable de explorar películas, comprar entradas y administrar toda su experiencia cinematográfica, incluida la selección de asientos y las concesiones.">Moviegoers, regardless of their age or tech-savviness, often experience frustration with outdated and inconvenient ticketing methods. They desire a more streamlined, efficient, and enjoyable way to browse movies, purchase tickets, and manage their entire movie-going experience, including seat selection and concessions.</p>
+
+        <h3 data-es="Declaración de la hipótesis">Hypothesis Statement</h3>
+        <p data-es="Una aplicación móvil fácil de usar puede mejorar significativamente la experiencia cinematográfica. Al ofrecer una navegación fluida, compra de entradas simplificada, selección de asientos intuitiva y un cómodo pedido anticipado de concesiones, Theatron abordará los puntos débiles de los usuarios y aumentará la satisfacción. Esta hipótesis se basa en el supuesto de que los usuarios valoran la comodidad, la velocidad y el control sobre su experiencia cinematográfica.">A user-friendly mobile app can significantly improve the movie-going experience. By offering seamless browsing, simplified ticket purchasing, intuitive seat selection, and convenient concession pre-ordering, Theatron will address user pain points and increase satisfaction. This hypothesis is based on the assumption that users value convenience, speed, and control over their movie-going experience.</p>
+
+        <h3 data-es="Propuesta de valor">Value Proposition</h3>
+        <p data-es="Theatron ofrece una experiencia de compra de entradas de cine sin complicaciones y agradable. Elimina la necesidad de entradas físicas y largas filas, ofreciendo un proceso optimizado accesible en cualquier momento, directamente desde su dispositivo móvil. Los usuarios pueden buscar películas, seleccionar asientos y realizar compras seguras con facilidad, lo que les permite concentrarse en la emoción de la película en sí.">Theatron provides a hassle-free and enjoyable movie ticketing experience. It eliminates the need for physical tickets and long lines, offering a streamlined process accessible at any time, right from your mobile device. Users can browse movies, select seats, and make secure purchases with ease, allowing them to focus on the excitement of the movie itself.</p>
+
+        <h3 data-es="Análisis Competitivo">Competitive Audit</h3>
+        <p data-es="Para comprender el panorama competitivo, realicé una auditoría competitiva de las aplicaciones y sitios web de venta de entradas de cine existentes. Este análisis me ayudó a identificar oportunidades para diferenciar Theatron y proporcionar una propuesta de valor única.">To understand the competitive landscape, I conducted a competitive audit of existing movie ticketing apps and websites. This analysis helped me identify opportunities to differentiate Theatron and provide a unique value proposition.</p>
 <div class="competitive-audit">
-<div class="competitor">
-<h4>Fandango</h4>
-<p><strong>Product Offering:</strong> Movie listings, ticketing, trailers, reviews, celebrity
-                            news.</p>
-<p><strong>Strengths:</strong> Comprehensive movie information, integration with Rotten
-                            Tomatoes, large user base.</p>
-<p><strong>Weaknesses:</strong> Can feel cluttered, complex interface, less focus on the local
-                            cinema experience.</p>
+    <div class="competitor">
+        <h4 data-es="Fandango">Fandango</h4>
+        <p><strong data-es="Oferta de producto">Product Offering:</strong> <span data-es="Listados de películas, venta de entradas, trailers, reseñas, noticias de famosos.">Movie listings, ticketing, trailers, reviews, celebrity news.</span></p>
+        <p><strong data-es="Fortalezas">Strengths:</strong> <span data-es="Información completa de la película, integración con Rotten Tomatoes, gran base de usuarios.">Comprehensive movie information, integration with Rotten Tomatoes, large user base.</span></p>
+        <p><strong data-es="Debilidades">Weaknesses:</strong> <span data-es="Puede sentirse desordenado, interfaz compleja, menos enfoque en la experiencia del cine local.">Can feel cluttered, complex interface, less focus on the local cinema experience.</span></p>
+    </div>
+    <div class="competitor">
+        <h4 data-es="Atom Tickets">Atom Tickets</h4>
+        <p><strong data-es="Oferta de producto">Product Offering:</strong> <span data-es="Venta de entradas, reservas de grupo, concesiones, funciones sociales.">Ticketing, group bookings, concessions, social features.</span></p>
+        <p><strong data-es="Fortalezas">Strengths:</strong> <span data-es="Descuentos para grupos, herramientas de planificación social, enfoque en experiencias compartidas.">Group discounts, social planning tools, focus on shared experiences.</span></p>
+        <p><strong data-es="Debilidades">Weaknesses:</strong> <span data-es="Cobertura de cines limitada, el énfasis en las reservas de grupo puede no atender a los cinéfilos individuales.">Limited theater coverage, emphasis on group bookings may not cater to individual moviegoers.</span></p>
+    </div>
+    <div class="competitor">
+        <h4 data-es="AMC Theatres">AMC Theatres</h4>
+        <p><strong data-es="Oferta de producto">Product Offering:</strong> <span data-es="Venta de entradas, programa de fidelización (AMC Stubs), selección de asientos, concesiones.">Ticketing, loyalty program (AMC Stubs), seat selection, concessions.</span></p>
+        <p><strong data-es="Fortalezas">Strengths:</strong> <span data-es="Beneficios del programa de fidelización, amplia cobertura de cines, experiencia integrada.">Loyalty program benefits, wide theater coverage, integrated experience.</span></p>
+        <p><strong data-es="Debilidades">Weaknesses:</strong> <span data-es="Principalmente atiende a los cines AMC, menos flexible para los usuarios que frecuentan otros cines.">Primarily caters to AMC theaters, less flexible for users who frequent other cinemas.</span></p>
+    </div>
 </div>
-<div class="competitor">
-<h4>Atom Tickets</h4>
-<p><strong>Product Offering:</strong> Ticketing, group bookings, concessions, social features.
-                        </p>
-<p><strong>Strengths:</strong> Group discounts, social planning tools, focus on shared
-                            experiences.</p>
-<p><strong>Weaknesses:</strong> Limited theater coverage, emphasis on group bookings may not
-                            cater to individual moviegoers.</p>
-</div>
-<div class="competitor">
-<h4>AMC Theatres</h4>
-<p><strong>Product Offering:</strong> Ticketing, loyalty program (AMC Stubs), seat selection,
-                            concessions.</p>
-<p><strong>Strengths:</strong> Loyalty program benefits, wide theater coverage, integrated
-                            experience.</p>
-<p><strong>Weaknesses:</strong> Primarily caters to AMC theaters, less flexible for users who
-                            frequent other cinemas.</p>
-</div>
-</div>
-<h3>Theatron's Competitive Advantage</h3>
-<p>Based on the competitive audit, Theatron's competitive advantage will be:</p>
-</div>
-<div class="advantage-points">
-<div class="point">
-<h4>Elegant Simplicity</h4>
-<p>A clean and intuitive interface that focuses on core functionalities, providing a
-                                streamlined and user-friendly experience for all users, especially those less familiar
-                                with technology.</p>
-</div>
-<div class="point">
-<h4>Independent Charm</h4>
-<p>Embracing and showcasing the unique character of "Theatron" as an independent theater,
-                                providing a distinct brand identity and experience that sets it apart from larger
-                                cinema chains.</p>
+<h3 data-es="Ventaja competitiva de Theatron">Theatron's Competitive Advantage</h3>
+        <p data-es="Basado en la auditoría competitiva, la ventaja competitiva de Theatron será:">Based on the competitive audit, Theatron's competitive advantage will be:</p>
+        <div class="advantage-points">
+            <div class="point">
+                <h4 data-es="Elegante simplicidad">Elegant Simplicity</h4>
+                <p data-es="Una interfaz limpia e intuitiva que se centra en las funcionalidades principales, proporcionando una experiencia optimizada y fácil de usar para todos los usuarios, especialmente aquellos menos familiarizados con la tecnología.">A clean and intuitive interface that focuses on core functionalities, providing a streamlined and user-friendly experience for all users, especially those less familiar with technology.</p>
+            </div>
+            <div class="point">
+                <h4 data-es="Encanto independiente">Independent Charm</h4>
+                <p data-es="Abrazando y mostrando el carácter único de “Theatron“ como un cine independiente, proporcionando una identidad de marca y una experiencia distintas que lo diferencian de las cadenas de cines más grandes.">Embracing and showcasing the unique character of "Theatron" as an independent theater, providing a distinct brand identity and experience that sets it apart from larger cinema chains.</p>
 </div>
 </div>
 </div></section>
 <section class="section" id="ideate">
-<h2>Ideate</h2>
-<div class="case-study-intro">
-<p>The Ideate phase focused on translating the research insights and defined problem into concrete
-                        design solutions. This involved developing the information architecture, creating user flows for key
-                        tasks, and sketching initial wireframes to visualize the app's structure and layout.</p>
-<h3>Information Architecture</h3>
-<p>A well-defined information architecture is crucial for ensuring intuitive navigation and a seamless user experience. I created a sitemap to visualize the app's structure and hierarchy, organizing content in a logical and user-friendly way.</p>
-<img alt="Sitemap" src="images/sitemap.png"/>
-<h3>User Flows</h3>
-<p>I developed a User Flow to visualize the steps and possible stop any issues in the process that the users would take in order to buy tickets for an specific movie. in this case smooth edges meands an action taken by the user, stright edges mean an app screen and the diamons shape means a decition.</p>
-<img alt="UserFlow" src="images/user-flow.png"/>
-<p>User opens Theatron. The homepage displays currently playing movies with posters showing each one. The user navigates to the "Coming Soon" section, from there they select a specific movie. The Movie Details screen now displays a trailer, synopsis, and general information. The user then books a ticket; the ticket booking screen shows a seat map with available seats, dates, and times. The user chooses according to their comfort, goes to checkout, uses various payment methods, confirms the payment, and gets their digital ticket ready to use at the theater.</p>
-<h3>Sketches and Early Ideation</h3>
-<p>I started the design process by sketching out various ideas for the app's layout and key features. These initial sketches served as a way to quickly explore different concepts and user flows. This is crucial for me, as sometimes the solutions appear only by drawing and moving my hands and pencils, without thinking to much. Then, with those solutions, and with new questions to ask, I iterate with digital tools, refining them as much as it needs.  I tried Rapid sketching and story boards on other papers that I cant seem to find, but I got one of these first versions of the wireframes.</p>
-<div class="visual-element">
-<img alt="Early Sketches" class="sketches-image" src="images/sketches.jpg"/>
-<figcaption>Early sketches exploring the app's layout.</figcaption>
-</div>
-</div></section>
+    <h2 data-es="Idear">Ideate</h2>
+    <div class="case-study-intro">
+        <p data-es="La fase de Ideación se centró en traducir la información de la investigación y los objetivos del proyecto en soluciones de diseño tangibles. Esto abarcó la arquitectura de la información, los flujos de usuario y los bocetos iniciales para dar forma a la estructura y la experiencia de usuario del sitio web.">The Ideate phase focused on translating research insights and project goals into tangible design solutions. This encompassed information architecture, user flows, and initial sketches to shape the website’s structure and user experience.</p>
+
+        <h3 data-es="Arquitectura de Información">Information Architecture</h3>
+        <p data-es="Una arquitectura de información bien definida es crucial para garantizar una navegación intuitiva y una experiencia de usuario fluida. Creé un mapa del sitio para visualizar la estructura y jerarquía de la aplicación, organizando el contenido de una manera lógica y fácil de usar.">A well-defined information architecture is crucial for ensuring intuitive navigation and a seamless user experience. I created a sitemap to visualize the app's structure and hierarchy, organizing content in a logical and user-friendly way.</p>
+        <img alt="Sitemap" src="images/sitemap.png" /> <p></p>
+
+        <h3 data-es="Flujos de Usuario">User Flows</h3>
+        <p data-es="Desarrollé un flujo de usuario para visualizar los pasos que tomarían los usuarios para comprar boletos para una película específica y para detectar posibles problemas en el proceso. En este caso, los bordes suaves significan una acción realizada por el usuario, los bordes rectos significan una pantalla de la aplicación y la forma de diamante significa una decisión.">I developed a User Flow to visualize the steps and stop any possible issues in the process that the users would take in order to buy tickets for a specific movie. In this case, smooth edges mean an action taken by the user, straight edges mean an app screen, and the diamond shape means a decision.</p>
+        <img alt="UserFlow" src="images/user-flow.png" />
+        <p data-es="El usuario abre Theatron. La página de inicio muestra las películas que se están reproduciendo actualmente con carteles que muestran cada una. El usuario navega a la sección “Próximamente“, desde allí selecciona una película específica. La pantalla Detalles de la película ahora muestra un avance, una sinopsis e información general. Luego, el usuario reserva un boleto; la pantalla de reserva de boletos muestra un mapa de asientos con los asientos, fechas y horas disponibles. El usuario elige según su comodidad, va al pago, utiliza varios métodos de pago, confirma el pago y obtiene su boleto digital listo para usar en el cine.">User opens Theatron. The homepage displays currently playing movies with posters showing each one. The user navigates to the "Coming Soon" section, from there they select a specific movie. The Movie Details screen now displays a trailer, synopsis, and general information. The user then books a ticket; the ticket booking screen shows a seat map with available seats, dates, and times. The user chooses according to their comfort, goes to checkout, uses various payment methods, confirms the payment, and gets their digital ticket ready to use at the theater.</p>
+
+
+        <h3><span data-es="Bocetos e ideación temprana">Sketches and Early Ideation</span></h3>
+        <p data-es="Comencé el proceso de diseño dibujando varias ideas para el diseño y las características clave de la aplicación. Estos bocetos iniciales sirvieron como una forma de explorar rápidamente diferentes conceptos y flujos de usuario. Esto es crucial para mí, ya que a veces las soluciones aparecen solo dibujando y moviendo mis manos y lápices, sin pensar demasiado. Luego, con esas soluciones y con nuevas preguntas que hacer, itero con herramientas digitales, refinándolas tanto como sea necesario. Probé bocetos rápidos y guiones gráficos en otros documentos que parece que no puedo encontrar, pero obtuve una de estas primeras versiones de los wireframes.">I started the design process by sketching out various ideas for the app's layout and key features. These initial sketches served as a way to quickly explore different concepts and user flows. This is crucial for me, as sometimes the solutions appear only by drawing and moving my hands and pencils, without thinking too much. Then, with those solutions, and with new questions to ask, I iterate with digital tools, refining them as much as needed. I tried Rapid sketching and storyboards on other papers that I can’t seem to find, but I got one of these first versions of the wireframes.</p>
+        <div class="visual-element">
+            <img alt="Early Sketches" class="sketches-image" src="images/sketches.jpg" />
+            <figcaption data-es="Primeros bocetos que exploran el diseño de la aplicación.">Early sketches exploring the app's layout.</figcaption>
+        </div>
+    </div>
+</section>
 <section class="section" id="prototype">
-<h2>Prototype</h2>
-<div class="case-study-intro">
-<p>I proceeded to create low-fidelity wireframes using Figma to visualize the layout and structure of key screens. These wireframes then evolved into high-fidelity mockups, providing a more polished and realistic representation of the app's interface, but we will see them a bit later on.</p>
-<h3>Wireframes</h3>
-<div class="wireframes">
-<img alt="Key Screen Wireframes" src="images/Old-Wireframes.png"/>
-<p>the first iterations of the digital Wireframes (Homepage, Comming soon, Search, Movie Details, Booking, Checkout, Profile, Notifications)</p>
-</div>
-<div class="prototype-interactive-and-details">
-<div class="interactive-prototype">
-<h3>Low Fidelity Prototype</h3>
-<video autoplay="" loop="" muted="" playsinline=""> <source src="images/prototype-demo.mp4" type="video/mp4"/> </video>
-</div>
-<div class="prototype-details-text">
-<h3>Prototype Details</h3>
-<p>The interactive, low-fidelity prototype, built using Figma, focuses on core user flows such as browsing movies, purchasing tickets, selecting seats, and managing digital tickets. This prototype allowed me to simulate the user experience and identify potential usability issues early in the design process, and was extremelly useful for real user testing. It helped me ensure a streamlined and enjoyable movie ticketing experience.</p>
-</div>
-</div>
-<p>Even with a fictional project, user feedback is crucial. I conducted usability testing with friends and family, and reaching out online, asking them to perform key tasks within the prototype. This gave me valuable insights into how real users interact with the design and uncover areas that may not have been apparent to me as the designer.</p>
-</div>
+    <h2 data-es="Prototipo">Prototype</h2>
+    <div class="case-study-intro">
+        <p data-es="Procedí a crear wireframes de baja fidelidad utilizando Figma para visualizar el diseño y la estructura de las pantallas clave. Estos wireframes luego evolucionaron a mockups de alta fidelidad, proporcionando una representación más pulida y realista de la interfaz de la aplicación, pero las veremos un poco más adelante.">I proceeded to create low-fidelity wireframes using Figma to visualize the layout and structure of key screens. These wireframes then evolved into high-fidelity mockups, providing a more polished and realistic representation of the app's interface, but we will see them a bit later on.</p>
+
+        <h3>Wireframes</h3>
+        <div class="wireframes">
+            <img alt="Key Screen Wireframes" src="images/Old-Wireframes.png" />
+            <p data-es="Las primeras iteraciones de los wireframes digitales (Página de inicio, Próximamente, Búsqueda, Detalles de la película, Reserva, Pago, Perfil, Notificaciones)">The first iterations of the digital Wireframes (Homepage, Coming soon, Search, Movie Details, Booking, Checkout, Profile, Notifications)</p>
+        </div>
+
+        <div class="prototype-interactive-and-details">
+            <div class="interactive-prototype">
+                <h3 data-es="Prototipo de baja fidelidad">Low Fidelity Prototype</h3>
+                <video autoplay="" loop="" muted="" playsinline="">
+                    <source src="images/prototype-demo.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="prototype-details-text">
+                <h3 data-es="Detalles del prototipo">Prototype Details</h3>
+                <p data-es="El prototipo interactivo de baja fidelidad, creado con Figma, se centra en los flujos de usuario principales, como la exploración de películas, la compra de entradas, la selección de asientos y la gestión de entradas digitales. Este prototipo me permitió simular la experiencia del usuario e identificar posibles problemas de usabilidad al principio del proceso de diseño, y fue extremadamente útil para las pruebas reales de usuarios. Me ayudó a garantizar una experiencia de compra de entradas de cine optimizada y agradable.">The interactive, low-fidelity prototype, built using Figma, focuses on core user flows such as browsing movies, purchasing tickets, selecting seats, and managing digital tickets. This prototype allowed me to simulate the user experience and identify potential usability issues early in the design process, and was extremely useful for real user testing. It helped me ensure a streamlined and enjoyable movie ticketing experience.</p>
+            </div>
+        </div>
+
+        <p data-es="Incluso con un proyecto ficticio, la retroalimentación del usuario es crucial. Realicé pruebas de usabilidad con amigos y familiares, y contacté en línea, pidiéndoles que realizaran tareas clave dentro del prototipo. Esto me brindó información valiosa sobre cómo los usuarios reales interactúan con el diseño y descubrí áreas que pueden no haber sido evidentes para mí como diseñador.">Even with a fictional project, user feedback is crucial. I conducted usability testing with friends and family, and reaching out online, asking them to perform key tasks within the prototype. This gave me valuable insights into how real users interact with the design and uncover areas that may not have been apparent to me as the designer.</p>
+    </div>
 </section>
 <section class="section" id="testing">
-<h2>Testing and Iterations</h2>
-<div class="case-study-intro">
-<p>Testing was essential to refine the Theatron app and ensure a user-centered design. I conducted multiple rounds of testing with representative users, gathering feedback to identify pain points and iterate on the design. The fictional nature of the project allowed for flexible, iterative testing with a focus on learning and improvement.</p>
-<h3>Testing Methods</h3>
-<div class="testing-methods">
-<div class="method">
-<h4>Moderated Usability Testing</h4>
-<p>I conducted moderated usability testing sessions with five participants, representative of the target audience (moviegoers aged 20-45). During these sessions, I observed participants interacting with the prototype, asked them to think aloud, and encouraged them to share their thoughts and frustrations. These tests were crucial for understanding users' behavior and pain points.</p>
-</div>
-<div class="method">
-    <h4>Cognitive Walkthrough</h4>
-    <p>To further evaluate the app's usability, I performed a Cognitive Walkthrough. I stepped through key user tasks, considering the user's goals, the actions they would take, and the system's responses. This helped me identify potential usability issues from the user's perspective, focusing on learnability and ease of use for new users.</p>
-</div>
-</div>
-<h3>Key Findings &amp; Iterations</h3>
-<div class="findings-iterations">
-<div class="finding">
-<h4>Homepage Navigation</h4>
-<p><strong>Initial Design:</strong> The initial homepage design included a prominent "Coming Soon" section, which some users found distracting. They primarily wanted to see movies currently playing.</p>
-<p><strong>Iteration:</strong> I moved the "Coming Soon" section below "Now Playing" and gave more visual prominence to current releases. This improved the clarity and efficiency of the homepage.</p>
-</div>
-<div class="finding">
-<h4>Seat Selection Clarity</h4>
-<p><strong>Initial Design:</strong> Users found the seat map difficult to interpret, particularly regarding screen position and seat availability. The lack of clear labels and numbers caused confusion.</p>
-<p><strong>Iteration:</strong> Added clear row and seat numbers, improved color-coding for seat availability, and included a visual representation of the screen position to enhance clarity and user confidence during seat selection.</p>
-</div>
-<div class="finding">
-<h4>Checkout Streamlining</h4>
-<p><strong>Initial Design:</strong> Some users expressed confusion during checkout, particularly regarding payment confirmation.  The process felt unclear, leading to concerns about accidental purchases.</p>
-<p><strong>Iteration:</strong>  Streamlined the checkout process by reducing the number of steps. Added clear visual feedback upon successful payment to provide reassurance and prevent accidental repurchases.</p>
-</div>
-</div>
-<div class="wireframes">
-<img alt="Key Screen Wireframes" src="images/Wireframes.png"/>
-<p>The updated wireframes</p>
-</div>
-<h3>User Feedback, After testing once again</h3>
-<div class="feedback-quotes">
-<blockquote class="quote">
-<p>"The app is much easier to use now! I love how quickly I can find movies and buy tickets."</p>
-</blockquote>
-<blockquote class="quote">
-<p>"The seat selection is so much clearer. I feel confident I picked the right seats for my family."</p>
-</blockquote>
-<blockquote class="quote">
-<p>"I appreciate the simplified checkout. It's much faster and less stressful."</p>
-</blockquote>
-</div>
-<p>These iterations, driven by user feedback, enhanced the app's usability and overall user experience, validating the user-centered design approach. The iterative nature of the project allowed for flexible improvements and helped me train my problem-solving skills.</p>
-</div>
+    <h2 data-es="Pruebas e iteraciones">Testing and Iterations</h2>
+    <div class="case-study-intro">
+        <p data-es="Las pruebas fueron esenciales para refinar la aplicación Theatron y garantizar un diseño centrado en el usuario. Realicé varias rondas de pruebas con usuarios representativos, recopilando comentarios para identificar puntos débiles e iterar en el diseño. La naturaleza ficticia del proyecto permitió pruebas flexibles e iterativas con un enfoque en el aprendizaje y la mejora.">Testing was essential to refine the Theatron app and ensure a user-centered design. I conducted multiple rounds of testing with representative users, gathering feedback to identify pain points and iterate on the design. The fictional nature of the project allowed for flexible, iterative testing with a focus on learning and improvement.</p>
+
+        <h3 data-es="Métodos de prueba">Testing Methods</h3>
+        <div class="testing-methods">
+            <div class="method">
+                <h4 data-es="Prueba de usabilidad moderada">Moderated Usability Testing</h4>
+                <p data-es="Realicé sesiones de prueba de usabilidad moderadas con cinco participantes, representativos del público objetivo (cinéfilos de 20 a 45 años). Durante estas sesiones, observé a los participantes interactuando con el prototipo, les pedí que pensaran en voz alta y los alenté a compartir sus pensamientos y frustraciones. Estas pruebas fueron cruciales para comprender el comportamiento y los puntos débiles de los usuarios.">I conducted moderated usability testing sessions with five participants, representative of the target audience (moviegoers aged 20-45). During these sessions, I observed participants interacting with the prototype, asked them to think aloud, and encouraged them to share their thoughts and frustrations. These tests were crucial for understanding users' behavior and pain points.</p>
+            </div>
+            <div class="method">
+                <h4 data-es="Recorrido cognitivo">Cognitive Walkthrough</h4>
+                <p data-es="Para evaluar más a fondo la usabilidad de la aplicación, realicé un recorrido cognitivo. Revisé las tareas clave del usuario, considerando sus objetivos, las acciones que tomarían y las respuestas del sistema. Esto me ayudó a identificar posibles problemas de usabilidad desde la perspectiva del usuario, centrándome en la capacidad de aprendizaje y la facilidad de uso para los nuevos usuarios.">To further evaluate the app's usability, I performed a Cognitive Walkthrough. I stepped through key user tasks, considering the user's goals, the actions they would take, and the system's responses. This helped me identify potential usability issues from the user's perspective, focusing on learnability and ease of use for new users.</p>
+            </div>
+        </div>
+
+        <h3 data-es="Hallazgos e iteraciones clave">Key Findings & Iterations</h3>
+        <div class="findings-iterations">
+            <div class="finding">
+                <h4 data-es="Navegación de la página de inicio">Homepage Navigation</h4>
+                <p><strong data-es="Diseño inicial">Initial Design:</strong> <span data-es="El diseño inicial de la página de inicio incluía una sección destacada de “Próximamente“, que algunos usuarios encontraron distractora. Principalmente querían ver películas que se estuvieran reproduciendo actualmente.">The initial homepage design included a prominent "Coming Soon" section, which some users found distracting. They primarily wanted to see movies currently playing.</span></p>
+                <p><strong data-es="Iteración">Iteration:</strong> <span data-es="Moví la sección “Próximamente“ debajo de “Reproduciendo ahora“ y di más protagonismo visual a los estrenos actuales. Esto mejoró la claridad y la eficiencia de la página de inicio.">I moved the "Coming Soon" section below "Now Playing" and gave more visual prominence to current releases. This improved the clarity and efficiency of the homepage.</span></p>
+
+            </div>
+            <div class="finding">
+                <h4 data-es="Claridad en la selección de asientos">Seat Selection Clarity</h4>
+                <p><strong data-es="Diseño inicial">Initial Design:</strong> <span data-es="A los usuarios les resultó difícil interpretar el mapa de asientos, especialmente con respecto a la posición de la pantalla y la disponibilidad de asientos. La falta de etiquetas y números claros causó confusión.">Users found the seat map difficult to interpret, particularly regarding screen position and seat availability. The lack of clear labels and numbers caused confusion.</span></p>
+                <p><strong data-es="Iteración">Iteration:</strong> <span data-es="Se agregaron números de fila y asiento claros, se mejoró la codificación de colores para la disponibilidad de asientos y se incluyó una representación visual de la posición de la pantalla para mejorar la claridad y la confianza del usuario durante la selección de asientos.">Added clear row and seat numbers, improved color-coding for seat availability, and included a visual representation of the screen position to enhance clarity and user confidence during seat selection.</span></p>
+
+            </div>
+            <div class="finding">
+                <h4 data-es="Simplificación del pago">Checkout Streamlining</h4>
+                <p><strong data-es="Diseño inicial">Initial Design:</strong> <span data-es="Algunos usuarios expresaron confusión durante el pago, especialmente con respecto a la confirmación del pago. El proceso no estaba claro, lo que generó preocupaciones sobre compras accidentales.">Some users expressed confusion during checkout, particularly regarding payment confirmation. The process felt unclear, leading to concerns about accidental purchases.</span></p>
+                <p><strong data-es="Iteración">Iteration:</strong> <span data-es="Se simplificó el proceso de pago reduciendo la cantidad de pasos. Se agregó información visual clara al completar el pago correctamente para brindar tranquilidad y evitar nuevas compras accidentales.">Streamlined the checkout process by reducing the number of steps. Added clear visual feedback upon successful payment to provide reassurance and prevent accidental repurchases.</span></p>
+
+            </div>
+        </div>
+
+        <div class="wireframes">
+            <img alt="Key Screen Wireframes" src="images/Wireframes.png" />
+            <p data-es="Wireframes actualizados después de las pruebas de usuario">Updated Wireframes after User Testing</p>
+        </div>
+        <h3 data-es="Comentarios de los usuarios, después de probar una vez más">User Feedback, After testing once again</h3>
+        <div class="feedback-quotes">
+            <blockquote class="quote">
+                <p data-es="“¡La aplicación es mucho más fácil de usar ahora! Me encanta lo rápido que puedo encontrar películas y comprar entradas.“">“The app is much easier to use now! I love how quickly I can find movies and buy tickets.”</p>
+            </blockquote>
+            <blockquote class="quote">
+                <p data-es="“La selección de asientos es mucho más clara. Estoy seguro de que elegí los asientos correctos para mi familia.“">“The seat selection is so much clearer. I feel confident I picked the right seats for my family.”</p>
+            </blockquote>
+            <blockquote class="quote">
+                <p data-es="“Agradezco el pago simplificado. Es mucho más rápido y menos estresante.“">“I appreciate the simplified checkout. It's much faster and less stressful.”</p>
+            </blockquote>
+        </div>
+        <p data-es="Estas iteraciones, impulsadas por los comentarios de los usuarios, mejoraron la usabilidad de la aplicación y la experiencia general del usuario, validando el enfoque de diseño centrado en el usuario. La naturaleza iterativa del proyecto permitió mejoras flexibles y me ayudó a entrenar mis habilidades de resolución de problemas.">These iterations, driven by user feedback, enhanced the app’s usability and overall user experience, validating the user-centered design approach. The iterative nature of the project allowed for flexible improvements and helped me train my problem-solving skills.</p>
+    </div>
 </section>
 <section class="section" id="design">
-<h2>Final Design</h2>
-<div class="case-study-intro">
-<p>After multiple rounds of testing and iteration, I moved into the Final Design phase. Here, I translated the low-fidelity prototypes into polished, high-fidelity mockups that captured the visual brand and personality of Theatron.  The goal was to create a design that was not only functional and user-friendly but also visually appealing and engaging.</p>
-<h3>High-Fidelity Mockups and Prototype</h3>
-<img alt="Final Mockups" src="images/Final-Designs.webp"/>
-<div class="prototype-interactive-and-details">
-<div class="interactive-prototype">
-<h3>Interactive Prototype</h3>
-<video autoplay="" loop="" muted="" playsinline="" width="300">
-<source src="images/Final-Prototype .mp4" type="video/mp4"/>
-</video>
-</div>
-<div class="prototype-details-text">
-<h3>Prototype Details</h3>
-<p>This high-fidelity prototype demonstrates the final user interface and interactions, incorporating visual design elements and transitions. It provides a realistic simulation of the Theatron app experience.</p>
-<p>The prototype allows users to explore the following key functionalities:</p>
-<ul>
-<li>Browse movies (Now Playing, Coming Soon)</li>
-<li>Filter movies by genre and other criteria</li>
-<li>View movie details (synopsis, trailers, showtimes)</li>
-<li>Select seats using an interactive seat map</li>
-<li>Purchase tickets through a streamlined checkout flow</li>
-<li>Access and manage digital tickets</li>
-</ul>
-<p><a class="cta" href="#" rel="noopener" target="_blank">View Interactive Prototype (Figma)</a></p>
-</div>
-</div>
-<div class="design-system">
-<h3>Color Palette</h3>
-<div class="color-palette">
-<div class="color-swatch" style="background-color: #FF331F;"></div>
-<div class="color-swatch" style="background-color: #EDE9EF;"></div>
-<div class="color-swatch" style="background-color: #110418;"></div>
-</div>
-<div class="color-descriptions">
-<p><strong>#FF331F (Vivid Red):</strong> Primary brand color, used for calls to action, highlights, and important interactive elements.</p>
-<p><strong>#EDE9EF (Soft White):</strong> Used for text and UI elements to ensure clear readability and contrast against the darker background.</p>
-<p><strong>#110418 (Dark Purple):</strong> Used as a background color for specific elements, creating depth and visual interest.</p>
-</div>
-<h3>Typography</h3>
-<div class="font-display">Albert Sans</div>
-<p><strong>Albert Sans:</strong> Used for all text within the app.  The clean, modern sans-serif style ensures readability and complements the overall aesthetic. Variations in weight (regular, medium, bold) are used to create a clear visual hierarchy.</p>
+    <h2 data-es="Diseño final">Final Design</h2>
+    <div class="case-study-intro">
+        <p data-es="Después de varias rondas de pruebas e iteraciones, pasé a la fase de diseño final. Aquí, traduje los prototipos de baja fidelidad en maquetas pulidas de alta fidelidad que capturaron la marca visual y la personalidad de Theatron. El objetivo era crear un diseño que no solo fuera funcional y fácil de usar, sino también visualmente atractivo y cautivador.">After multiple rounds of testing and iteration, I moved into the Final Design phase. Here, I translated the low-fidelity prototypes into polished, high-fidelity mockups that captured the visual brand and personality of Theatron. The goal was to create a design that was not only functional and user-friendly but also visually appealing and engaging.</p>
 
-<h3>Iconography</h3>
-<p>The icons used in Theatron follow a consistent style, using simple, recognizable forms that are easy to understand. The icons are designed to complement the overall aesthetic of the app and enhance usability.</p>
+        <h3><span data-es="Maquetas de alta fidelidad y prototipo">High-Fidelity Mockups and Prototype</span></h3>
+        <img alt="Final Mockups" src="images/Final-Designs.webp" />
+        <div class="prototype-interactive-and-details">
+            <div class="interactive-prototype">
+                <h3><span data-es="Prototipo interactivo">Interactive Prototype</span></h3>
+                <video autoplay="" loop="" muted="" playsinline="" width="300">
+                    <source src="images/Final-Prototype .mp4" type="video/mp4" /> </video>
+            </div>
+            <div class="prototype-details-text">
+                <h3><span data-es="Detalles del prototipo">Prototype Details</span></h3>
+                <p data-es="Este prototipo de alta fidelidad muestra la interfaz de usuario final y las interacciones, incorporando elementos y transiciones de diseño visual. Proporciona una simulación realista de la experiencia de la aplicación Theatron.">This high-fidelity prototype demonstrates the final user interface and interactions, incorporating visual design elements and transitions. It provides a realistic simulation of the Theatron app experience.</p>
+                <p data-es="El prototipo permite a los usuarios explorar las siguientes funcionalidades clave:">The prototype allows users to explore the following key functionalities:</p>
+                <ul>
+                    <li data-es="Explorar películas (Reproduciendo ahora, Próximamente)">Browse movies (Now Playing, Coming Soon)</li>
+                    <li data-es="Filtrar películas por género y otros criterios">Filter movies by genre and other criteria</li>
+                    <li data-es="Ver detalles de la película (sinopsis, trailers, horarios)">View movie details (synopsis, trailers, showtimes)</li>
+                    <li data-es="Seleccionar asientos usando un mapa de asientos interactivo">Select seats using an interactive seat map</li>
+                    <li data-es="Comprar entradas a través de un flujo de pago optimizado">Purchase tickets through a streamlined checkout flow</li>
+                    <li data-es="Acceder y administrar boletos digitales">Access and manage digital tickets</li>
+                </ul>
+                <a class="cta" href="https://www.figma.com/proto/CvY2tSiDyU355ndpFCwGjf/Theatron-App?page-id=81%3A725&node-id=223-677&node-type=canvas&viewport=854%2C505%2C0.19&t=YNDRug86Ulgs50YW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=223%3A692&show-proto-sidebar=1" rel="noopener" target="_blank" data-es="Ver prototipo interactivo (Figma)">View Interactive Prototype (Figma)</a>
+            </div>
+        </div>
+        <div class="design-system">
+            <h3 data-es="Paleta de colores">Color Palette</h3>
+            <div class="color-palette">
+                <div class="color-swatch" style="background-color: #FF331F;"></div>
+                <div class="color-swatch" style="background-color: #EDE9EF;"></div>
+                <div class="color-swatch" style="background-color: #110418;"></div>
+            </div>
+            <div class="color-descriptions">
+                <p><strong data-es="#FF331F (Rojo vívido)">#FF331F (Vivid Red):</strong> <span data-es="Color de marca principal, utilizado para llamadas a la acción, aspectos destacados y elementos interactivos importantes.">Primary brand color, used for calls to action, highlights, and important interactive elements.</span></p>
+                <p><strong data-es="#EDE9EF (Blanco suave)">#EDE9EF (Soft White):</strong> <span data-es="Utilizado para texto y elementos de la interfaz de usuario para garantizar una legibilidad y un contraste claros sobre el fondo más oscuro.">Used for text and UI elements to ensure clear readability and contrast against the darker background.</span></p>
+                <p><strong data-es="#110418 (Púrpura oscuro)">#110418 (Dark Purple):</strong> <span data-es="Utilizado como color de fondo para elementos específicos, creando profundidad e interés visual.">Used as a background color for specific elements, creating depth and visual interest.</span></p>
+            </div>
 
-<h3>Imagery</h3>
-<p>Theatron features high-quality movie posters and promotional imagery to enhance the visual experience. Images are optimized for different screen sizes and resolutions, ensuring a crisp and clear display.</p>
+            <h3 data-es="Tipografía">Typography</h3>
+            <div class="font-display">Albert Sans</div>
+            <p data-es="Albert Sans: se utiliza para todo el texto dentro de la aplicación. El estilo sans-serif limpio y moderno garantiza la legibilidad y complementa la estética general. Las variaciones de peso (regular, medio, negrita) se utilizan para crear una jerarquía visual clara."><strong>Albert Sans:</strong> Used for all text within the app. The clean, modern sans-serif style ensures readability and complements the overall aesthetic. Variations in weight (regular, medium, bold) are used to create a clear visual hierarchy.</p>
 
-<h3>UI Components</h3>
-<p>Reusable UI components are used throughout the app to create a consistent user experience. Buttons, form elements, and other interactive elements follow a unified design language.</p>
+            <h3 data-es="Iconografía">Iconography</h3>
+            <p data-es="Los iconos utilizados en Theatron siguen un estilo coherente, utilizando formas sencillas y reconocibles que son fáciles de entender. Los iconos están diseñados para complementar la estética general de la aplicación y mejorar la usabilidad.">The icons used in Theatron follow a consistent style, using simple, recognizable forms that are easy to understand. The icons are designed to complement the overall aesthetic of the app and enhance usability.</p>
 
-<h3>Accessibility</h3>
-<p>Theatron was designed with accessibility in mind, ensuring the app is inclusive and usable for people with disabilities. Key accessibility features include:</p>
-<ul>
-<li><strong>Sufficient Color Contrast:</strong>  Ensuring enough contrast between text and background colors for users with low vision.</li>
-<li><strong>Simple Design:</strong> The overall design aims to be as simple and clear as possible.</li>
-<li><strong>Text Descriptions:</strong> Based on user feedback, I realized that adding text to areas like the bottom navigation would improve clarity.</li>
-</ul>
-</div>
+            <h3 data-es="Imágenes">Imagery</h3>
+            <p data-es="Theatron presenta carteles de películas e imágenes promocionales de alta calidad para mejorar la experiencia visual. Las imágenes están optimizadas para diferentes tamaños y resoluciones de pantalla, lo que garantiza una visualización nítida y clara.">Theatron features high-quality movie posters and promotional imagery to enhance the visual experience. Images are optimized for different screen sizes and resolutions, ensuring a crisp and clear display.</p>
+
+            <h3 data-es="Componentes de la interfaz de usuario">UI Components</h3>
+            <p data-es="Los componentes reutilizables de la interfaz de usuario se utilizan en toda la aplicación para crear una experiencia de usuario coherente. Los botones, los elementos de formulario y otros elementos interactivos siguen un lenguaje de diseño unificado.">Reusable UI components are used throughout the app to create a consistent user experience. Buttons, form elements, and other interactive elements follow a unified design language.</p>
+
+
+            <h3 data-es="Accesibilidad">Accessibility</h3>
+            <p data-es="Theatron se diseñó teniendo en cuenta la accesibilidad, lo que garantiza que la aplicación sea inclusiva y utilizable para personas con discapacidades. Las características de accesibilidad clave incluyen:">Theatron was designed with accessibility in mind, ensuring the app is inclusive and usable for people with disabilities. Key accessibility features include:</p>
+            <ul>
+                <li><strong data-es="Suficiente contraste de color">Sufficient Color Contrast:</strong> <span data-es="Garantizar suficiente contraste entre el texto y los colores de fondo para los usuarios con baja visión.">Ensuring enough contrast between text and background colors for users with low vision.</span></li>
+                <li><strong data-es="Diseño simple">Simple Design:</strong> <span data-es="El diseño general pretende ser lo más simple y claro posible.">The overall design aims to be as simple and clear as possible.</span></li>
+                <li><strong data-es="Descripciones de texto:">Text Descriptions:</strong> <span data-es="Según los comentarios de los usuarios, me di cuenta de que agregar texto a áreas como la navegación inferior mejoraría la claridad.">Based on user feedback, I realized that adding text to areas like the bottom navigation would improve clarity.</span></li>
+            </ul>
+        </div>
+    </div>
 </section>
 <section class="section" id="conclusion">
-    <h2>Conclusion</h2>
+    <h2 data-es="Conclusión">Conclusion</h2>
     <div class="case-study-intro">
-        <p>The Theatron app project represents more than just a design exercise, it was a deep dive into the complete UX/UI design process. From the initial research phase through to the final interactive prototype, each step taught me valuable lessons about creating meaningful user experiences.</p>
-    
-        <h3>Key Takeaways</h3>
-        <p>My journey through this project revealed several crucial insights that have shaped my approach to design.</p>
-        
-        <p>The power of iteration became crystal clear during testing, watching users interact with early prototypes showed me that what seems obvious to a designer isn't always clear to users. Each round of feedback led to meaningful improvements, from simplifying the checkout flow to enhancing seat selection clarity. This iterative process taught me to embrace feedback.</p>
-        
-        <p>Documentation played a bigger role than I initially expected. Writing this case study helped me realize how important it is to articulate design decisions clearly and this is a skill that's crucial when working with developers, stakeholders, and other designers. It forced me to think deeply about my choices and their implications.</p>
-        
-        <p>Perhaps most importantly, it reinforced that great design isn't just about making things look good. It's about creating experiences that feel natural and effortless. Every color choice, every interaction, and every piece of feedback had to serve the user's needs while maintaining visual appeal and accessibility.</p>
-    
-        <h3>Real-World Impact</h3>
-        <p>While Theatron is a concept project, its potential impact on the real world is significant:</p>
-        
-        <p>For users, it would transform the often frustrating experience of movie ticket booking into something actually enjoyable. The streamlined process, from browsing movies to selecting seats, could save people valuable time and reduce anxiety about seating arrangements.</p>
-        
-        <p>From a business perspective, the efficiency gains could be substantial. Digital ticketing reduces staff workload at peak times, minimizes paper waste, and creates opportunities for data-driven improvements to the customer experience.</p>
-        
-        <p>The emphasis on accessibility and intuitive design means more people can enjoy the cinema experience without barriers, whether they're tech-savvy young professionals like Sarah or busy parents like David.</p>
-    
-        <h3>Future Development</h3>
-        <p>Looking ahead, there are several possibilities for evolution:</p>
+        <p data-es="El proyecto de la aplicación Theatron representa más que un simple ejercicio de diseño, fue una inmersión profunda en todo el proceso de diseño UX/UI. Desde la fase de investigación inicial hasta el prototipo interactivo final, cada paso me enseñó valiosas lecciones sobre la creación de experiencias de usuario significativas.">The Theatron app project represents more than just a design exercise; it was a deep dive into the complete UX/UI design process. From the initial research phase through to the final interactive prototype, each step taught me valuable lessons about creating meaningful user experiences.</p>
+
+        <h3 data-es="Conclusiones clave">Key Takeaways</h3>
+        <p data-es="Mi viaje a través de este proyecto reveló varias ideas cruciales que han dado forma a mi enfoque de diseño.">My journey through this project revealed several crucial insights that have shaped my approach to design.</p>
+
+        <p data-es="El poder de la iteración se hizo evidente durante las pruebas, ver a los usuarios interactuar con los primeros prototipos me mostró que lo que parece obvio para un diseñador no siempre es claro para los usuarios. Cada ronda de comentarios condujo a mejoras significativas, desde la simplificación del flujo de pago hasta la mejora de la claridad de la selección de asientos. Este proceso iterativo me enseñó a aceptar los comentarios.">The power of iteration became crystal clear during testing, watching users interact with early prototypes showed me that what seems obvious to a designer isn’t always clear to users. Each round of feedback led to meaningful improvements, from simplifying the checkout flow to enhancing seat selection clarity. This iterative process taught me to embrace feedback.</p>
+
+        <p data-es="La documentación jugó un papel más importante de lo que esperaba inicialmente. Escribir este caso de estudio me ayudó a darme cuenta de lo importante que es articular claramente las decisiones de diseño, y esta es una habilidad crucial cuando se trabaja con desarrolladores, partes interesadas y otros diseñadores. Me obligó a pensar profundamente sobre mis elecciones y sus implicaciones.">Documentation played a bigger role than I initially expected. Writing this case study helped me realize how important it is to articulate design decisions clearly, and this is a skill that’s crucial when working with developers, stakeholders, and other designers. It forced me to think deeply about my choices and their implications.</p>
+
+        <p data-es="Quizás lo más importante es que reforzó que un gran diseño no se trata solo de hacer que las cosas se vean bien. Se trata de crear experiencias que se sientan naturales y sin esfuerzo. Cada elección de color, cada interacción y cada comentario tenían que satisfacer las necesidades del usuario al tiempo que mantenían el atractivo visual y la accesibilidad.">Perhaps most importantly, it reinforced that great design isn’t just about making things look good. It’s about creating experiences that feel natural and effortless. Every color choice, every interaction, and every piece of feedback had to serve the user’s needs while maintaining visual appeal and accessibility.</p>
+
+        <h3 data-es="Impacto en el mundo real">Real-World Impact</h3>
+        <p data-es="Si bien Theatron es un proyecto conceptual, su impacto potencial en el mundo real es significativo:">While Theatron is a concept project, its potential impact on the real world is significant:</p>
+
+        <p data-es="Para los usuarios, transformaría la experiencia, a menudo frustrante, de reservar entradas de cine en algo realmente agradable. El proceso optimizado, desde la búsqueda de películas hasta la selección de asientos, podría ahorrarles a las personas un tiempo valioso y reducir la ansiedad sobre la disposición de los asientos.">For users, it would transform the often frustrating experience of movie ticket booking into something actually enjoyable. The streamlined process, from browsing movies to selecting seats, could save people valuable time and reduce anxiety about seating arrangements.</p>
+
+        <p data-es="Desde una perspectiva empresarial, las ganancias de eficiencia podrían ser sustanciales. La venta de entradas digital reduce la carga de trabajo del personal en las horas pico, minimiza el desperdicio de papel y crea oportunidades para mejoras basadas en datos en la experiencia del cliente.">From a business perspective, the efficiency gains could be substantial. Digital ticketing reduces staff workload at peak times, minimizes paper waste, and creates opportunities for data-driven improvements to the customer experience.</p>
+
+        <p data-es="El énfasis en la accesibilidad y el diseño intuitivo significa que más personas pueden disfrutar de la experiencia cinematográfica sin barreras, ya sean jóvenes profesionales expertos en tecnología como Sarah o padres ocupados como David.">The emphasis on accessibility and intuitive design means more people can enjoy the cinema experience without barriers, whether they’re tech-savvy young professionals like Sarah or busy parents like David.</p>
+
+        <h3 data-es="Desarrollo futuro">Future Development</h3>
+        <p data-es="De cara al futuro, existen varias posibilidades de evolución:">Looking ahead, there are several possibilities for evolution:</p>
         <ul>
-            <li>Smart recommendations based on viewing history and preferences</li>
-            <li>Integration with theater loyalty programs</li>
-            <li>Enhanced accessibility features for diverse user needs</li>
+            <li data-es="Recomendaciones inteligentes basadas en el historial de visualización y las preferencias">Smart recommendations based on viewing history and preferences</li>
+            <li data-es="Integración con programas de fidelización de cines">Integration with theater loyalty programs</li>
+            <li data-es="Funciones de accesibilidad mejoradas para diversas necesidades de los usuarios">Enhanced accessibility features for diverse user needs</li>
         </ul>
-    
-        <h3>Final Reflections</h3>
-        <p>This project pushed me to think deeply about every aspect of the user experience, from the first tap to the final confirmation. While Theatron may be fictional, the skills I've developed and the insights I've gained are very real. I've learned to balance user needs with business goals, to iterate based on feedback, and to create designs that are functional.</p>
-        
-        <p>I'm proud of how this project demonstrates my ability to tackle complex UX challenges and create solutions that make a difference. As I look toward future opportunities, I'm excited to bring a lot more dedication and user-centered thinking to real-world projects.</p>
-        
-        <p>Thank you for taking the time to explore this case study. I welcome any questions or discussions about my process, decisions, or potential collaborations.</p>
+
+        <h3 data-es="Reflexiones finales">Final Reflections</h3>
+        <p data-es="Este proyecto me impulsó a pensar profundamente sobre cada aspecto de la experiencia del usuario, desde el primer toque hasta la confirmación final. Si bien Theatron puede ser ficticio, las habilidades que he desarrollado y los conocimientos que he adquirido son muy reales. Aprendí a equilibrar las necesidades del usuario con los objetivos comerciales, a iterar en función de los comentarios y a crear diseños que sean funcionales y atractivos.">This project pushed me to think deeply about every aspect of the user experience, from the first tap to the final confirmation. While Theatron may be fictional, the skills I’ve developed and the insights I’ve gained are very real. I’ve learned to balance user needs with business goals, to iterate based on feedback, and to create designs that are functional and attractive. </p>
+
+        <p data-es="Estoy orgulloso de cómo este proyecto demuestra mi capacidad para abordar desafíos dentro UX y crear soluciones que marquen la diferencia. A medida que miro hacia futuras oportunidades, estoy interesado en aportar más dedicación y pensamiento centrado en el usuario a proyectos del mundo real.">I'm proud of how this project demonstrates my ability to tackle complex UX challenges and create solutions that make a difference. As I look toward future opportunities, I’m excited to bring my dedication and user-centered thinking to real-world projects.</p>
+
+        <p data-es="Gracias por tomarse el tiempo de explorar este caso de estudio. Agradezco cualquier pregunta o comentario sobre mi proceso, decisiones o posibles colaboraciones.">Thank you for taking the time to explore this case study. I welcome any questions or discussions about my process, decisions, or potential collaborations.</p>
     </div>
-    
+
     <div class="conclusion-actions">
-        <a class="cta" href="index.html">Back to Home</a>
-        <a class="cta" href="#contact">Contact Me</a>
+        <a class="cta" href="index.html" data-es="Página principal">Back to Home</a>
+        <a class="cta" href="index.html#contact" data-es="Contáctame">Contact Me</a>
     </div>
 </section>
 </div>
 </div>
 </div>
 <footer class="footer">
-<div class="container footer-content">
-<div class="footer-column">
-<h4>Theatron Museum</h4>
-<ul>
-<li><a href="#overview">Project Overview</a></li>
-<li><a href="#ideate">Design Process</a></li>
-<li><a href="#final-design">Outcomes</a></li>
-</ul>
-</div>
-<div class="footer-column">
-    <h4>Work</h4>
-    <ul>
-        <li><a href="index.html#projects">UX/UI Portfolio</a></li>
-        <li><a href="index.html#personal-projects">Personal Projects</a></li>
-        <li><a href="index.html#my-art">Art & Illustrations</a></li>
-    </ul>
-</div>
-<div class="footer-column">
-<h4>Contact</h4>
-<ul>
-<li><a href="mailto:villadafelipe28@gmail.com">villadafelipe28@gmail.com</a></li>
-<li><a href="https://www.linkedin.com/in/felipevillada/">LinkedIn</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>Ready to take on meaningful projects? <a href="#contact">Let’s Collaborate</a></p>
-</div>
-<div class="footer-bottom">
-<p>© 2024 Felipe Villada. All Rights Reserved.</p>
-</div>
+    <div class="container footer-content">
+
+        <div class="footer-column">
+            <h4>Nefer Museum</h4>
+            <ul>
+            <li><a href="Nefer-CaseStudy.html#overview" data-es="Resumen">Project Overview</a></li>
+            <li><a href="Nefer-CaseStudy.html#ideate" data-es="Proceso de Diseño">Design Process</a></li>
+            <li><a href="Nefer-CaseStudy.html#design" data-es="Resultados">Outcomes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Theatron</h4>
+            <ul>
+            <li><a href="Theatron-CaseStudy.html#overview" data-es="Resumen">Project Overview</a></li>
+            <li><a href="Theatron-CaseStudy.html#ideate" data-es="Proceso de Diseño">Design Process</a></li>
+            <li><a href="Theatron-CaseStudy.html#design" data-es="Resultados">Outcomes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4 data-es="Mi Trabajo">My Work</h4>
+            <ul>
+                <li><a href="index.html#projects" data-es="Portafolio UX/UI">UX/UI Portfolio</a></li>
+                <li><a href="index.html#personal-projects" data-es="Proyectos Personales">Personal Projects</a></li>
+                <li><a href="index.html#my-art" data-es="Arte e Ilustraciones">Art & Illustrations</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4 data-es="Contacto">Contact</h4>
+            <ul>
+                <li><a href="#" data-es="Currículum">Resume</a></li> 
+                <li><a href="mailto:villadafelipe28@gmail.com">villadafelipe28@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/felipevillada/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><a href="#contact">Let’s Collaborate</a></p>
+    </div>
+    <div class="footer-bottom">
+        <p data-es="© 2024 Felipe Villada. Todos los derechos reservados.">© 2024 Felipe Villada. All Rights Reserved.</p>
+    </div>
 </footer>
 <a aria-label="Scroll to top" class="scroll-to-top" href="#">↑</a>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
@@ -1767,26 +1747,51 @@ body {
         });
 
         // Language toggle functionality
-        const langToggle = document.getElementById('langToggle');
-        const translations = {
-            en: {
-                introText: "Nefer Museum is a fictional digital project designed to showcase UX/UI skills."
-            },
-            sp: {
-                introText: "Nefer Museum es un proyecto ficticio diseñado para mostrar habilidades de UX/UI."
-            }
-        };
+const langToggle = document.getElementById('langToggle');
+let currentLang = 'en'; // Default language
 
-        let currentLang = 'en';
+function translatePage(lang) {
+    const elementsToTranslate = document.querySelectorAll('[data-es]');
 
-        function updateLanguage(lang) {
-            document.getElementById('introText').textContent = translations[lang].introText;
+    elementsToTranslate.forEach(element => {
+        if (lang === 'es') {
+            element.textContent = element.getAttribute('data-es'); // Use Spanish translation
+        } else {
+            element.textContent = element.dataset.originalText || element.textContent; // Revert to original English
         }
+    });
 
-        langToggle.addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'sp' : 'en';
-            updateLanguage(currentLang);
-            langToggle.textContent = currentLang === 'en' ? 'EN/SP' : 'SP/EN';
+    document.documentElement.lang = lang; // Update the <html> lang attribute
+}
+
+langToggle.addEventListener('click', () => {
+    currentLang = (currentLang === 'en') ? 'es' : 'en';
+    translatePage(currentLang);
+    langToggle.textContent = (currentLang === 'en') ? 'EN/SP' : 'SP/EN';
+});
+
+
+function storeOriginalText() {
+    const elementsToTranslate = document.querySelectorAll('[data-es]');
+    elementsToTranslate.forEach(element => {
+        element.dataset.originalText = element.textContent;
+    });
+}
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    storeOriginalText();
+    translatePage(currentLang)
+});
+
+
+        // Loader
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader-container');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
         });
 
         // Scroll to top button
@@ -1807,6 +1812,37 @@ body {
             });
         });
 
+        // Function to handle video playback based on visibility
+function handleVideoVisibility() {
+    const videos = document.querySelectorAll('video[autoplay]'); // Select all autoplay videos
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                video.play();
+            } else {
+                video.pause();
+                video.currentTime = 0; // Reset to the beginning
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust threshold as needed (0.5 means 50% visible)
+    });
+
+    videos.forEach((video) => {
+        observer.observe(video);
+    });
+}
+
+
+// Call the function when the page loads
+window.addEventListener('load', () => {
+    // ... other onload functions (e.g., loader hide)
+
+    handleVideoVisibility(); // Call the video visibility function
+});
         
     </script>
 

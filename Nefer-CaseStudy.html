@@ -242,7 +242,6 @@ img, video {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,6 +252,23 @@ img, video {
     font-size: 0.9rem;
     color: var(--text-color);
     margin-top: 0.5rem;
+}
+
+.visual-element + .cta {
+    
+    display: block; /* Make the button a block-level element */
+    width: fit-content; /* Or set a specific width if needed */
+    background-color: var(--highlight-color);
+    color: #000;
+    padding: 10px 20px;
+    border: none; /* Remove default border */
+    border-radius: 5px;
+    text-align: center; /* Center the text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    margin: 15px auto 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -310,7 +326,6 @@ img, video {
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: bold;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
  /* Empathy Map Styles */
@@ -332,15 +347,8 @@ img, video {
         display: flex;
         flex-direction: column; /* Vertical alignment for better spacing */
         align-items: center;
-        transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        
     }
-
-    .empathy-map-quadrant:hover {
-        transform: translateY(-5px); /* Lift up on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-    }
-
-
     .empathy-map h4 {
         color: var(--primary-color);
         font-size: 1.2rem; /* Larger font size */
@@ -375,16 +383,9 @@ img, video {
     text-align: left;
     
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     flex: 1 0 300px; /* Ensure personas take equal width and don't shrink too much */
     max-width: 400px; /* Set a maximum width for personas */
 }
-
-    .user-persona:hover {
-        transform: translateY(-5px); /* Lift up on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-    }
-
     .user-persona h3 {
         margin-bottom: 15px;
     }
@@ -423,7 +424,6 @@ img, video {
     border-radius: 10px; /* Rounded corners */
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Added smooth transition */
 }
 
 .user-story h4 {
@@ -455,18 +455,8 @@ img, video {
     border-radius: 10px;
     text-align: center;  /* Center text within each value prop */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    transition: transform var(--transition-speed) ease; /* Add hover transition */
 
 }
-
-
-
-.value-prop:hover {
-    transform: translateY(-5px); /* Smooth hover effect */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-
-}
-
 
 .value-prop img {
     width: 50px;
@@ -501,15 +491,7 @@ img, video {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Added smooth transition */
 }
-
-.competitor:hover {
-    transform: translateY(-5px); /* Lift up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-
-}
-
 
 
 .competitor h4 {
@@ -538,14 +520,6 @@ img, video {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Added smooth transition */
-}
-
-
-.point:hover {
-    transform: translateY(-5px); /* Lift up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-
 }
 
 
@@ -585,7 +559,6 @@ img, video {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 100%; /* Allow wrapping on smaller screens */
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 
@@ -595,17 +568,11 @@ img, video {
     border-radius: 10px;
     padding: 0.8rem 1.2rem; /* Consistent padding */
     font-weight: 500;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.user-flow-step:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
 
 
 .user-flow-arrow {
@@ -650,7 +617,6 @@ img, video {
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center; /* Center content */
-    transition: transform var(--transition-speed) ease; /* Added smooth transition */
 }
 
 
@@ -701,6 +667,21 @@ img, video {
     text-align: left;
 }
 
+#prototype .prototype-details-text .cta {
+    display: block; /* Make the button a block-level element */
+    width: fit-content; /* Or set a specific width if needed */
+    background-color: var(--highlight-color);
+    color: #000;
+    padding: 10px 20px;
+    border: none; /* Remove default border */
+    border-radius: 5px;
+    text-align: center; /* Center the text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    margin: 15px auto 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 #prototype .prototype-conclusion p { /* Style the concluding paragraph */
     margin-bottom: 15px; /* Space before the button */
@@ -733,13 +714,6 @@ img, video {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-}
-
-#testing .method:hover,
-#testing .finding:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #testing h4 {
@@ -770,11 +744,6 @@ img, video {
     transition: transform var(--transition-speed) ease; /* Smooth transition */
 }
 
-
-#testing .quote:hover {
-    transform: translateX(5px);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-}
 
 
 #testing .quote p {
@@ -866,12 +835,12 @@ img, video {
     margin: 20px auto; /* Center horizontally */
     max-width: 80%; /* Adjust as needed */
     height: auto;
-}
+} 
 
 /* Final Design Section - Call to Action Button */
 #design .prototype-details-text .cta {
-    
-    display: inline-block; /* Make it an inline-block element */
+    display: block; /* Make the button a block-level element */
+    width: fit-content; /* Or set a specific width if needed */
     background-color: var(--highlight-color);
     color: #000;
     padding: 10px 20px;
@@ -881,13 +850,13 @@ img, video {
     text-decoration: none;
     font-weight: bold;
     transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    margin-top: 15px; /* Add some spacing above the button */
+    margin: 15px auto 0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
 #design .prototype-details-text .cta:hover {
-    background-color: #ed4204; /* Slightly lighter on hover */
+    background-color: var(--highlight-color);
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
@@ -977,6 +946,7 @@ img, video {
     margin-top: 30px;
     font-size: 0.9rem;
 }
+
 
 /* Scroll to Top Button */
 .scroll-to-top {
@@ -1170,446 +1140,505 @@ body {
         font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
     }
 }
-    </style>
 
-<body class="nefer-page">  </body>
+/* Loader styles */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid var(--highlight-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+</style>
 </head>
-
+<body>
+<div class="loader-container">
+<div class="loader"></div>
+</div>
+<canvas id="galaxy-canvas"></canvas>
       
+<nav class="nav">
+    <div class="nav-content">
+        <div>
+            <a href="index.html" data-es="Inicio">Home</a>
+            <a href="#about" data-es="Sobre Mí">About</a>
+            <a href="#projects" data-es="UX/UI">UX/UI</a>
+            <a href="#personal-projects" data-es="Mi Arte">Art</a>
+            <a href="mailto:villadafelipe28@gmail.com" data-es="Contacto">Contact</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/felipevillada/" target="_blank">LinkedIn</a>
+            <a href="#" data-es="CV">CV</a>
+        </div>
+        <button id="langToggle"><i class="fas fa-globe"></i> EN/SP</button>
+    </div>
+</nav>
 <nav class="vertical-nav">
     <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#empathize">Empathize</a></li>
-        <li><a href="#define">Define</a></li>
-        <li><a href="#ideate">Ideate</a></li>
-        <li><a href="#prototype">Prototype</a></li>
-        <li><a href="#testing">Testing</a></li>
-        <li><a href="#design">Final Design</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-
+        <li><a href="#overview" data-es="Resumen">Overview</a></li>
+        <li><a href="#empathize" data-es="Empatizar">Empathize</a></li>
+        <li><a href="#define" data-es="Definir">Define</a></li>
+        <li><a href="#ideate" data-es="Idear">Ideate</a></li>
+        <li><a href="#prototype" data-es="Prototipo">Prototype</a></li>
+        <li><a href="#testing" data-es="Pruebas">Testing</a></li>
+        <li><a href="#design" data-es="Diseño final">Final Design</a></li>
+        <li><a href="#conclusion" data-es="Conclusión">Conclusion</a></li>
     </ul>
-            </nav> <canvas id="galaxy-canvas"></canvas>
-   
-            <nav class="nav">
-                <div class="nav-content">
-                    <div>
-                        <a href="index.html">Home</a>
-                        <a href="index.html#about">About</a>
-                        <a href="index.html#projects">UX/UI</a>
-                        <a href="index.html#personal-projects">Art</a>
-                        <a href="mailto:villadafelipe28@gmail.com">Contact</a> 
-                        <a href="https://www.linkedin.com/in/felipevillada/">LinkedIn</a>
-                    </div>
-                    <button id="langToggle"><i class="fas fa-globe"></i> EN/SP</button>
-                </div>
-            </nav>
+</nav>
 
             
-        <div class="hero">
-            <div class="hero-container">
-                <div class="hero-circle"></div>
-                <h1>NEFER MUSEUM</h1>
-                <h2>Website Design & Development</h2> </div> <div class="container short-intro">
-                <p id="introText">Nefer Museum is a practice project showcasing UX/UI and front-end development skills, bringing a fictional museum dedicated to ancient Egyptian artifacts to life online.</p> </div>
-        </div> <div class="binah">
-            <div class="container"> <section id="overview" class="section">
-                    <h2>Understanding The Project</h2>
-                    <div class="case-study-intro">
-    
-                    <div class="intro-mockups">
-                        <figure class="intro-mockup">
-                            <img alt="Nefer Museum Mockup - Desktop" src="images/Mockup1-Nefer.webp">
-                        </figure>
-                    </div>
-    
-                        <h3>Overview</h3>
-    
-                        <p>This case study presents my complete design and development process for the Nefer Museum website.  From initial concept and user research to the final, interactive implementation, this project allowed me to explore a variety of design and development techniques.  My goal was to create a captivating online experience for a diverse audience, from casual browsers to dedicated history enthusiasts, highlighting ancient Egyptian artifacts and culture.</p>
-    
-    
-                        <div class="overview-details">
-                            <div class="skills">
-                                <h3>Skills</h3>
-                                <div class="project-skills">
-                                    <span class="skill-tag">UX Research</span>
-                                    <span class="skill-tag">Information Architecture</span>
-                                    <span class="skill-tag">Visual Design</span>
-                                    <span class="skill-tag">Prototyping</span>
-                                    <span class="skill-tag">HTML</span>
-                                    <span class="skill-tag">CSS</span>
-                                    <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">Responsive Design</span>
-                                </div>
-                            </div>
-                            <div class="role">
-                                <h3>My Role</h3>
-                                <div class="project-skills">
-                                    <span class="skill-tag">UX/UI Designer</span>
-                                    <span class="skill-tag">Front-End Developer</span>
-                                    <span class="skill-tag">User Researcher</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <h3>Timeline</h3>
-                            <p>September 2024 - October 2024</p>
-                        </div>
-    
-                        <h3>Key Challenges</h3>
-                                <li>Designing for a diverse audience, from casual browsers to serious history enthusiasts.</li>
-                                <li>Balancing visual appeal with accessibility and performance.</li>
-                                <li>Creating a sense of authenticity and immersion for a fictional museum.</li>
-                                <li>Managing the entire project lifecycle solo, from concept to fully functional website.</li>
-                    </div>
-                </section>
-    
-                <section id="empathize" class="section">
-                    <h2>Understanding the Museum Visitor</h2>
-                    <div class="case-study-intro">
-                        <p>Creating an engaging online museum experience hinges on understanding the diverse motivations and needs of potential visitors. I conducted user research and analysis, delving into what makes these experiences so compelling and what can turn users away. This understanding informed every step of the design process.</p>
+<div class="hero">
+    <div class="hero-container">
+        <div class="hero-circle"></div>
+        <h1 data-es="MUSEO NEFER">NEFER MUSEUM</h1>
+        <h2 data-es="Diseño y Desarrollo Web">Website Design & Development</h2>
+    </div>
+    <div class="container short-intro">
+        <p id="introText" data-es="El Museo Nefer es un proyecto de práctica que muestra las habilidades de UX/UI y desarrollo front-end, dando vida en línea a un museo ficticio dedicado a los artefactos del antiguo Egipto.">Nefer Museum is a practice project showcasing UX/UI and front-end development skills, bringing a fictional museum dedicated to ancient Egyptian artifacts to life online.</p>
+    </div>
+</div>
 
-                    <h3>Research Methods</h3>
-                        <ul>
-                            <li>User Interviews: I conducted interviews with individuals representing different levels of museum interest like students, casual visitors and history buffs, to understand their online browsing habits and expectations.</li>
-                            <li>Competitive Analysis: Analyzing popular museum websites (such as The British Museum, The Met, and others) revealed best practices in visual design, information architecture, user experience, and technical implementation.</li>
-                        </ul>
-                    <h3>User Personas</h3>
-                        <p>Building upon my research, I developed three distinct user personas to represent the target audience. These personas helped me focus on specific user needs and goals throughout the design process.</p>
-                    <div class="user-personas-container">
-                        <div class="user-persona">
-                            <h3>Lucas</h3>
-                            <p><strong>Age:</strong> 45</p>
-                            <p><strong>Occupation:</strong> Teacher</p>
-                            <p><strong>Tech Proficiency:</strong> Moderate</p>
-                            <p><strong>Museum Habits:</strong> Frequent visitor, both in person and online. Deep interest in history and actively seeks out educational content.</p>
-                            <p><strong>Goals:</strong> Deepen his knowledge of ancient Egypt, find reliable historical information and educational resources, and plan his museum visits in detail.</p>
-                            <p><strong>Frustrations:</strong> Cluttered websites, lack of in-depth information, and difficulty navigating complex online exhibits.</p>
-                            <p><strong>Quote:</strong> "I want a website that's easy to navigate and provides detailed information about the artifacts and exhibits."</p>
-                        </div>
-                        <div class="user-persona">
-                            <h3>Ben</h3>
-                            <p><strong>Age:</strong> 38</p>
-                            <p><strong>Occupation:</strong> Engineer</p>
-                            <p><strong>Tech Proficiency:</strong> low</p>
-                            <p><strong>Museum Habits:</strong> Occasional visitor, primarily interested in engaging his children with history and culture. </p>
-                            <p><strong>Goals:</strong> Find interactive and educational content for his children, plan family museum visits, and enjoy a seamless experience.</p>
-                            <p><strong>Frustrations:</strong> Websites that are not child-friendly, lack of interactive exhibits, and complicated ticketing or reservation processes.</p>
-                            <p><strong>Quote:</strong> "I'm looking for a website that's both educational and engaging for my kids."</p>
-                        </div>
-                        <div class="user-persona">
-                            <h3>Emma</h3>
-                            <p><strong>Age:</strong> 25</p>
-                            <p><strong>Occupation:</strong> Marketing</p>
-                            <p><strong>Tech Proficiency:</strong> High</p>
-                            <p><strong>Museum Habits:</strong> Infrequent visitor, enjoys exploring new things and appreciates visually appealing design.</p>
-                            <p><strong>Goals:</strong> Learn something new about ancient Egypt, find inspiration for creative projects, easily navigate the website, share interesting discoveries on social media.</p>
-                            <p><strong>Frustrations:</strong> Slow loading times, cluttered layouts, and confusing navigation.</p>
-                            <p><strong>Quote:</strong> "I want a website that's visually appealing and easy to use. I don't have a lot of time, so I need to find information quickly."</p>
+<div class="binah">
+    <div class="container">
+        <section id="overview" class="section">
+            <h2 data-es="Comprensión del proyecto">Understanding The Project</h2>
+            <div class="case-study-intro">
+                <div class="intro-mockups">
+                    <figure class="intro-mockup">
+                        <img alt="Nefer Museum Mockup - Desktop" src="images/Mockup1-Nefer.webp">
+                    </figure>
+                </div>
+
+                <h3 data-es="Resumen">Overview</h3>
+                <p data-es="Este caso práctico presenta mi proceso completo de diseño y desarrollo para el sitio web del Museo Nefer. Desde el concepto inicial y la investigación del usuario hasta la implementación final e interactiva, este proyecto me permitió explorar una variedad de técnicas de diseño y desarrollo. Mi objetivo era crear una experiencia en línea cautivadora para una audiencia diversa, desde navegadores ocasionales hasta entusiastas de la historia dedicados, destacando los artefactos y la cultura del antiguo Egipto.">This case study presents my complete design and development process for the Nefer Museum website. From initial concept and user research to the final, interactive implementation, this project allowed me to explore a variety of design and development techniques. My goal was to create a captivating online experience for a diverse audience, from casual browsers to dedicated history enthusiasts, highlighting ancient Egyptian artifacts and culture.</p>
+
+                <div class="overview-details">
+                    <div class="skills">
+                        <h3 data-es="Habilidades">Skills</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag" data-es="Investigación UX">UX Research</span>
+                            <span class="skill-tag" data-es="Arquitectura de información">Information Architecture</span>
+                            <span class="skill-tag" data-es="Diseño Visual">Visual Design</span>
+                            <span class="skill-tag">Prototyping</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag" data-es="Diseño adaptable">Responsive Design</span>
                         </div>
                     </div>
-                    <h3>User Stories</h3>
+                    <div class="role">
+                        <h3 data-es="Mi rol">My Role</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag" data-es="Diseñador UX/UI">UX/UI Designer</span>
+                            <span class="skill-tag" data-es="Desarrollador Front-End">Front-End Developer</span>
+                            <span class="skill-tag" data-es="Investigador de usuarios">User Researcher</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <h3 data-es="Duración">Timeline</h3>
+                    <p data-es="Septiembre 2024 - octubre 2024">September 2024 - October 2024</p>
+                </div>
+
+                <h3 data-es="Desafíos clave">Key Challenges</h3>
+                    <ul>
+                        <li data-es="Diseñar para una audiencia diversa, desde navegadores ocasionales hasta entusiastas serios de la historia.">Designing for a diverse audience, from casual browsers to serious history enthusiasts.</li>
+                        <li data-es="Equilibrar el atractivo visual con la accesibilidad y el rendimiento.">Balancing visual appeal with accessibility and performance.</li>
+                        <li data-es="Crear una sensación de autenticidad e inmersión para un museo ficticio.">Creating a sense of authenticity and immersion for a fictional museum.</li>
+                        <li data-es="Gestionar todo el ciclo de vida del proyecto solo, desde el concepto hasta el sitio web completamente funcional.">Managing the entire project lifecycle solo, from concept to fully functional website.</li>
+                    </ul>
+
+            </div>
+        </section>
+
+        <section id="empathize" class="section">
+            <h2 data-es="Comprender al visitante del museo">Understanding the Museum Visitor</h2>
+            <div class="case-study-intro">
+                <p data-es="Crear una experiencia de museo en línea atractiva depende de comprender las diversas motivaciones y necesidades de los visitantes potenciales. Realicé una investigación y un análisis de usuarios, profundizando en qué hace que estas experiencias sean tan atractivas y qué puede alejar a los usuarios. Esta comprensión informó cada paso del proceso de diseño.">Creating an engaging online museum experience hinges on understanding the diverse motivations and needs of potential visitors. I conducted user research and analysis, delving into what makes these experiences so compelling and what can turn users away. This understanding informed every step of the design process.</p>
+
+                <h3 data-es="Métodos de búsqueda">Research Methods</h3>
+                    <ul>
+                        <li data-es="Entrevistas a usuarios: realicé entrevistas con personas que representan diferentes niveles de interés en los museos, como estudiantes, visitantes ocasionales y aficionados a la historia, para comprender sus hábitos y expectativas de navegación en línea.">User Interviews: I conducted interviews with individuals representing different levels of museum interest like students, casual visitors and history buffs, to understand their online browsing habits and expectations.</li>
+                        <li data-es="Análisis competitivo: el análisis de sitios web de museos populares (como el Museo Británico, el Met y otros) reveló las mejores prácticas en diseño visual, arquitectura de la información, experiencia del usuario e implementación técnica.">Competitive Analysis: Analyzing popular museum websites (such as The British Museum, The Met, and others) revealed best practices in visual design, information architecture, user experience, and technical implementation.</li>
+                    </ul>
+
+                
+                <h3 data-es="User Personas">User Personas</h3>
+                    <p data-es="A partir de mi investigación, desarrollé tres personajes de usuario distintos para representar al público objetivo. Estos personajes me ayudaron a centrarme en las necesidades y objetivos específicos del usuario a lo largo del proceso de diseño.">Building upon my research, I developed three distinct user personas to represent the target audience. These personas helped me focus on specific user needs and goals throughout the design process.</p>
+
+
+
+                <div class="user-personas-container">
+                    <div class="user-persona">
+                        <h3 data-es="Lucas">Lucas</h3>
+                        <p><strong data-es="Edad:">Age:</strong> 45</p>
+                        <p><strong data-es="Ocupación:">Occupation:</strong> <span data-es="Profesor">Teacher</span></p>
+                        <p><strong data-es="Competencia tecnológica:">Tech Proficiency:</strong> <span data-es="Moderada">Moderate</span></p>
+                        <p><strong data-es="Hábitos en los museos:">Museum Habits:</strong> <span data-es="Visitante frecuente, tanto en persona como en línea. Profundo interés en la historia y busca activamente contenido educativo.">Frequent visitor, both in person and online. Deep interest in history and actively seeks out educational content.</span></p>
+                        <p><strong data-es="Metas:">Goals:</strong> <span data-es="Profundizar su conocimiento del antiguo Egipto, encontrar información histórica confiable y recursos educativos, y planificar sus visitas al museo en detalle.">Deepen his knowledge of ancient Egypt, find reliable historical information and educational resources, and plan his museum visits in detail.</span></p>
+                        <p><strong data-es="Frustraciones:">Frustrations:</strong> <span data-es="Sitios web desordenados, falta de información detallada y dificultad para navegar por exhibiciones complejas en línea.">Cluttered websites, lack of in-depth information, and difficulty navigating complex online exhibits.</span></p>
+                        <p><strong data-es="Cita:">Quote:</strong> "<span data-es="Quiero un sitio web que sea fácil de navegar y que proporcione información detallada sobre los artefactos y las exhibiciones.">"I want a website that's easy to navigate and provides detailed information about the artifacts and exhibits."</span></p>
+                    </div>
+                    <div class="user-persona">
+                        <h3 data-es="Ben">Ben</h3>
+                        <p><strong data-es="Edad:">Age:</strong> 38</p>
+                        <p><strong data-es="Ocupación:">Occupation:</strong> <span data-es="Ingeniero">Engineer</span></p>
+                        <p><strong data-es="Competencia tecnológica:">Tech Proficiency:</strong><span data-es="Baja">Low</span></p>
+                        <p><strong data-es="Hábitos en los museos:">Museum Habits:</strong> <span data-es="Visitante ocasional, principalmente interesado en involucrar a sus hijos con la historia y la cultura.">Occasional visitor, primarily interested in engaging his children with history and culture.</span></p>
+                        <p><strong data-es="Metas:">Goals:</strong> <span data-es="Encontrar contenido interactivo y educativo para sus hijos, planificar visitas familiares al museo y disfrutar de una experiencia fluida.">Find interactive and educational content for his children, plan family museum visits, and enjoy a seamless experience.</span></p>
+                        <p><strong data-es="Frustraciones:">Frustrations:</strong> <span data-es="Sitios web que no son aptos para niños, falta de exhibiciones interactivas y procesos complicados de venta de entradas o reservas.">Websites that are not child-friendly, lack of interactive exhibits, and complicated ticketing or reservation processes.</span></p>
+                        <p><strong data-es="Cita:">Quote:</strong> "<span data-es="Estoy buscando un sitio web que sea educativo y atractivo para mis hijos.">"I'm looking for a website that's both educational and engaging for my kids."</span></p>
+                    </div>
+
+                    <div class="user-persona">
+                        <h3><span data-es="Emma:">Emma</span></h3>
+                        <p><strong data-es="Edad:">Age:</strong> 25</p>
+                        <p><strong data-es="Ocupación:">Occupation:</strong> Marketing</p>
+                        <p><strong data-es="Competencia tecnológica:">Tech Proficiency:</strong> <span data-es="Alta">High</span></p>
+                        <p><strong data-es="Hábitos en los museos:">Museum Habits:</strong> <span data-es="Visitante poco frecuente, disfruta explorando cosas nuevas y aprecia el diseño visualmente atractivo.">Infrequent visitor, enjoys exploring new things and appreciates visually appealing design.</span></p>
+                        <p><strong data-es="Metas:">Goals:</strong> <span data-es="Aprender algo nuevo sobre el antiguo Egipto, encontrar inspiración para proyectos creativos, navegar fácilmente por el sitio web, compartir descubrimientos interesantes en las redes sociales.">Learn something new about ancient Egypt, find inspiration for creative projects, easily navigate the website, share interesting discoveries on social media.</span></p>
+                        <p><strong data-es="Frustraciones:">Frustrations:</strong> <span data-es="Tiempos de carga lentos, diseños desordenados y navegación confusa.">Slow loading times, cluttered layouts, and confusing navigation.</span></p>
+                        <p><strong data-es="Cita:">Quote:</strong> "<span data-es="Quiero un sitio web que sea visualmente atractivo y fácil de usar. No tengo mucho tiempo, así que necesito encontrar información rápidamente.">"I want a website that's visually appealing and easy to use. I don't have a lot of time, so I need to find information quickly."</span></p>
+                    </div>
+                </div>
+
+                <h3 data-es="Historias de usuario">User Stories</h3>
                     <div class="user-stories">
                         <div class="user-story">
-                            <h4>Explore Artifacts</h4>
-                            <p>As a museum enthusiast, I want to explore the museum's artifacts in detail, view high-quality images, and discover their stories, so I can deepen my understanding of ancient Egyptian history and culture.</p>
+                            <h4 data-es="Explora Artefactos">Explore Artifacts</h4>
+                            <p><span data-es="Como entusiasta de los museos, quiero explorar los artefactos del museo en detalle, ver imágenes de alta calidad y descubrir sus historias, para poder profundizar mi comprensión de la historia y la cultura del antiguo Egipto.">As a museum enthusiast, I want to explore the museum’s artifacts in detail, view high-quality images, and discover their stories, so I can deepen my understanding of ancient Egyptian history and culture.</span></p>
                         </div>
                         <div class="user-story">
-                            <h4>Plan a Visit</h4>
-                            <p>As a potential visitor, I want to easily find practical information about the museum, including location, hours, admission fees, and accessibility, to effectively plan my visit.</p>
+                            <h4 data-es="Planifica un Visita">Plan a Visit</h4>
+                            <p><span data-es="Como visitante potencial, quiero encontrar fácilmente información práctica sobre el museo, incluida la ubicación, el horario, las tarifas de admisión y la accesibilidad, para planificar mi visita de manera eficaz.">As a potential visitor, I want to easily find practical information about the museum, including location, hours, admission fees, and accessibility, to effectively plan my visit.</span></p>
                         </div>
                         <div class="user-story">
-                            <h4>Support the Museum</h4>
-                            <p>As a supporter of the museum, I want to quickly find ways to contribute, through donations, memberships, or volunteering, to help preserve and share its valuable collection.</p>
+                            <h4 data-es="Apoyar al Museo">Support the Museum</h4>
+                            <p><span data-es="Como partidario del museo, quiero encontrar rápidamente formas de contribuir, a través de donaciones, membresías o voluntariado, para ayudar a preservar y compartir su valiosa colección.">As a supporter of the museum, I want to quickly find ways to contribute, through donations, memberships, or volunteering, to help preserve and share its valuable collection.</span></p>
                         </div>
                     </div>
-                    <h3>Empathy Map</h3>
-                        <p>To visualize user needs and feelings, I created an empathy map. This helped me understand the target audience's perspective and motivations.</p>
-                        <div class="empathy-map">
-                            <div class="empathy-map-quadrant">
-                                <h3>Says</h3>
-                                <p>"I'm fascinated by ancient Egypt."</p>
-                                <p>"Museum websites can be overwhelming or boring."</p>
-                                <p>"I want to learn more about the artifacts." </p>
-                            </div>
-                            <div class="empathy-map-quadrant">
-                                <h3>Thinks</h3>
-                                <p>"I wish I could experience the museum from home."</p>
-                                <p>"How can I support the museum's work?"</p>
-                                <p>"Is the website easy to navigate on my phone?"</p> 
-                            </div>
-                            <div class="empathy-map-quadrant">
-                                <h3>Does</h3>
-                                <p>Reads books and articles about history and ancient cultures.</p>
-                                <p>Visits museum websites and online exhibitions.</p>
-                                <p>Shares interesting historical information on social media.</p>
-                            </div>
-                            <div class="empathy-map-quadrant">
-                                <h3>Feels</h3>
-                                <p>Curious, intrigued, excited to learn.</p>
-                                <p>Frustrated by cluttered websites, lack of information, and poor mobile experience.</p>
-                                <p>Inspired by history and wants to contribute to preservation efforts.</p>
-                            </div>
-                        </div>
-                </div>
+                <h3 data-es="Mapa de empatía">Empathy Map</h3>
+                    <p data-es="Para visualizar las necesidades y sentimientos de los usuarios, creé un mapa de empatía. Esto me ayudó a comprender la perspectiva y las motivaciones del público objetivo.">To visualize user needs and feelings, I created an empathy map. This helped me understand the target audience’s perspective and motivations.</p>
 
-
-
-                    <section id="define" class="section">
-                        <h2>Define: Setting Clear Objectives</h2>
-                        <div class="case-study-intro">
-                            <p>In the Define phase, I solidified the project goals, conducted a competitive audit to understand the landscape of existing museum websites, and developed a clear value proposition for the Nefer Museum.</p>
-                    
-        
-                        <h3>Project Goals</h3>
-                            <ul>
-                                <li>Create an engaging and informative online experience for a diverse audience of museum visitors.</li>
-                                <li>Showcase the museum’s collection in a visually compelling and accessible manner.</li>
-                                <li>Provide easy-to-find information about the museum and visiting information.</li>
-                                <li>Encourage user engagement and support for the museum's mission.</li>
-                            </ul>
-        
-                        <h3>Competitive Audit</h3>
-                        <div class="competitive-audit">
-                            <div class="competitor">
-                                <h4>The British Museum</h4>
-                                <p><strong>Strengths:</strong> Vast online collection, detailed artifact information, virtual tours.</p>
-                                <p><strong>Weaknesses:</strong> Overwhelming amount of content, navigation could be improved.</p>
-                            </div>
-                            <div class="competitor">
-                                <h4>The Metropolitan Museum of Art</h4>
-                                <p><strong>Strengths:</strong> High-quality images, curated online exhibitions, educational resources.</p>
-                                <p><strong>Weaknesses:</strong> Strong focus on art might not appeal to all history enthusiasts, occasional slow loading times.</p>
-                            </div>
-                            <div class="competitor">
-                                <h4>The Egyptian Museum (Cairo)</h4>
-                                <p><strong>Strengths:</strong> Authenticity and historical significance, focused on Egyptian artifacts.</p>
-                                <p><strong>Weaknesses:</strong> Limited online presence, outdated design, lacks interactive elements.</p>
-                            </div>
-                        </div>
-        
-                        <h3>Value Proposition</h3>
-                            <p>The Nefer Museum website provides a unique online journey into ancient Egypt, making the museum’s collection and stories accessible, engaging, and user-friendly. Whether you are a history enthusiast, casual browser, or planning a visit, the website provides a rich and immersive experience.</p>
-                    </section>
-        
-                    <section id="ideate" class="section">
-                        <h2>Ideate: Bringing the Museum to Life Online</h2>
-                        <div class="case-study-intro">
-                            <p>The Ideate phase involved translating research insights and project goals into tangible design solutions. This encompassed information architecture, user flows, and initial sketches to shape the website’s structure and user experience.</p>
-                        
-        
-                        <h3>Information Architecture</h3>
-                            <p>The sitemap below visually represents the website's structure, ensuring intuitive navigation for users.</p>
-                        <img alt="Sitemap" src="images/Sitemap-Nefer.png" />
-        
-        
-                        <h3>User Flows</h3>
-                            <p>User flows were instrumental in mapping user journeys and optimizing key interactions. Here is an example of how the user would get to know the museum's location and opening time and from there buying a ticket.</p>
-                        <!-- User flow diagrams -->
-                        <div class="user-flow-one">
-                        <img alt="UserFlow" src="images/UserFlow-Nefer.png"/>
-                        <p>User opens website; the homepage displays featured artifacts and exhibits. To explore further, users can navigate to specific artifact information, the plan your visit section, or donate/support the museum. All these options allow for smooth transitions across the pages.</p>
-                        </div>
-                        
-        
-                    </section>
-        
-                    <section id="prototype" class="section">
-                        <h2>Prototype</h2>
-                        <div class="case-study-intro">
-                            <p>After defining user needs and project goals, I created low-fidelity wireframes to establish the layout and structure of key screens. These wireframes served as a blueprint for the website's functionality and helped me explore different design options before moving to high-fidelity mockups and prototyping.  The initial wireframes focused on presenting essential information clearly and establishing a logical flow for the user journey.</p>
-                    
-                    
-                        <div class="wireframes">
-                            <img alt="Initial Wireframes" src="images/OldWireframes-Nefer.png" />
-                            <p>Initial Wireframes (Homepage, About Us, Support Us, Plan Your Visit, Buy Tickets)</p>
-                        </div>
-                    
-                        <div class="prototype-interactive-and-details">
-                            <div class="interactive-prototype">
-                                <h3>Low Fidelity Prototype</h3>
-                                <video autoplay="" loop="" muted="" playsinline="">
-                                    <source src="images/PrototypeDemo-Nefer.mp4" type="video/mp4" />
-                                </video>
-                            </div>
-                    
-                            <div class="prototype-details-text">
-                                <h3>Prototype Details</h3>
-                                <p>This initial interactive prototype, built with Figma, focused on core user flows such as browsing artifacts, exploring exhibits, and planning a visit. It allowed me to simulate the user experience and identify potential usability issues early in the design process.  I shared this prototype with potential users for early feedback and to guide further iterations.</p>
-                                <a class="cta" href="#" rel="noopener" target="_blank">View Interactive Prototype (Figma)</a>
-                            </div>
-                        </div>
-                    </section>
-        
-                    <section id="testing" class="section">
-                        <h2>Testing and Iterations</h2>
-                        <div class="case-study-intro">
-                            <p>Usability testing was crucial for refining the design and ensuring the website met user needs. I conducted testing with representative users, gathering feedback and iterating based on their insights. This iterative process significantly improved the user experience.</p>
-
-                    
-                        <h3>Testing Methods</h3>
-                        <div class="testing-methods">
-                            <div class="method">
-                                <h4>Moderated Usability Testing</h4>
-                                <p>I conducted moderated usability testing sessions with participants representing my target audience (history enthusiasts, families, casual visitors). I observed their interactions with the prototype, asked them to think aloud, and encouraged them to share feedback, focusing on identifying pain points and areas for improvement. This direct observation provided valuable qualitative data.</p>
-                            </div>
-                    
-                            <div class="method">
-                                <h4>Unmoderated Remote Testing</h4>
-                                <p>To gather broader feedback, I used unmoderated remote testing tools. This allowed participants to interact with the prototype at their own convenience and in their own environment. I collected quantitative data on task completion rates, error rates, and time spent on tasks, providing a broader perspective on usability.</p>
-                            </div>
-                        </div>
-                    
-                        <h3>Key Findings & Iterations</h3>
-                        <div class="findings-iterations">
-                    
-                            <div class="finding">
-                                <h4>Homepage Clarity and Engagement</h4>
-                                <p><strong>Initial Design:</strong> The homepage lacked a clear visual hierarchy and key information, like hours and location, was not immediately visible. The "Explore" section felt generic and didn't draw users in.</p>
-                                <p><strong>User Feedback:</strong> Users wanted quicker access to key information (hours, location) and a more engaging way to explore the collection. The journey icon wasn't immediately understood.</p>
-                                <p><strong>Iteration:</strong> Added a prominent "Museum Info" section with hours and location.  Redesigned the "Explore" section to showcase specific artifact categories with images, replacing the generic placeholder grid.  Removed the journey icon for clarity.</p>
-                            </div>
-                    
-                            <div class="finding">
-                                <h4>Improved Artifact Highlighting</h4>
-                                <p><strong>Initial Design:</strong> The homepage lacked a dedicated space to highlight specific artifacts, which diminished the opportunity to showcase key pieces from the collection.</p>
-                                <p><strong>User Feedback:</strong> Users expressed a desire to see highlighted artifacts on the homepage to get a better sense of the museum's collection and pique their interest.</p>
-                                <p><strong>Iteration:</strong> Added a "Featured Artifact" section to the homepage, showcasing a prominent artifact with a high-quality image and a brief description. This addition created a focal point and provided a more engaging introduction to the collection.</p>
-                            </div>
-                    
-                            <div class="finding">
-                                <h4>Enhanced "New Exhibits" Presentation</h4>
-                                <p><strong>Initial Design:</strong> The "New Exhibits" section on the homepage was presented as a simple text list, which lacked visual appeal and didn't effectively draw users' attention.</p>
-                                <p><strong>User Feedback:</strong>  Users wanted more visual information about new exhibits, such as images or videos, to make the section more engaging and informative.</p>
-                                <p><strong>Iteration:</strong> Redesigned the "New Exhibits" section to include visually appealing images or videos for each exhibit, along with concise descriptions and clear calls to action to learn more. This change significantly improved the section's visual appeal and encouraged users to explore the exhibits.</p>
-                            </div>
-                    
-                            <div class="finding">
-                                <h4>Accessibility Improvements in "Plan Your Visit"</h4>
-                                <p><strong>Initial Design:</strong> The "Plan Your Visit" page lacked sufficient detail about accessibility features, which could be a barrier for users with disabilities.</p>
-                                <p><strong>User Feedback:</strong> Users emphasized the importance of detailed accessibility information to ensure they could comfortably visit the museum.</p>
-                                <p><strong>Iteration:</strong> Expanded the accessibility section to include specific information about wheelchair access, ramps, elevators, accessible restrooms, sensory-friendly options, and other relevant features.  This addition demonstrated a commitment to inclusivity and provided essential information for visitors with disabilities.</p>
-                            </div>
-                        </div>
-                    
-                        <div class="wireframes">
-                            <img alt="Updated Wireframes" src="images/Wireframes-Nefer.png" />
-                            <p>Updated Wireframes after User Testing</p>
-                        </div>
-                    </section>
-
-
-                    <section id="design" class="section">
-                        <h2>Design: Crafting the Experience</h2>
-                        <div class="case-study-intro">
-                            <p>The final design phase involved bringing all the research, ideation, and testing together to create a visually appealing, user-friendly, and immersive online experience. This encompassed refining the visual design, developing the user interface, and ensuring responsiveness across various devices.</p>
-                        <div class="FinalDesigns">
-                                <img alt="FinalDesigns" src="images/FinalDesigns-Nefer.webp" />
-                                <p>The High Fidelity Designs</p>
-                            </div>
-        
-                        <h3>Visual Design & Branding</h3>
-                            <p>The visual design of the Nefer Museum website aimed to evoke the richness and mystery of ancient Egypt while maintaining a modern and accessible aesthetic. This was achieved through careful selection of colors, typography, and imagery.</p>
-                        
-        
-                        <div class="design-system">
-                            <h3>Color Palette</h3>
-                            <div class="color-palette">
-                                <div class="color-swatch" style="background-color: #06664e;"></div>
-                                <div class="color-swatch" style="background-color: #EFBF04;"></div>
-                                <div class="color-swatch" style="background-color: #000000;"></div>
-                                <div class="color-swatch" style="background-color: #ffffff;"></div>
-                            </div>
-                            <div class="color-descriptions">
-                                <p><strong>#06664e (Deep Teal):</strong> This rich teal serves as the primary brand color, representing the historical depth and mystique of ancient Egypt. It's used for headings, interactive elements, and accents.</p>
-                                <p><strong>#EFBF04 (Amber Gold):</strong>  This warm gold is used sparingly for highlights and accents, evoking the precious metals often found in ancient Egyptian artifacts.</p>
-                                <p><strong>#000000 (Black):</strong>  Provides a grounding backdrop, creating a sense of sophistication and allowing the other colors to pop.</p>
-                                <p><strong>#ffffff (White):</strong> Used for body text and UI elements, ensuring optimal readability and contrast against the darker background.</p>
-                            </div>
-                            <h4>Typography</h4>
-        <div class="font-display">Roboto</div>
-        <p><strong>Roboto:</strong>  This modern, geometric sans-serif font was chosen for its clarity, readability, and versatility. It provides a contemporary touch while complementing the historical theme.</p>
-        
-                            <h3>Imagery & Iconography</h3>
-                                <p>High-quality images of artifacts, sourced from museums with open-access policies or Creative Commons licenses, are used throughout the website to enhance visual storytelling. Placeholder images generated using flux. Since there is no Nefer museum at the end of the day and these images hold a bit of the illusion, I'm not a fan of AI, but I am willing to learn and use it in ethical ways. Iconography is kept simple and consistent, primarily using icons from Font Awesome.</p>
-                        
-                        </div>
-        
-        
-                        <h3>Development & Responsiveness</h3>
-        
-                            <p>In bringing the Nefer Museum website to life, I implemented responsive design principles, ensuring a seamless user experience across various devices, from desktops to mobile phones. Technical considerations included performance optimization and the use of HTML, CSS, and JavaScript. I simply used Visual Studio Code, some Figma plugins and simple basic code from my part. And hosted it for free through GitHub, I would say that I'm not extremely proud of the code, but it works!</p>
-                            <ul>
-                                <li><strong>HTML:</strong> Provided the structural foundation of the website, ensuring semantic markup for accessibility and SEO best practices.</li>
-                                <li><strong>CSS:</strong>  Styled the website with a focus on visual appeal, consistency, and responsiveness, leveraging CSS variables for maintainability and adaptability.</li>
-                                <li><strong>JavaScript:</strong> Implemented interactive elements, such as image galleries and dynamic content updates, enhancing user engagement.</li>
-                                <li><strong>Responsive Design:</strong>  Used media queries and fluid layouts to optimize the website's appearance and functionality on different screen sizes.</li>
-                                <li><strong>Performance Optimization:</strong> Optimized images, minimized HTTP requests, and employed caching strategies to ensure fast loading times and a smooth user experience. </li>
-                            </ul>
-        
-                        <div class="visual-element">
-                            <video autoplay="" loop="" muted="" playsinline="" width="700">
-                                <source src="images/Website-Nefer.mp4" type="video/mp4" />
-                            </video>
-                            <figcaption>The Developed Prototype</figcaption>
-                        </div>
-                        <a class="cta" href="#" rel="noopener" target="_blank">Cheek Out the Page</a>
-                    </section>
-            
-                    <section id="conclusion" class="section">
-                        <h2>Conclusion</h2>
-                        <div class="case-study-intro">
-                            <p>The Nefer Museum website, while a fictional project, provided a valuable opportunity to hone my UX/UI design and front-end development skills. From conducting user research and creating wireframes to developing a fully functional website, I managed the entire project lifecycle solo.  This experience reinforced the importance of a user-centered design approach, iterative prototyping, and thorough testing, even in a hypothetical context.</p>
-                    
-                            <p>Key takeaways include:</p>
-                            <ul>
-                                <li>The importance of clear and consistent visual hierarchy in guiding user attention and comprehension.</li>
-                                <li>The power of user feedback in identifying areas for improvement and refining the user experience.</li>
-                                <li>The challenge and reward of balancing aesthetics, functionality, and accessibility in web design.</li>
-                            </ul>
-                    
-                            <p>If this were a real-world project, I would continue iterating on the design based on user feedback and analytics.  Future development could include implementing a CMS for easier content management, integrating e-commerce features for ticket sales and donations, and creating a virtual tour of the museum.</p>
-                    
-                    
-                            <p>This project solidified my passion for creating engaging and meaningful digital experiences. I'm eager to apply my skills to real-world projects and collaborate with teams to bring innovative ideas to life.  Thank you for taking the time to explore this case study.  I welcome any feedback or questions about my work.</p>
-                        </div>
-                        <div class="conclusion-actions">
-                            <a class="cta" href="index.html">Back to Home</a>
-                            <a class="cta" href="index.html#contact">Contact Me</a>
-                        </div>
-                    </section>
+                <div class="empathy-map">
+                    <div class="empathy-map-quadrant">
+                        <h3 data-es="Dice">Says</h3>
+                        <div class="empathy-map-item" data-es="“Estoy fascinado por el antiguo Egipto.“">“I’m fascinated by ancient Egypt.”</div>
+                        <div class="empathy-map-item" data-es="“Los sitios web de los museos pueden ser abrumadores o aburridos.“">“Museum websites can be overwhelming or boring.”</div>
+                        <div class="empathy-map-item" data-es="“Quiero aprender más sobre los artefactos.“">“I want to learn more about the artifacts.”</div>
+                    </div>
+                    <div class="empathy-map-quadrant">
+                        <h3 data-es="Piensa">Thinks</h3>
+                        <div class="empathy-map-item" data-es="“Ojalá pudiera experimentar el museo desde casa.“">“I wish I could experience the museum from home.”</div>
+                        <div class="empathy-map-item" data-es="“¿Cómo puedo apoyar el trabajo del museo?“">“How can I support the museum’s work?”</div>
+                        <div class="empathy-map-item" data-es="¿Es el sitio web fácil de navegar en mi teléfono?">"Is the website easy to navigate on my phone?"</div>
+                    </div>
+                    <div class="empathy-map-quadrant">
+                        <h3 data-es="Hace">Does</h3>
+                        <div class="empathy-map-item" data-es="Lee libros y artículos sobre historia y culturas antiguas.">Reads books and articles about history and ancient cultures.</div>
+                        <div class="empathy-map-item" data-es="Visita sitios web de museos y exposiciones en línea.">Visits museum websites and online exhibitions.</div>
+                        <div class="empathy-map-item" data-es="Comparte información histórica interesante en las redes sociales.">Shares interesting historical information on social media.</div>
+                    </div>
+                    <div class="empathy-map-quadrant">
+                        <h3 data-es="Siente">Feels</h3>
+                        <div class="empathy-map-item" data-es="Curioso, intrigado, emocionado de aprender.">Curious, intrigued, excited to learn.</div>
+                        <div class="empathy-map-item" data-es="Frustrado por sitios web desordenados, falta de información y mala experiencia móvil.">Frustrated by cluttered websites, lack of information, and poor mobile experience.</div>
+                        <div class="empathy-map-item" data-es="Inspirado por la historia y quiere contribuir a los esfuerzos de preservación.">Inspired by history and wants to contribute to preservation efforts.</div>
+                    </div>
                 </div>
             </div>
-        
-            <footer class="footer">
-                <div class="container footer-content">
-                    <div class="footer-column">
-                        <h4>Nefer Museum</h4>
-                        <ul>
-                            <li><a href="#overview">Project Overview</a></li>
-                            <li><a href="#ideate">Design Process</a></li>
-                            <li><a href="#design">Outcomes</a></li>
-                            </ul>
-                            </div>
-                            <div class="footer-column">
-                                <h4>Work</h4>
-                                <ul>
-                                    <li><a href="index.html#projects">UX/UI Portfolio</a></li>
-                                    <li><a href="index.html#personal-projects">Personal Projects</a></li>
-                                    <li><a href="index.html#my-art">Art & Illustrations</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-column">
-                            <h4>Contact</h4>
-                            <ul>
-                            <li><a href="mailto:villadafelipe28@gmail.com">villadafelipe28@gmail.com</a></li>
-                            <li><a href="https://www.linkedin.com/in/felipevillada/">LinkedIn</a></li>
-                            </ul>
-                            </div>
-                            </div>
-                <div class="footer-bottom">
-                    <p>© 2024 Felipe Villada. All Rights Reserved.</p>
+        </section>
+
+        <section id="define" class="section">
+            <h2 data-es="Definir: Establecer objetivos claros">Define: Setting Clear Objectives</h2>
+            <div class="case-study-intro">
+                <p data-es="En la fase de Definición, solidifiqué los objetivos del proyecto, realicé una auditoría competitiva para comprender el panorama de los sitios web de museos existentes y desarrollé una propuesta de valor clara para el Museo Nefer.">In the Define phase, I solidified the project goals, conducted a competitive audit to understand the landscape of existing museum websites, and developed a clear value proposition for the Nefer Museum.</p>
+
+
+            <h3 data-es="Objetivos del proyecto">Project Goals</h3>
+                <ul>
+                    <li data-es="Crear una experiencia en línea atractiva e informativa para una audiencia diversa de visitantes del museo.">Create an engaging and informative online experience for a diverse audience of museum visitors.</li>
+                    <li data-es="Mostrar la colección del museo de una manera visualmente atractiva y accesible.">Showcase the museum’s collection in a visually compelling and accessible manner.</li>
+                    <li data-es="Proporcionar información fácil de encontrar sobre el museo y la información de visita.">Provide easy-to-find information about the museum and visiting information.</li>
+                    <li data-es="Fomentar la participación del usuario y el apoyo a la misión del museo.">Encourage user engagement and support for the museum's mission.</li>
+                </ul>
+
+            <h3 data-es="Auditoría competitiva">Competitive Audit</h3>
+            <div class="competitive-audit">
+                <div class="competitor">
+                    <h4 data-es="El Museo Británico">The British Museum</h4>
+                    <p data-es="Fortalezas: vasta colección en línea, información detallada sobre artefactos, visitas virtuales."><strong>Strengths:</strong> Vast online collection, detailed artifact information, virtual tours.</p>
+                    <p data-es="Debilidades: cantidad abrumadora de contenido, la navegación podría mejorarse."><strong>Weaknesses:</strong> Overwhelming amount of content, navigation could be improved.</p>
                 </div>
-            </footer>
+                <div class="competitor">
+                    <h4 data-es="El Museo Metropolitano de Arte">The Metropolitan Museum of Art</h4>
+                    <p data-es="Fortalezas: imágenes de alta calidad, exposiciones en línea curadas, recursos educativos."><strong>Strengths:</strong> High-quality images, curated online exhibitions, educational resources.</p>
+                    <p data-es="Debilidades: el fuerte enfoque en el arte puede no atraer a todos los entusiastas de la historia, tiempos de carga ocasionalmente lentos."><strong>Weaknesses:</strong> Strong focus on art might not appeal to all history enthusiasts, occasional slow loading times.</p>
+                </div>
+                <div class="competitor">
+                    <h4 data-es="El Museo Egipcio (El Cairo)">The Egyptian Museum (Cairo)</h4>
+                    <p data-es="Fortalezas: autenticidad e importancia histórica, centrado en artefactos egipcios."><strong>Strengths:</strong> Authenticity and historical significance, focused on Egyptian artifacts.</p>
+                    <p data-es="Debilidades: presencia en línea limitada, diseño obsoleto, carece de elementos interactivos."><strong>Weaknesses:</strong> Limited online presence, outdated design, lacks interactive elements.</p>
+                </div>
+            </div>
+            <h3 data-es="Propuesta de valor">Value Proposition</h3>
+
+                <p data-es="El sitio web del Museo Nefer ofrece un viaje en línea único al antiguo Egipto, haciendo que la colección y las historias del museo sean accesibles, atractivas y fáciles de usar. Ya sea que sea un entusiasta de la historia, un navegador ocasional o esté planeando una visita, el sitio web ofrece una experiencia rica e inmersiva.">The Nefer Museum website provides a unique online journey into ancient Egypt, making the museum’s collection and stories accessible, engaging, and user-friendly. Whether you are a history enthusiast, casual browser, or planning a visit, the website provides a rich and immersive experience.</p>
+            </div>
+        </section>
+        
+        <section id="ideate" class="section">
+            <h2 data-es="Idear">Ideate</h2>
+            <div class="case-study-intro">
+                <p data-es="La fase de Ideación implicó traducir la información de la investigación y los objetivos del proyecto en soluciones de diseño tangibles. Esto abarcó la arquitectura de la información, los flujos de usuarios y los bocetos iniciales para dar forma a la estructura y la experiencia del usuario del sitio web.">The Ideate phase involved translating research insights and project goals into tangible design solutions. This encompassed information architecture, user flows, and initial sketches to shape the website’s structure and user experience.</p>
+            
+
+            <h3 data-es="Arquitectura de la información">Information Architecture</h3>
+            
+                <p data-es="El mapa del sitio a continuación representa visualmente la estructura del sitio web, lo que garantiza una navegación intuitiva para los usuarios.">The sitemap below visually represents the website's structure, ensuring intuitive navigation for users.</p>
+            
+            <img alt="Sitemap" src="images/Sitemap-Nefer.png" />
+
+            <h3 data-es="Flujos de usuario">User Flows</h3>
+            
+                <p data-es="Los flujos de usuario fueron fundamentales para mapear los recorridos de los usuarios y optimizar las interacciones clave. Aquí hay un ejemplo de cómo el usuario conocería la ubicación y el horario de apertura del museo y, a partir de ahí, compraría una entrada.">User flows were instrumental in mapping user journeys and optimizing key interactions. Here is an example of how the user would get to know the museum's location and opening time and from there buying a ticket.</p>
+            
+            <div class="user-flow-one">
+                <img alt="UserFlow" src="images/UserFlow-Nefer.png" />
+                <p data-es="El usuario abre el sitio web; la página de inicio muestra artefactos y exhibiciones destacados. Para explorar más a fondo, los usuarios pueden navegar a información específica sobre artefactos, la sección Planifique su visita o donar/apoyar al museo. Todas estas opciones permiten transiciones naturales entre las páginas.">User opens the website; the homepage displays featured artifacts and exhibits. To explore further, users can navigate to specific artifact information, the plan your visit section, or donate/support the museum. All these options allow for smooth transitions across the pages.</p>
+            </div>
+        </div>
+
+        </section>
+
+        <section id="prototype" class="section">
+            <h2 data-es="Prototipo">Prototype</h2>
+            <div class="case-study-intro">
+                <p data-es="Después de definir las necesidades del usuario y los objetivos del proyecto, creé wireframes de baja fidelidad para establecer el diseño y la estructura de las pantallas clave. Estos wireframes sirvieron como modelo para la funcionalidad del sitio web y me ayudaron a explorar diferentes opciones de diseño antes de pasar a las maquetas de alta fidelidad y la creación de prototipos. Los wireframes iniciales se centraron en presentar información esencial de forma clara y establecer un flujo lógico para el recorrido del usuario.">After defining user needs and project goals, I created low-fidelity wireframes to establish the layout and structure of key screens. These wireframes served as a blueprint for the website's functionality and helped me explore different design options before moving to high-fidelity mockups and prototyping. The initial wireframes focused on presenting essential information clearly and establishing a logical flow for the user journey.</p>
+
+
+            <div class="wireframes">
+                <img alt="Initial Wireframes" src="images/OldWireframes-Nefer.png" />
+                <p data-es="Wireframes iniciales (Página de inicio, Acerca de nosotros, Apóyanos, Planifica tu visita, Compra entradas)">Initial Wireframes (Homepage, About Us, Support Us, Plan Your Visit, Buy Tickets)</p>
+            </div>
+
+            <div class="prototype-interactive-and-details">
+                <div class="interactive-prototype">
+                    <h3 data-es="Prototipo de baja fidelidad">Low Fidelity Prototype</h3>
+                    <video autoplay="" loop="" muted="" playsinline="">
+                        <source src="images/PrototypeDemo-Nefer.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+                <div class="prototype-details-text">
+                    <h3 data-es="Detalles del prototipo">Prototype Details</h3>
+                    <p data-es="Este prototipo interactivo inicial, creado con Figma, se centró en los flujos de usuario principales, como la exploración de artefactos, la exploración de exhibiciones y la planificación de una visita. Me permitió simular la experiencia del usuario e identificar posibles problemas de usabilidad al principio del proceso de diseño. Compartí este prototipo con usuarios potenciales para obtener comentarios tempranos y guiar futuras iteraciones.">This initial interactive prototype, built with Figma, focused on core user flows such as browsing artifacts, exploring exhibits, and planning a visit. It allowed me to simulate the user experience and identify potential usability issues early in the design process. I shared this prototype with potential users for early feedback and to guide further iterations.</p>
+                    <a class="cta" href="https://www.figma.com/proto/qBm2CDrW8lmvKoh8S7z2i8/Nefer-Museum?page-id=0%3A1&node-id=113-328&node-type=canvas&viewport=1080%2C841%2C0.1&t=CkwaMa0qkkS64QsK-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=113%3A328&show-proto-sidebar=1" rel="noopener" target="_blank" data-es="Ver prototipo interactivo (Figma)">View Interactive Prototype (Figma)</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testing" class="section">
+            <h2 data-es="Pruebas e iteraciones">Testing and Iterations</h2>
+            <div class="case-study-intro">
+                <p data-es="Las pruebas de usabilidad fueron cruciales para refinar el diseño y garantizar que el sitio web satisfaga las necesidades de los usuarios. Realicé pruebas con usuarios representativos, recopilando comentarios e iterando en función de sus conocimientos. Este proceso iterativo mejoró significativamente la experiencia del usuario.">Usability testing was crucial for refining the design and ensuring the website met user needs. I conducted testing with representative users, gathering feedback and iterating based on their insights. This iterative process significantly improved the user experience.</p>
+
+            <h3 data-es="Métodos de prueba">Testing Methods</h3>
+            <div class="testing-methods">
+                <div class="method">
+                    <h4 data-es="Pruebas de usabilidad moderadas">Moderated Usability Testing</h4>
+                    <p data-es="Realicé sesiones de prueba de usabilidad moderadas con participantes que representan a mi público objetivo (entusiastas de la historia, familias, visitantes ocasionales). Observé sus interacciones con el prototipo, les pedí que pensaran en voz alta y los alenté a compartir comentarios, centrándome en identificar puntos débiles y áreas de mejora. Esta observación directa proporcionó valiosos datos cualitativos.">I conducted moderated usability testing sessions with participants representing my target audience (history enthusiasts, families, casual visitors). I observed their interactions with the prototype, asked them to think aloud, and encouraged them to share feedback, focusing on identifying pain points and areas for improvement. This direct observation provided valuable qualitative data.</p>
+                </div>
+
+                <div class="method">
+                    <h4 data-es="Pruebas remotas no moderadas">Unmoderated Remote Testing</h4>
+                    <p data-es="Para recopilar comentarios más amplios, utilicé herramientas de prueba remotas no moderadas. Esto permitió a los participantes interactuar con el prototipo a su propia conveniencia y en su propio entorno. Recopilé datos cuantitativos sobre las tasas de finalización de tareas, las tasas de error y el tiempo dedicado a las tareas, lo que proporcionó una perspectiva más amplia sobre la usabilidad.">To gather broader feedback, I used unmoderated remote testing tools. This allowed participants to interact with the prototype at their own convenience and in their own environment. I collected quantitative data on task completion rates, error rates, and time spent on tasks, providing a broader perspective on usability.</p>
+                </div>
+            </div>
+
+            <h3><span data-es="Hallazgos e iteraciones clave">Key Findings & Iterations</span></h3>
+            <div class="findings-iterations">
+                <div class="finding">
+                    <h4 data-es="Claridad y participación en la página de inicio">Homepage Clarity and Engagement</h4>
+                    <p><strong data-es="Diseño inicial">Initial Design:</strong> The homepage lacked a clear visual hierarchy and key information, like hours and location, was not immediately visible. The "Explore" section felt generic and didn’t draw users in. </p>
+                    <p><strong data-es="Comentarios del usuario">User Feedback:</strong> Users wanted quicker access to key information (hours, location) and a more engaging way to explore the collection. The journey icon wasn’t immediately understood. </p>
+                    <p><strong data-es="Iteración">Iteration:</strong> Added a prominent “Museum Info” section with hours and location. Redesigned the “Explore” section to showcase specific artifact categories with images, replacing the generic placeholder grid. Removed the journey icon for clarity.</p>
+                    <img alt="Homepage Iteration" src="images/mockup.png" />
+                </div>
+
+                <div class="finding">
+                    <h4 data-es="Resaltado de artefactos mejorado">Improved Artifact Highlighting</h4>
+                    <p><strong data-es="Diseño inicial">Initial Design:</strong> The homepage lacked a dedicated space to highlight specific artifacts, which diminished the opportunity to showcase key pieces from the collection. </p>
+                    <p><strong data-es="Comentarios del usuario">User Feedback:</strong> Users expressed a desire to see highlighted artifacts on the homepage to get a better sense of the museum’s collection and pique their interest.</p>
+                    <p><strong data-es="Iteración">Iteration:</strong> Added a “Featured Artifact” section to the homepage, showcasing a prominent artifact with a high-quality image and a brief description. This addition created a focal point and provided a more engaging introduction to the collection.</p>
+                     <img alt="Homepage Iteration" src="images/mockup.png" />
+                </div>
+
+                <div class="finding">
+                    <h4 data-es="Presentación mejorada de “Nuevas exhibiciones“">Enhanced "New Exhibits" Presentation</h4>
+                    <p><strong data-es="Diseño inicial">Initial Design:</strong> The “New Exhibits” section on the homepage was presented as a simple text list, which lacked visual appeal and didn’t effectively draw users’ attention.</p>
+                    <p><strong data-es="Comentarios del usuario">User Feedback:</strong> Users wanted more visual information about new exhibits, such as images or videos, to make the section more engaging and informative.</p>
+                    <p><strong data-es="Iteración">Iteration:</strong> Redesigned the “New Exhibits” section to include visually appealing images or videos for each exhibit, along with concise descriptions and clear calls to action to learn more. This change significantly improved the section’s visual appeal and encouraged users to explore the exhibits. </p>
+                     <img alt="Homepage Iteration" src="images/mockup.png" />
+                </div>
+                <div class="finding">
+                    <h4 data-es="Mejoras de accesibilidad en “Planifique su visita“">Accessibility Improvements in "Plan Your Visit"</h4>
+                    <p><strong data-es="Diseño inicial">Initial Design:</strong> The “Plan Your Visit” page lacked sufficient detail about accessibility features, which could be a barrier for users with disabilities.</p>
+                    <p><strong data-es="Comentarios del usuario">User Feedback:</strong> Users emphasized the importance of detailed accessibility information to ensure they could comfortably visit the museum. </p>
+                    <p><strong data-es="Iteración">Iteration:</strong> Expanded the accessibility section to include specific information about wheelchair access, ramps, elevators, accessible restrooms, sensory-friendly options, and other relevant features. This addition demonstrated a commitment to inclusivity and provided essential information for visitors with disabilities.</p>
+                     <img alt="Homepage Iteration" src="images/mockup.png" />
+                </div>
+
+            </div>
+
+            <div class="wireframes">
+                <img alt="Updated Wireframes" src="images/Wireframes-Nefer.png" />
+                <p data-es="Wireframes actualizados después de las pruebas de usuario">Updated Wireframes after User Testing</p>
+            </div>
+        </section>
+
+        <section id="design" class="section">
+            <h2 data-es="Diseño">Designe</h2>
+            <div class="case-study-intro">
+                <p data-es="La fase de diseño final implicó reunir toda la investigación, la ideación y las pruebas para crear una experiencia en línea visualmente atractiva, fácil de usar e inmersiva. Esto abarcó refinar el diseño visual, desarrollar la interfaz de usuario y garantizar la capacidad de respuesta en varios dispositivos.">The final design phase involved bringing all the research, ideation, and testing together to create a visually appealing, user-friendly, and immersive online experience. This encompassed refining the visual design, developing the user interface, and ensuring responsiveness across various devices.</p>
+            <div class="FinalDesigns">
+                <img alt="FinalDesigns" src="images/FinalDesigns-Nefer.webp" />
+                <p data-es="Los diseños de alta fidelidad">The High Fidelity Designs</p>
+            </div>
+
+            <h3 data-es="Diseño visual y marca">Visual Design & Branding</h3>
+                <p data-es="El diseño visual del sitio web del Museo Nefer tenía como objetivo evocar la riqueza y el misterio del antiguo Egipto al tiempo que mantenía una estética moderna y accesible. Esto se logró mediante una cuidadosa selección de colores, tipografía e imágenes.">The visual design of the Nefer Museum website aimed to evoke the richness and mystery of ancient Egypt while maintaining a modern and accessible aesthetic. This was achieved through careful selection of colors, typography, and imagery.</p>
+            <div class="design-system">
+                <h3 data-es="Paleta de color">Color Palette</h3>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background-color: #06664e;"></div>
+                    <div class="color-swatch" style="background-color: #EFBF04;"></div>
+                    <div class="color-swatch" style="background-color: #000000;"></div>
+                    <div class="color-swatch" style="background-color: #ffffff;"></div>
+                </div>
+
+                <div class="color-descriptions">
+                    <p><strong data-es="#06664e (Verde azulado profundo)">#06664e (Deep Teal):</strong> <span data-es="Este rico verde azulado sirve como color de marca principal, que representa la profundidad histórica y la mística del antiguo Egipto. Se utiliza para encabezados, elementos interactivos y acentos en todo el sitio web.">This rich teal serves as the primary brand color, representing the historical depth and mystique of ancient Egypt. It's used for headings, interactive elements, and accents throughout the website.</span></p>
+                    <p><strong data-es="#EFBF04 (Oro ámbar)">#EFBF04 (Amber Gold):</strong> <span data-es="Este oro cálido se usa con moderación para reflejos y acentos, evocando los metales preciosos que a menudo se encuentran en los artefactos del antiguo Egipto.">This warm gold is used sparingly for highlights and accents, evoking the precious metals often found in ancient Egyptian artifacts.</span></p>
+                    <p><strong data-es="#000000 (Negro)">#000000 (Black):</strong> <span data-es="Proporciona un telón de fondo de conexión a tierra, creando una sensación de sofisticación y permitiendo que los otros colores resalten.">Provides a grounding backdrop, creating a sense of sophistication and allowing the other colors to pop.</span></p>
+                    <p><strong data-es="#ffffff (Blanco)">#ffffff (White):</strong> <span data-es="Se utiliza para el texto del cuerpo y los elementos de la interfaz de usuario, lo que garantiza una legibilidad y un contraste óptimos con el fondo más oscuro.">Used for body text and UI elements, ensuring optimal readability and contrast against the darker background.</span></p>
+                </div>
+                <h3><span data-es="Tipografía">Typography</span></h3>
+                <div class="font-display">Roboto</div>
+                <p data-es="Roboto: esta fuente sans-serif moderna y geométrica fue elegida por su claridad, legibilidad y versatilidad. Proporciona un toque contemporáneo al tiempo que complementa el tema histórico."><strong>Roboto:</strong> This modern, geometric sans-serif font was chosen for its clarity, readability, and versatility. It provides a contemporary touch while complementing the historical theme.</p>
+        
+                <h3><span data-es="Imágenes e iconografía">Imagery & Iconography</span></h3>
+                <p data-es="En todo el sitio web se utilizan imágenes de alta calidad de artefactos, obtenidas de museos con políticas de acceso abierto o licencias Creative Commons, para mejorar la narración visual. Las imágenes de marcador de posición generadas con flux. Dado que no existe el Museo Nefer al final del día y estas imágenes contienen un poco de la ilusión, no soy fanático de la IA, pero estoy dispuesto a aprender y usarla de manera ética. La iconografía se mantiene simple y coherente, utilizando principalmente iconos de Font Awesome.">High-quality images of artifacts, sourced from museums with open-access policies or Creative Commons licenses, are used throughout the website to enhance visual storytelling. Placeholder images generated using flux. Since there is no Nefer museum at the end of the day and these images hold a bit of the illusion, I'm not a fan of AI, but I am willing to learn and use it in ethical ways. Iconography is kept simple and consistent, primarily using icons from Font Awesome.</p>
+            </div>
+
+            <h3 data-es="Desarrollo y capacidad de respuesta">Development & Responsiveness</h3>
+                <p data-es="Al dar vida al sitio web del Museo Nefer, implementé principios de diseño receptivo, asegurando una experiencia de usuario fluida en varios dispositivos, desde computadoras de escritorio hasta teléfonos móviles. Las consideraciones técnicas incluyeron la optimización del rendimiento y el uso de HTML, CSS y JavaScript. Simplemente utilicé Visual Studio Code, algunos complementos de Figma y un código básico simple de mi parte. Y alojado de forma gratuita a través de GitHub, diría que no estoy extremadamente orgulloso del código, ¡pero funciona!">In bringing the Nefer Museum website to life, I implemented responsive design principles, ensuring a seamless user experience across various devices, from desktops to mobile phones. Technical considerations included performance optimization and the use of HTML, CSS, and JavaScript. I simply used Visual Studio Code, some Figma plugins and simple basic code from my part. And hosted it for free through GitHub, I would say that I'm not extremely proud of the code, but it works!</p>
+                <ul>
+                    <li><strong data-es="HTML">HTML:</strong> <span data-es="Proporcionó la base estructural del sitio web, asegurando un marcado semántico para la accesibilidad y las mejores prácticas de SEO.">Provided the structural foundation of the website, ensuring semantic markup for accessibility and SEO best practices.</span></li>
+                    <li><strong data-es="CSS">CSS:</strong> <span data-es="Diseñó el sitio web con un enfoque en el atractivo visual, la coherencia y la capacidad de respuesta, aprovechando las variables CSS para la mantenibilidad y la adaptabilidad.">Styled the website with a focus on visual appeal, consistency, and responsiveness, leveraging CSS variables for maintainability and adaptability.</span></li>
+                    <li><strong data-es="JavaScript">JavaScript:</strong> <span data-es="Implementó elementos interactivos, como galerías de imágenes y actualizaciones de contenido dinámico, mejorando la participación del usuario.">Implemented interactive elements, such as image galleries and dynamic content updates, enhancing user engagement.</span></li>
+                    <li><strong data-es="Diseño adaptable">Responsive Design:</strong> <span data-es="Utilicé consultas de medios y diseños fluidos para optimizar la apariencia y la funcionalidad del sitio web en diferentes tamaños de pantalla.">Used media queries and fluid layouts to optimize the website's appearance and functionality on different screen sizes.</span></li>
+                    <li><strong data-es="Optimización del rendimiento">Performance Optimization:</strong> <span data-es="Imágenes optimizadas, solicitudes HTTP minimizadas y estrategias de almacenamiento en caché empleadas para garantizar tiempos de carga rápidos y una experiencia de usuario fluida.">Optimized images, minimized HTTP requests, and employed caching strategies to ensure fast loading times and a smooth user experience.</span></li>
+                </ul>
+            <div class="visual-element">
+                <video autoplay="" loop="" muted="" playsinline="" width="700">
+                    <source src="images/Website-Nefer.mp4" type="video/mp4" />
+                </video>
+                <figcaption data-es="El prototipo desarrollado">The Developed Prototype</figcaption>
+            </div>
+            <a class="cta" href="https://gron28.github.io/Nefer-Museum/" rel="noopener" target="_blank" data-es="Visita la página web">Cheek Out the Website</a>
+        </section>
+
+        <section id="conclusion" class="section">
+            <h2 data-es="Conclusión">Conclusion</h2>
+            <div class="case-study-intro">
+                <p data-es="El sitio web del Museo Nefer, aunque es un proyecto ficticio, brindó una valiosa oportunidad para perfeccionar mis habilidades de diseño UX/UI y desarrollo front-end. Desde la realización de investigaciones de usuarios y la creación de wireframes hasta el desarrollo de un sitio web totalmente funcional, administré todo el ciclo de vida del proyecto solo. Esta experiencia reforzó la importancia de un enfoque de diseño centrado en el usuario, la creación de prototipos iterativos y las pruebas exhaustivas, incluso en un contexto hipotético.">The Nefer Museum website, while a fictional project, provided a valuable opportunity to hone my UX/UI design and front-end development skills. From conducting user research and creating wireframes to developing a fully functional website, I managed the entire project lifecycle solo. This experience reinforced the importance of a user-centered design approach, iterative prototyping, and thorough testing, even in a hypothetical context.</p>
+
+                <p data-es="Conclusiones clave">Key takeaways include:</p>
+                <ul>
+                    <li data-es="La importancia de una jerarquía visual clara y coherente para guiar la atención y la comprensión del usuario.">The importance of clear and consistent visual hierarchy in guiding user attention and comprehension.</li>
+                    <li data-es="El poder de los comentarios de los usuarios para identificar áreas de mejora y refinar la experiencia del usuario.">The power of user feedback in identifying areas for improvement and refining the user experience.</li>
+                    <li data-es="El desafío y la recompensa de equilibrar la estética, la funcionalidad y la accesibilidad en el diseño web.">The challenge and reward of balancing aesthetics, functionality, and accessibility in web design.</li>
+                </ul>
+
+                <p data-es="Si este fuera un proyecto del mundo real, continuaría iterando en el diseño en función de los comentarios de los usuarios y los análisis. El desarrollo futuro podría incluir la implementación de un CMS para una gestión de contenido más sencilla, la integración de funciones de comercio electrónico para la venta de entradas y donaciones, y la creación de un recorrido virtual por el museo.">If this were a real-world project, I would continue iterating on the design based on user feedback and analytics. Future development could include implementing a CMS for easier content management, integrating e-commerce features for ticket sales and donations, and creating a virtual tour of the museum.</p>
+
+                <p data-es="Este proyecto solidificó mi pasión por crear experiencias digitales atractivas y significativas. Estoy ansioso por aplicar mis habilidades a proyectos del mundo real y colaborar con equipos para dar vida a ideas innovadoras. Gracias por tomarse el tiempo para explorar este estudio de caso. Agradezco cualquier comentario o pregunta sobre mi trabajo.">This project solidified my passion for creating engaging and meaningful digital experiences. I’m eager to apply my skills to real-world projects and collaborate with teams to bring innovative ideas to life. Thank you for taking the time to explore this case study. I welcome any feedback or questions about my work.</p>
+            </div>
+            <div class="conclusion-actions">
+                <a class="cta" href="index.html" data-es="Volver a la página principal">Back to Home</a>
+                <a class="cta" href="mailto:villadafelipe28@gmail.com" data-es="Contáctame">Contact Me</a>
+            </div>
+        </section>
+    </div>
+</div>
+        
+<footer class="footer">
+    <div class="container footer-content">
+
+        <div class="footer-column">
+            <h4>Nefer Museum</h4>
+            <ul>
+            <li><a href="Nefer-CaseStudy.html#overview" data-es="Resumen">Project Overview</a></li>
+            <li><a href="Nefer-CaseStudy.html#ideate" data-es="Proceso de Diseño">Design Process</a></li>
+            <li><a href="Nefer-CaseStudy.html#design" data-es="Resultados">Outcomes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Theatron</h4>
+            <ul>
+            <li><a href="Theatron-CaseStudy.html#overview" data-es="Resumen">Project Overview</a></li>
+            <li><a href="Theatron-CaseStudy.html#ideate" data-es="Proceso de Diseño">Design Process</a></li>
+            <li><a href="Theatron-CaseStudy.html#design" data-es="Resultados">Outcomes</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4 data-es="Mi Trabajo">My Work</h4>
+            <ul>
+                <li><a href="index.html#projects" data-es="Portafolio UX/UI">UX/UI Portfolio</a></li>
+                <li><a href="index.html#personal-projects" data-es="Proyectos Personales">Personal Projects</a></li>
+                <li><a href="index.html#my-art" data-es="Arte e Ilustraciones">Art & Illustrations</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4 data-es="Contacto">Contact</h4>
+            <ul>
+                <li><a href="#" data-es="Currículum">Resume</a></li> 
+                <li><a href="mailto:villadafelipe28@gmail.com">villadafelipe28@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/felipevillada/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><a href="#contact">Let’s Collaborate</a></p>
+    </div>
+    <div class="footer-bottom">
+        <p data-es="© 2024 Felipe Villada. Todos los derechos reservados.">© 2024 Felipe Villada. All Rights Reserved.</p>
+    </div>
+</footer>
     
 
     <a href="#" class="scroll-to-top" aria-label="Scroll to top">↑</a>
@@ -1717,27 +1746,53 @@ body {
             }
         });
 
-        // Language toggle functionality
-        const langToggle = document.getElementById('langToggle');
-        const translations = {
-            en: {
-                introText: "Nefer Museum is a fictional digital project designed to showcase UX/UI skills."
-            },
-            sp: {
-                introText: "Nefer Museum es un proyecto ficticio diseñado para mostrar habilidades de UX/UI."
-            }
-        };
+       // Language toggle functionality
+const langToggle = document.getElementById('langToggle');
+let currentLang = 'en'; // Default language
 
-        let currentLang = 'en';
+function translatePage(lang) {
+    const elementsToTranslate = document.querySelectorAll('[data-es]');
 
-        function updateLanguage(lang) {
-            document.getElementById('introText').textContent = translations[lang].introText;
+    elementsToTranslate.forEach(element => {
+        if (lang === 'es') {
+            element.textContent = element.getAttribute('data-es'); // Use Spanish translation
+        } else {
+            element.textContent = element.dataset.originalText || element.textContent; // Revert to original English
         }
+    });
 
-        langToggle.addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'sp' : 'en';
-            updateLanguage(currentLang);
-            langToggle.textContent = currentLang === 'en' ? 'EN/SP' : 'SP/EN';
+    document.documentElement.lang = lang; // Update the <html> lang attribute
+}
+
+langToggle.addEventListener('click', () => {
+    currentLang = (currentLang === 'en') ? 'es' : 'en';
+    translatePage(currentLang);
+    langToggle.textContent = (currentLang === 'en') ? 'EN/SP' : 'SP/EN';
+});
+
+
+function storeOriginalText() {
+    const elementsToTranslate = document.querySelectorAll('[data-es]');
+    elementsToTranslate.forEach(element => {
+        element.dataset.originalText = element.textContent;
+    });
+}
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    storeOriginalText();
+    translatePage(currentLang)
+});
+
+
+
+        // Loader
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader-container');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
         });
 
         // Scroll to top button
@@ -1757,6 +1812,38 @@ body {
                 behavior: 'smooth'
             });
         });
+
+        // Function to handle video playback based on visibility
+function handleVideoVisibility() {
+    const videos = document.querySelectorAll('video[autoplay]'); // Select all autoplay videos
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                video.play();
+            } else {
+                video.pause();
+                video.currentTime = 0; // Reset to the beginning
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust threshold as needed (0.5 means 50% visible)
+    });
+
+    videos.forEach((video) => {
+        observer.observe(video);
+    });
+}
+
+
+// Call the function when the page loads
+window.addEventListener('load', () => {
+    // ... other onload functions (e.g., loader hide)
+
+    handleVideoVisibility(); // Call the video visibility function
+});
 
         
     </script>
