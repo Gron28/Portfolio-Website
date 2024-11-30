@@ -977,132 +977,6 @@ img, video {
     transform: translateY(-5px);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .hero {
-        height: 95vh;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-
-    .ux-intro-text, 
-    .personal-projects-text, 
-    .art-cta-container p, 
-    .other-content {
-        max-width: 90%;  /* Ensure text containers shrink properly */
-        padding: 15px;  /* Slightly reduce padding on mobile */
-        margin: 0 auto; /* Center horizontally */
-        text-align: center; /* Improve readability on mobile */
-    }
-
-     /* Reduce font sizes for all text elements */
-    h1 {
-        font-size: 2rem; /* Slightly smaller h1 */
-    }
-
-    h2 {
-        font-size: 1.6rem; /* Slightly smaller h2 */
-    }
-
-    h3 {
-        font-size: 1.3rem; /* Slightly smaller h3 */
-    }
-
-    h4 {
-        font-size: 1.1rem; /* Slightly smaller h4 */
-    }
-
-    p, ul, ol, li, .skill-tag, .empathy-map-item, /* Add other text-based classes */
-    .user-persona p, .user-story p, .value-prop p, .competitor p, .point p,
-    .method p, .finding p, .quote p, .other-content p, .prototype-details-text p {
-        font-size: 0.9rem; /* Smaller body text, list items, etc. */
-        line-height: 1.4; /* Slightly tighter line height */
-    }
-
-    .binah {
-        padding: 0px;
-    }
-
-    .case-study-intro{
-        padding: 0.5rem;
-    }
-
-    #conclusion .cta {
-        padding: 20px 20px;
-        font-size: 1rem;
-    }
-
-    .user-persona {
-        max-width: 80%;
-    }
-
-    .empathy-map {
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    }
-
-
-}
-/* Media Queries - Make sure to adjust as needed */
-@media (max-width: 768px) {
-    /* ... Other media queries */
-    #design .color-palette {
-        flex-direction: column; /* Stack color swatches vertically */
-        align-items: center;  /* Center items horizontally */
-    }
-    #design .color-descriptions {
-        text-align: left; /* Left align descriptions */
-    }
-    #design .design-system h4 {  /* Smaller headings on mobile */
-        font-size: 1.4rem;
-    }
-    #design .font-display {
-        font-size: 2rem;  /* Adjust as needed */
-    }
-
-    #design .mockup-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
-    }
-
-    #design .mockup-item img {
-        max-width: 100%;
-    }
-}
-
-/* ... other styles and media queries ... */
-
-
-@media (max-width: 768px) {  /* Responsive adjustments */
-    /* ... other media queries */
-    #testing .testing-methods,
-    #testing .findings-iterations {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
-    }
-}
-
-/* ... (Media Queries - adjust breakpoints if necessary) */
-
-/* Media Queries */
-@media (max-width: 768px) {
-/* other queries */
-
-
-    #prototype .prototype-interactive-and-details {
-        grid-template-columns: 1fr; /* Single column on mobile */
-    }
-    #prototype .interactive-prototype video {
-        width: 100%; /* Video takes full width */
-        max-width: none; /* Remove fixed max-width */
-    }
-
-
-}
-
 </style>
 
 <style>
@@ -1124,28 +998,6 @@ body {
     background-color: var(--background-color);
     overflow-x: hidden;
 }
-
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.936);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-.nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: 501;
-    transition: color 0.3s ease;
-}
-.nav a:hover {
-    color: var(--primary-color-nefer);
-}
-
 .cta {
     display: inline-block;
     background-color: var(--primary-color-nefer);
@@ -1210,6 +1062,154 @@ body {
     .hero h1 {
         font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
     }
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    html {
+        font-size: 85%; /* Reduces font size to 80% of the default */
+    }
+
+    h1 {
+        font-size: 2.4rem; /* Adjust as needed */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        height: 95vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: 95vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .ux-intro-text, 
+    .personal-projects-text, 
+    .art-cta-container, 
+    .other-content {
+        max-width: 90%;  /* Ensure text containers shrink properly */
+        padding: 15px;  /* Slightly reduce padding on mobile */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center; /* Improve readability on mobile */
+    }
+
+    ul, ol, .skill-tag, .empathy-map-item, /* Add other text-based classes */
+    .user-persona p, .user-story p, .value-prop p, .competitor p, .point p,
+    .method p, .finding p, .quote p, .other-content p, .prototype-details-text p {
+        font-size: 0.9rem; /* Smaller body text, list items, etc. */
+        line-height: 1.4; /* Slightly tighter line height */
+    }
+
+    .binah {
+        padding: 0px;
+    }
+
+    .case-study-intro{
+        padding: 0.5rem;
+    }
+
+    #conclusion .cta {
+        padding: 20px 20px;
+        font-size: 1rem;
+    }
+
+    .user-persona {
+        max-width: 80%;
+    }
+
+    .empathy-map {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    .vertical-nav {
+            position: fixed;
+            left: 10px; /* Space from left edge */
+            top: 50%; /* Center vertically */
+            transform: translateY(60%); /* Center vertically */
+        }
+
+}
+/* Media Queries - Make sure to adjust as needed */
+@media (max-width: 768px) {
+    /* ... Other media queries */
+    #design .color-palette {
+        flex-direction: column; /* Stack color swatches vertically */
+        align-items: center;  /* Center items horizontally */
+    }
+    #design .color-descriptions {
+        text-align: left; /* Left align descriptions */
+    }
+    #design .design-system h4 {  /* Smaller headings on mobile */
+        font-size: 1.4rem;
+    }
+    #design .font-display {
+        font-size: 2rem;  /* Adjust as needed */
+    }
+
+    #design .mockup-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    #design .mockup-item img {
+        max-width: 100%;
+    }
+}
+
+/* ... other styles and media queries ... */
+
+
+@media (max-width: 768px) {  /* Responsive adjustments */
+    /* ... other media queries */
+    #testing .testing-methods,
+    #testing .findings-iterations {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+}
+
+/* ... (Media Queries - adjust breakpoints if necessary) */
+
+/* Media Queries */
+@media (max-width: 768px) {
+/* other queries */
+
+
+    #prototype .prototype-interactive-and-details {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    #prototype .interactive-prototype video {
+        width: 100%; /* Video takes full width */
+        max-width: none; /* Remove fixed max-width */
+    }
+
+
 }
 
 /* Loader styles */

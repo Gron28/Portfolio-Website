@@ -42,47 +42,54 @@ body {
 }
 /* Navigation */
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.936);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-.nav-content {
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.65rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-.nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: 501;
-    transition: color 0.3s ease;
-}
-.nav a:hover {
-    color: var(--highlight-color);
-}
-#langToggle {
-    font-size: 0.7rem;
-    background: none;
-    border: 1px solid var(--text-color);
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: var(--font-family);
-    color: var(--text-color);
-}
-#langToggle:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.936);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            max-width: 100%;
+        }
+
+        .nav-content {
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.65rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 501;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--highlight-color);
+        }
+
+        #langToggle {
+            font-size: 0.7rem;
+            background: none;
+            border: 1px solid var(--text-color);
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-family);
+            color: var(--text-color);
+        }
+
+        #langToggle:hover {
+            background-color: var(--text-color);
+            color: var(--background-color);
+        }
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -401,7 +408,7 @@ h2 {
 .personal-projects-text {
     background-color: var(--section-bg-color);
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 20px;
     width: 100%;
     max-width: 860px;
@@ -418,6 +425,7 @@ h2 {
     justify-content: center;
     max-width: 900px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .art-item {
@@ -598,6 +606,27 @@ h2 {
 
 /* Media Queries */
 @media (max-width: 768px) {
+
+    html {
+        font-size: 85%; /* Reduces font size to 80% of the default */
+    }
+
+    h1 {
+        font-size: 2.4rem; /* Adjust as needed */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
     .hero {
         height: 95vh;
     }
@@ -610,33 +639,22 @@ h2 {
         font-size: 1.5rem;
     }
 
+    .art-cta-container {
+        max-width: 90%;  /* Ensure text containers shrink properly */
+        padding: 15px;  /* Slightly reduce padding on mobile */
+        margin: 0 auto;
+        align-items: center;
+    }
+
     .ux-intro-text, 
     .personal-projects-text, 
-    .art-cta-container p, 
     .other-content {
         max-width: 90%;  /* Ensure text containers shrink properly */
         padding: 15px;  /* Slightly reduce padding on mobile */
         margin: 0 auto; /* Center horizontally */
     }
 
-     /* Reduce font sizes for all text elements */
-    h1 {
-        font-size: 2rem; /* Slightly smaller h1 */
-    }
-
-    h2 {
-        font-size: 1.6rem; /* Slightly smaller h2 */
-    }
-
-    h3 {
-        font-size: 1.3rem; /* Slightly smaller h3 */
-    }
-
-    h4 {
-        font-size: 1.1rem; /* Slightly smaller h4 */
-    }
-
-    p, ul, ol, li, .skill-tag, .empathy-map-item, /* Add other text-based classes */
+    ul, ol, .skill-tag, .empathy-map-item, /* Add other text-based classes */
     .user-persona p, .user-story p, .value-prop p, .competitor p, .point p,
     .method p, .finding p, .quote p, .other-content p, .prototype-details-text p {
         font-size: 0.9rem; /* Smaller body text, list items, etc. */
@@ -796,26 +814,6 @@ body {
     overflow-x: hidden;
 }
 
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.936);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-.nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: 501;
-    transition: color 0.3s ease;
-}
-.nav a:hover {
-    color: var(--highlight-color);
-}
 
 .cta {
     display: inline-block;
@@ -1012,7 +1010,7 @@ body {
 <img alt="Art 6" loading="lazy" src="images/Art/6.jpg"/>
 </div>
 </div>
-<div class="art-cta-container">
+<div class="personal-projects-text">
     <p data-es="Los dibujos que se muestran aquí vienen de hace unos años, el más nuevo siendo de finales del 2021. Si bien estas obras representan una etapa anterior de mi trayectoria, los elementos centrales de mi estilo siguen presentes. Actualmente estoy trabajando en una nueva ola de ilustraciones que reflejan mi visión y estilo tal como son hoy, y espero actualizar pronto este portafolio.">The artwork displayed here comes from a few years ago, with the newest piece dating back to late 2021. While these works represent an earlier stage in my journey, the core elements of my style are still present. I’m currently working on a new wave of illustrations that reflect my vision and style as they are today, and I’m excited to update this portfolio soon.</p>
 </div>
 </section>
