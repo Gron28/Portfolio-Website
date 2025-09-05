@@ -765,6 +765,9 @@ html {
     .contact-links i {
         font-size: 1.2rem;
     }
+    .contact-form textarea {
+        height: 120px;
+    }
 }
 @media (max-width: 400px) {
     .hero {
