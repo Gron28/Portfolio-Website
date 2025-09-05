@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         elements: {
             loader: document.querySelector('.loader-container'),
             hamburger: document.querySelector('.hamburger'),
-            mobileNav: document.querySelector('.mobile-nav'),
-            mobileNavLinks: document.querySelectorAll('.mobile-nav a'),
             langToggle: document.getElementById('langToggle'),
             translatableElements: document.querySelectorAll('[data-es]'),
             bilingualLinks: document.querySelectorAll('[data-link-es]'),
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.setupMobileNav();
             this.setupLanguageToggle();
             this.setupVideoObserver();
-            this.setupGalaxyAnimation();
+            this.setupGalaxyAnimation(); 
             console.log('App Initialized Successfully.');
         },
 
@@ -63,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         },
+        
         setupLanguageToggle() {
             if (!this.elements.langToggle) return;
             
@@ -124,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.play().catch(error => {
-                            console.log("Autoplay prevented: ", error);
                         });
                     } else {
                         entry.target.pause();
@@ -140,6 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     
         setupGalaxyAnimation() {
+            const mobileBreakpoint = 768;
+            if (window.innerWidth <= mobileBreakpoint) {
+                const canvas = this.elements.canvas;
+                if (canvas) {
+                    canvas.style.display = 'none';
+                }
+                return; 
+            }
+
             const canvas = this.elements.canvas;
             if (!canvas) return;
     
