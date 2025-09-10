@@ -18,6 +18,7 @@ html.page-freelance {
 }
 
 .hero h1 {
+  margin-top: 20px;
   font-size: calc(1.9rem + 1vw);
   color: var(--color-primary);
   text-align: center;
@@ -537,14 +538,23 @@ html.page-freelance {
   }
 
   .page-freelance .hero p {
-    max-width: 90%;
+    max-width: 85%;
     font-size: 1.1rem;
     color: var(--color-background); 
   }
 
   .hero {
-    height: 70vh;
+    height: 75vh;
   }
+
+  .hero h1 {
+    max-width: 90%;
+  }
+
+  .hero-availability {
+    font-size: 1rem;
+  }
+
 
   .client-logos {
     gap: calc(var(--spacing-unit) * 4);
