@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     init() {
-      this.checkURLParamsForLang();
+      this.determineInitialLanguage(); 
+      this.applyLanguage();
       this.setupLoader();
       this.setupMobileNav();
       this.setupLanguageToggle();
@@ -26,14 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("App Initialized Successfully.");
     },
 
-    checkURLParamsForLang() {
+    determineInitialLanguage() {
       const params = new URLSearchParams(window.location.search);
-      const lang = params.get("lang");
-      if (lang === "es" || lang === "en") {
-        this.state.currentLanguage = lang;
-        localStorage.setItem("siteLanguage", lang);
+      const langFromURL = params.get('lang');
+  
+      if (langFromURL === 'es' || langFromURL === 'en') {
+          this.state.currentLanguage = langFromURL;
+          localStorage.setItem('siteLanguage', langFromURL);
+      } else {
+          this.state.currentLanguage = localStorage.getItem('siteLanguage') || 'en';
       }
-    },
+  },
 
     updateSEOTags(lang) {
       const descriptionTag = document.querySelector('meta[name="description"]');
