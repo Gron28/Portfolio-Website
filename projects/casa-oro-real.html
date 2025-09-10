@@ -1,223 +1,501 @@
 <!DOCTYPE html>
 <html lang="en" class="case-study-cor">
-<head>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ7HQD668Q"></script>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZJ7HQD668Q"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZJ7HQD668Q');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZJ7HQD668Q");
     </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case Study: Casa Oro Real Website</title>
-    
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/case-study.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-</head>
-<body> 
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/case-study.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="loader-container">
-        <div class="loader-spinner"></div>
+      <div class="loader-spinner"></div>
     </div>
     <canvas id="galaxy-canvas"></canvas>
 
-
     <nav class="nav">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo" data-en="Felipe Villada" data-es="Felipe Villada">Felipe Villada</a>
-            <div class="nav-links">
-                <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
-                <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
-                <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
-                <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
-            </div>
-            <div class="nav-controls">
-                <button id="langToggle"><i class="fas fa-globe"></i> EN/ES</button>
-            </div>
+      <div class="nav-container">
+        <a
+          href="../index.html"
+          class="nav-logo"
+          data-en="Felipe Villada"
+          data-es="Felipe Villada"
+          >Felipe Villada</a
+        >
+        <div class="nav-links">
+          <a href="../index.html#work" data-en="Work" data-es="Trabajos"
+            >Work</a
+          >
+          <a href="../index.html#skills" data-en="Skills" data-es="Habilidades"
+            >Skills</a
+          >
+          <a href="../index.html#about" data-en="About" data-es="Sobre Mí"
+            >About</a
+          >
+          <a
+            href="../freelance/freelance.html"
+            data-en="Freelance"
+            data-es="Freelance"
+            >Freelance</a
+          >
+          <a href="../index.html#contact" data-en="Contact" data-es="Contacto"
+            >Contact</a
+          >
         </div>
+        <div class="nav-controls">
+          <button id="langToggle"><i class="fas fa-globe"></i> EN/ES</button>
+        </div>
+      </div>
     </nav>
-    
     <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <span></span><span></span><span></span>
     </button>
-    
     <div class="mobile-menu-overlay">
-        <div class="mobile-menu-links">
-            <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
-            <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
-            <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
-            <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
-            <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
-        </div>
+      <div class="mobile-menu-links">
+        <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
+        <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
+        <a
+          href="../freelance/freelance.html"
+          data-en="Freelance"
+          data-es="Freelance"
+          >Freelance</a
+        >
+        <a href="../index.html#contact" data-en="Contact" data-es="Contacto"
+          >Contact</a
+        >
+      </div>
     </div>
 
     <header class="cs-hero">
-        <div class="hero-content">
-            <h1>CASA ORO REAL</h1>
-            <p class="hero-subtitle" data-en="<em>Forging Digital Trust for a Master Craft</em>" data-es="<em>Forjando Confianza Digital para un Oficio Maestro</em>"><em>Forging Digital Trust for a Master Craft</em></p>
-        </div>
+      <div class="hero-content">
+        <h1>CASA ORO REAL</h1>
+        <p
+          class="hero-subtitle"
+          data-en="<em>Forging Digital Trust for a Master Craft</em>"
+          data-es="<em>Forjando Confianza Digital para un Oficio Maestro</em>"
+        >
+          <em>Forging Digital Trust for a Master Craft</em>
+        </p>
+      </div>
     </header>
 
     <main class="main-container case-study-content">
+      <section class="cs-section cs-overview">
+        <div class="cs-intro-image">
+          <img
+            src="../images/COR/casaororeal2.webp"
+            alt="Isometric mockup of the Casa Oro Real website on a laptop and phone."
+            loading="lazy"
+          />
+        </div>
+        <h2 data-en="Project Overview" data-es="Resumen del Proyecto"></h2>
+        <p class="cs-summary"
+          data-en="I architected the entire digital presence for a master-class artifact restoration service. The goal: build a complete business asset from the ground up in just one week, from brand strategy to custom front-end development."
+          data-es="Arquitecté la presencia digital completa para un servicio de restauración de artefactos de maestría. El objetivo: construir un activo comercial completo desde cero en solo una semana, desde la estrategia de marca hasta el desarrollo front-end a medida."
+        ></p>
+        <div class="cs-at-a-glance">
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-user-circle'></i> MY ROLE"
+              data-es="<i class='fas fa-user-circle'></i> MI ROL"
+            >
+              <i class="fas fa-user-circle"></i> MY ROLE
+            </h4>
+            <p
+              data-en="Brand Strategist, UX/UI Designer, Frontend Developer"
+              data-es="Estratega de Marca, Diseñador UX/UI, Desarrollador Frontend"
+            >
+              Brand Strategist, UX/UI Designer, Frontend Developer
+            </p>
+          </div>
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-calendar-alt'></i> TIMELINE"
+              data-es="<i class='fas fa-calendar-alt'></i> CRONOGRAMA"
+            >
+              <i class="fas fa-calendar-alt"></i> TIMELINE
+            </h4>
+            <p
+              data-en="1 Week (Rapid Concept to Launch)"
+              data-es="1 Semana (Concepto a Lanzamiento Rápido)"
+            >
+              1 Week (Rapid Concept to Launch)
+            </p>
+          </div>
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-tools'></i> DELIVERABLES"
+              data-es="<i class='fas fa-tools'></i> ENTREGABLES"
+            >
+              <i class="fas fa-tools"></i> DELIVERABLES
+            </h4>
+            <p
+              data-en="Brand Identity, Custom Website, Sales Enablement Tool"
+              data-es="Identidad de Marca, Sitio Web a Medida, Herramienta de Ventas"
+            >
+              Brand Identity, Custom Website, Sales Enablement Tool
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="cs-section cs-overview">
-            <div class="cs-intro-image">
-                <img src="../images/COR/casaororeal2.webp" alt="Isometric mockup of the Casa Oro Real website on a laptop and phone." loading="lazy">
-            </div>
-            <h2 data-en="Project Overview" data-es="Resumen del Proyecto">Project Overview</h2>
-            <p class="cs-summary" data-en="I partnered with Casa Oro Real, a master-class artifact restoration service, to architect their entire digital presence from the ground up. I served as the sole creator, managing the end to end lifecycle from client consultation and brand strategy to UX/UI design and custom front end development, launching a complete business asset in just one week." data-es="Me asocié con Casa Oro Real, un servicio de restauración de artefactos de maestría, para arquitectar su presencia digital completa desde cero. Como único creador, gestioné el ciclo de vida completo, desde la consulta con el cliente y la estrategia de marca hasta el diseño UX/UI y el desarrollo front-end a medida, lanzando un activo comercial completo en solo una semana.">I partnered with Casa Oro Real, a master-class artifact restoration service, to architect their entire digital presence from the ground up. I served as the sole creator, managing the end to end lifecycle from client consultation and brand strategy to UX/UI design and custom front end development, launching a complete business asset in just one week.</p>
-            <div class="cs-at-a-glance">
-                <div class="glance-item">
-                    <h4 data-en="<i class='fas fa-user-circle'></i> MY ROLE" data-es="<i class='fas fa-user-circle'></i> MI ROL"><i class="fas fa-user-circle"></i> MY ROLE</h4>
-                    <p data-en="Brand Strategist, UX/UI Designer, Frontend Developer" data-es="Estratega de Marca, Diseñador UX/UI, Desarrollador Frontend">Brand Strategist, UX/UI Designer, Frontend Developer</p>
-                </div>
-                <div class="glance-item">
-                    <h4 data-en="<i class='fas fa-calendar-alt'></i> TIMELINE" data-es="<i class='fas fa-calendar-alt'></i> CRONOGRAMA"><i class="fas fa-calendar-alt"></i> TIMELINE</h4>
-                    <p data-en="1 Week (Rapid Concept to Launch)" data-es="1 Semana (Concepto a Lanzamiento Rápido)">1 Week (Rapid Concept to Launch)</p>
-                </div>
-                <div class="glance-item">
-                    <h4 data-en="<i class='fas fa-tools'></i> DELIVERABLES" data-es="<i class='fas fa-tools'></i> ENTREGABLES"><i class="fas fa-tools"></i> DELIVERABLES</h4>
-                    <p data-en="Brand Identity, Custom Website, Sales Enablement Tool" data-es="Identidad de Marca, Sitio Web a Medida, Herramienta de Ventas">Brand Identity, Custom Website, Sales Enablement Tool</p>
-                </div>
-            </div>
-        </section>
+      <section class="cs-section">
+        <h2 data-en="The Strategic Foundation" data-es="La Base Estratégica"></h2>
+        <p
+          data-en="The challenge: a master craftsman was entering a new market with zero digital presence. In a high-trust industry, this invisibility was a critical business vulnerability. The goal was not just to build a website, but to engineer credibility from scratch."
+          data-es="El desafío: un maestro artesano entraba en un nuevo mercado con cero presencia digital. En una industria de alta confianza, esta invisibilidad era una vulnerabilidad comercial crítica. El objetivo no era solo construir un sitio web, sino ingeniar credibilidad desde cero."
+        ></p>
 
-        <section class="cs-section">
-            <h2 data-en="The Strategic Foundation: Architecting Trust from Scratch" data-es="La Base Estratégica: Arquitectando Confianza Desde Cero">The Strategic Foundation: Architecting Trust from Scratch</h2>
-            <p data-en="The client, a master craftsman, was entering a new market with zero digital presence. In a high trust industry, this invisibility was a critical business vulnerability. The foundational challenge was not just to build a website, but to engineer credibility." data-es="El cliente, un maestro artesano, estaba entrando en un nuevo mercado sin presencia digital. En una industria de alta confianza, esta invisibilidad era una vulnerabilidad comercial crítica. El desafío fundamental no era solo construir un sitio web, sino ingeniar credibilidad.">The client, a master craftsman, was entering a new market with zero digital presence. In a high trust industry, this invisibility was a critical business vulnerability. The foundational challenge was not just to build a website, but to engineer credibility.</p>
-            
-            <div class="cs-multi-module-section">
-                <div class="cs-module">
-                    <div class="module-visual">
-                        <img src="../images/COR/brand.webp" alt="Brand identity for Casa Oro Real, showing logo, color palette, and typography." loading="lazy">
-                    </div>
-                    <div class="module-text">
-                        <h3 data-en="1. The Brand Identity as the First Solution" data-es="1. La Identidad de Marca como Primera Solución">1. The Brand Identity as the First Solution</h3>
-                        <p data-en="Before any design, I established a brand identity that communicated legacy and mastery. Through rapid client consultation, I developed a logo, color palette (gold and dark blue), and typography designed to evoke a sense of timeless quality and trustworthiness. This became the cornerstone of the entire project." data-es="Antes de cualquier diseño, establecí una identidad de marca que comunicaba legado y maestría. A través de una rápida consulta con el cliente, desarrollé un logo, paleta de colores (oro y azul oscuro) y tipografía diseñados para evocar una sensación de calidad atemporal y confianza. Esto se convirtió en la piedra angular de todo el proyecto."></p>
-                    </div>
-                </div>
-                <div class="cs-module reverse">
-                    <div class="module-visual">
-                         <img src="../images/COR/wireframes.webp" alt="Wireframe of the Casa Oro Real homepage." loading="lazy">
-                    </div>
-                    <div class="module-text">
-                        <h3 data-en="2. The UX Blueprint for Evidence" data-es="2. El Plan UX para la Evidencia">2. The UX Blueprint for Evidence</h3>
-                        <p data-en="From user and client interviews, I identified that the primary user need was verification. The website's information architecture was therefore designed as a direct path to evidence. The wireframes prioritize the gallery and proof of work above all else, funneling users toward the most persuasive content immediately." data-es="A partir de entrevistas con usuarios y el cliente, identifiqué que la principal necesidad del usuario era la verificación. Por lo tanto, la arquitectura de la información del sitio web se diseñó como un camino directo hacia la evidencia. Los wireframes priorizan la galería y la prueba de trabajo por encima de todo, canalizando a los usuarios hacia el contenido más persuasivo de inmediato."></p>
-                    </div>
-                </div>
+        <div class="cs-multi-module-section">
+          <div class="cs-module">
+            <div class="module-visual">
+              <img
+                src="../images/COR/brand.webp"
+                alt="Brand identity for Casa Oro Real, showing logo, color palette, and typography."
+                loading="lazy"
+              />
             </div>
-        </section>
+            <div class="module-text">
+              <h3
+                data-en="1. The Brand Identity as the First Solution"
+                data-es="1. La Identidad de Marca como Primera Solución"
+              >
+                1. The Brand Identity as the First Solution
+              </h3>
+              <p
+                data-en="Before any design, I established a brand identity that communicated legacy and mastery. Through rapid client consultation, I developed a logo, color palette (gold and dark blue), and typography designed to evoke a sense of timeless quality and trustworthiness. This became the cornerstone of the entire project."
+                data-es="Antes de cualquier diseño, establecí una identidad de marca que comunicaba legado y maestría. A través de una rápida consulta con el cliente, desarrollé un logo, paleta de colores (oro y azul oscuro) y tipografía diseñados para evocar una sensación de calidad atemporal y confianza. Esto se convirtió en la piedra angular de todo el proyecto."
+              ></p>
+            </div>
+          </div>
+          <div class="cs-module reverse">
+            <div class="module-visual">
+              <img
+                src="../images/COR/wireframes.webp"
+                alt="Wireframe of the Casa Oro Real homepage."
+                loading="lazy"
+              />
+            </div>
+            <div class="module-text">
+              <h3
+                data-en="2. The UX Blueprint for Evidence"
+                data-es="2. El Plan UX para la Evidencia"
+              >
+                2. The UX Blueprint for Evidence
+              </h3>
+              <p
+                data-en="From user and client interviews, I identified that the primary user need was verification. The website's information architecture was therefore designed as a direct path to evidence. The wireframes prioritize the gallery and proof of work above all else, funneling users toward the most persuasive content immediately."
+                data-es="A partir de entrevistas con usuarios y el cliente, identifiqué que la principal necesidad del usuario era la verificación. Por lo tanto, la arquitectura de la información del sitio web se diseñó como un camino directo hacia la evidencia. Los wireframes priorizan la galería y la prueba de trabajo por encima de todo, canalizando a los usuarios hacia el contenido más persuasivo de inmediato."
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="cs-section">
-            <h2 data-en="The Development Process: Engineering the &quot;Evidence Locker&quot;" data-es="El Proceso de Desarrollo: Diseñando el &quot;Casillero de Evidencia&quot;">The Development Process: Engineering the "Evidence Locker"</h2>
-            <p data-en="To bring the strategy to life, I moved from Figma prototypes to custom code. The core of the site couldn't be a generic template; it needed bespoke interactive elements to provide tangible, undeniable proof of the client's value." data-es="Para dar vida a la estrategia, pasé de los prototipos de Figma al código personalizado. El núcleo del sitio no podía ser una plantilla genérica; necesitaba elementos interactivos a medida para proporcionar una prueba tangible e innegable del valor del cliente."></p>
-            <div class="cs-comparison">
-                <div class="comparison-item">
-                    <h3 data-en="The Before and After Hook" data-es="El Gancho del Antes y Después">The Before and After Hook</h3>
-                    <p data-en="I developed a custom JavaScript hero slider to provide immediate, interactive proof of the restoration quality, the user's very first interaction is with the value proposition." data-es="Desarrollé un deslizador personalizado en JavaScript para el héroe, proporcionando una prueba interactiva e inmediata de la calidad de la restauración; la primera interacción del usuario es con la propuesta de valor."></p>
-                    <video class="case-video" autoplay loop muted playsinline>
-                        <source src="../images/COR/casaororeal.mp4" type="video/mp4" loading="lazy">
-                    </video>
-                </div>
-                <div class="comparison-item">
-                    <h3 data-en="The Digital Atelier Gallery" data-es="La Galería del Taller Digital">The Digital Atelier Gallery</h3>
-                    <p data-en="I built a multi-category, filterable gallery with a custom lightbox to showcase over 50 detailed images of restoration projects, serving as the website's centerpiece." data-es="Construí una galería filtrable y multi-categoría con un lightbox personalizado para exhibir más de 50 imágenes detalladas de proyectos de restauración, sirviendo como la pieza central del sitio web."></p>
-                    <video class="case-video" autoplay loop muted playsinline>
-                        <source src="../images/COR/casaororeal1.mp4" type="video/mp4" loading="lazy">
-                    </video>
-                </div>
-            </div>
-        </section>
-        
-        <section class="cs-section">
-            <h2 data-en="The Outcome: A Professional Sales & Credibility Asset" data-es="El Resultado: Un Activo Profesional de Ventas y Credibilidad">The Outcome: A Professional Sales & Credibility Asset</h2>
-            <p data-en="In just one week, I delivered a sophisticated digital tool that transformed the brand's invisibility into authority. The website now serves as the company's primary sales enablement asset, empowering their team to close high-value deals by providing irrefutable, beautifully presented evidence of their work." data-es="En solo una semana, entregué una herramienta digital sofisticada que transformó la invisibilidad de la marca en autoridad. El sitio web ahora sirve como el principal activo de ventas de la empresa, capacitando a su equipo para cerrar tratos de alto valor al proporcionar evidencia irrefutable y elegantemente presentada de su trabajo."></p>
-            <blockquote class="cs-testimonial">
-                <p data-en="&quot;The website is incredible. The detailed before and after gallery is one of our best tools for proving our quality to new clients before meeting them.&quot;" data-es="&quot;El sitio web es increíble. La galería detallada del antes y después es una de nuestras mejores herramientas para demostrar nuestra calidad a nuevos clientes antes de conocerlos.&quot;"></p>
-                <span data-en="Guilherme V. Owner, Casa Oro Real" data-es="Guilherme V. Propietario, Casa Oro Real">Guilherme V. Owner, Casa Oro Real</span>
-            </blockquote>
-            <div class="cs-cta-container">
-                <a href="https://www.casaororeal.com/" class="cta-button" target="_blank">casaororeal.com</a>
-            </div>
-        </section>
-        
-        <section class="cs-section cs-final-thoughts">
-            <h2 data-en="Impact & Key Learnings" data-es="Impacto y Aprendizajes Clave">Impact & Key Learnings</h2>
-            <div class="takeaways-grid">
-                <div class="takeaway-item">
-                    <h4 data-en="Delivered Business Value" data-es="Valor de Negocio Entregado">Delivered Business Value</h4>
-                    <ul>
-                        <li data-en="Established a professional brand identity that builds trust." data-es="Establecí una identidad de marca profesional que genera confianza."></li>
-                        <li data-en="Delivered a primary sales enablement asset that directly supports lead conversion." data-es="Entregué un activo de ventas clave que apoya directamente la conversión de leads."></li>
-                        <li data-en="A fully bilingual platform to support international business goals." data-es="Una plataforma completamente bilingüe para apoyar los objetivos comerciales internacionales."></li>
-                    </ul>
-                </div>
-                 <div class="takeaway-item">
-                    <h4 data-en="Personal Growth" data-es="Crecimiento Personal">Personal Growth</h4>
-                    <p data-en="This project forced me to step beyond a single discipline and become a true strategic partner. Managing the entire lifecycle, from brand conception to coding under a tight deadline, solidified my ability to translate ambiguous business needs into tangible, high-impact digital products." data-es="Este proyecto me forzó a ir más allá de una sola disciplina y convertirme en un verdadero socio estratégico. Gestionar todo el ciclo de vida, desde la concepción de la marca hasta la codificación bajo un plazo ajustado, consolidó mi capacidad para traducir necesidades comerciales ambiguas en productos digitales tangibles y de alto impacto."></p>
-                </div>
-            </div>
-        </section>
-        <section class="final-cta-section">
-            <h2 data-en="For work or feedback, <br>contact me from here:" data-es="Para trabajos o feedback, <br>contáctame desde acá:">For work or feedback, <br>contact me from here:</h2>            <a href="../index.html#contact" class="cta-button" data-en="Contact Me" data-es="Contáctame">Contact Me</a>
-        </section>
+      <section class="cs-section">
+        <h2 data-en="The Development Process" data-es="El Proceso de Desarrollo"></h2>
+        <p
+          data-en="To bring the strategy to life, I moved from Figma prototypes to custom code. The core of the site couldn't be a generic template; it needed bespoke interactive elements to provide tangible, undeniable proof of the client's value."
+          data-es="Para dar vida a la estrategia, pasé de los prototipos de Figma al código personalizado. El núcleo del sitio no podía ser una plantilla genérica; necesitaba elementos interactivos a medida para proporcionar una prueba tangible e innegable del valor del cliente."
+        ></p>
+        <div class="cs-comparison">
+          <div class="comparison-item">
+            <h3
+              data-en="The Before and After Hook"
+              data-es="El Gancho del Antes y Después"
+            >
+              The Before and After Hook
+            </h3>
+            <p
+              data-en="I developed a custom JavaScript hero slider to provide immediate, interactive proof of the restoration quality, the user's very first interaction is with the value proposition."
+              data-es="Desarrollé un deslizador personalizado en JavaScript para el héroe, proporcionando una prueba interactiva e inmediata de la calidad de la restauración; la primera interacción del usuario es con la propuesta de valor."
+            ></p>
+            <video class="case-video" autoplay loop muted playsinline>
+              <source
+                src="../images/COR/casaororeal.mp4"
+                type="video/mp4"
+                loading="lazy"
+              />
+            </video>
+          </div>
+          <div class="comparison-item">
+            <h3
+              data-en="The Digital Atelier Gallery"
+              data-es="La Galería del Taller Digital"
+            >
+              The Digital Atelier Gallery
+            </h3>
+            <p
+              data-en="I built a multi category, filterable gallery with a custom lightbox to showcase over 50 detailed images of restoration projects, serving as the website's centerpiece."
+              data-es="Construí una galería filtrable y multi categoría con un lightbox personalizado para exhibir más de 50 imágenes detalladas de proyectos de restauración, sirviendo como la pieza central del sitio web."
+            ></p>
+            <video class="case-video" autoplay loop muted playsinline>
+              <source
+                src="../images/COR/casaororeal1.mp4"
+                type="video/mp4"
+                loading="lazy"
+              />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2 data-en="The Outcome" data-es="El Resultado"></h2>
+    <p
+      data-en="In just one week, I delivered a sophisticated digital tool that transformed the brand's invisibility into authority. The website now serves as the company's primary sales asset, providing irrefutable, beautifully presented evidence of their work."
+      data-es="En solo una semana, entregué una sofisticada herramienta digital que transformó la invisibilidad de la marca en autoridad. El sitio web ahora sirve como el principal activo de ventas de la empresa, proporcionando evidencia irrefutable y elegantemente presentada de su trabajo."
+    ></p>
+        <blockquote class="cs-testimonial">
+          <p
+            data-en='"The website is incredible. The detailed before and after gallery is one of our best tools for proving our quality to new clients before meeting them."'
+            data-es='"El sitio web es increíble. La galería detallada del antes y después es una de nuestras mejores herramientas para demostrar nuestra calidad a nuevos clientes antes de conocerlos."'
+          ></p>
+          <span
+            data-en="Guilherme V. Owner, Casa Oro Real"
+            data-es="Guilherme V. Propietario, Casa Oro Real"
+            >Guilherme V. Owner, Casa Oro Real</span
+          >
+        </blockquote>
+        <div class="cs-cta-container">
+          <a
+            href="https://www.casaororeal.com/"
+            class="cta-button"
+            target="_blank"
+            >casaororeal.com</a
+          >
+        </div>
+      </section>
+
+      <section class="cs-section cs-final-thoughts">
+        <h2
+          data-en="Impact & Key Learnings"
+          data-es="Impacto y Aprendizajes Clave"
+        >
+          Impact & Key Learnings
+        </h2>
+        <div class="takeaways-grid">
+          <div class="takeaway-item">
+            <h4
+              data-en="Delivered Business Value"
+              data-es="Valor de Negocio Entregado"
+            >
+              Delivered Business Value
+            </h4>
+            <ul>
+              <li
+                data-en="Established a professional brand identity that builds trust."
+                data-es="Establecí una identidad de marca profesional que genera confianza."
+              ></li>
+              <li
+                data-en="Delivered a primary sales enablement asset that directly supports lead conversion."
+                data-es="Entregué un activo de ventas clave que apoya directamente la conversión de leads."
+              ></li>
+              <li
+                data-en="A fully bilingual platform to support international business goals."
+                data-es="Una plataforma completamente bilingüe para apoyar los objetivos comerciales internacionales."
+              ></li>
+            </ul>
+          </div>
+          <div class="takeaway-item">
+            <h4 data-en="Personal Growth" data-es="Crecimiento Personal"></h4>
+            <p
+              data-en="This project forced me to be a true strategic partner, not just a designer. Managing the entire lifecycle from brand conception to coding under a tight deadline solidified my ability to turn ambiguous business needs into high-impact digital products."
+              data-es="Este proyecto me obligó a ser un verdadero socio estratégico, no solo un diseñador. Gestionar todo el ciclo de vida desde la concepción de la marca hasta la codificación bajo un plazo ajustado consolidó mi capacidad para convertir necesidades comerciales ambiguas en productos digitales de alto impacto."
+            ></p>
+          </div>
+        </div>
+      </section>
+      <section class="final-cta-section">
+        <h2
+          data-en="Ready to Build Something Meaningful?"
+          data-es="¿Listo para Construir Algo Significativo?"
+        ></h2>
+        <p
+          class="final-cta-subtitle"
+          data-en="Whether you have a custom project in mind or need a high-impact site launched quickly, I'm here to help."
+          data-es="Ya sea que tengas un proyecto a medida en mente o necesites un sitio de alto impacto lanzado rápidamente, estoy aquí para ayudar."
+        ></p>
+        <div class="final-cta-buttons">
+          <a
+            href="../freelance/freelance.html"
+            class="cta-button"
+            data-en="See 7-Day Launch Service"
+            data-es="Ver Servicio de 7 Días"
+          ></a>
+          <a
+            href="../index.html#contact"
+            class="cta-button-secondary"
+            data-en="Contact for Custom Work"
+            data-es="Contacto para Proyectos a Medida"
+          ></a>
+        </div>
+      </section>
     </main>
 
     <nav class="project-nav">
-        <div class="project-nav-container">
-            <a href="tan-bonitos.html" class="project-nav-link" data-en="<i class='fas fa-arrow-left'></i> Previous Project" data-es="<i class='fas fa-arrow-left'></i> Proyecto Anterior"><i class="fas fa-arrow-left"></i> Previous Project</a>
-            <a href="../index.html#work" class="project-nav-link home" data-en="<i class='fas fa-th-large'></i> Back to Home" data-es="<i class='fas fa-th-large'></i> Volver al Inicio"><i class="fas fa-th-large"></i> Back to Home</a>
-            <a href="nefer-museum.html" class="project-nav-link" data-en="Next Project <i class='fas fa-arrow-right'></i>" data-es="Siguiente Proyecto <i class='fas fa-arrow-right'></i>">Next Project <i class="fas fa-arrow-right"></i></a>
-        </div>
+      <div class="project-nav-container">
+        <a
+          href="tan-bonitos.html"
+          class="project-nav-link"
+          data-en="<i class='fas fa-arrow-left'></i> Previous Project"
+          data-es="<i class='fas fa-arrow-left'></i> Proyecto Anterior"
+          ><i class="fas fa-arrow-left"></i> Previous Project</a
+        >
+        <a
+          href="../index.html#work"
+          class="project-nav-link home"
+          data-en="<i class='fas fa-th-large'></i> Back to Home"
+          data-es="<i class='fas fa-th-large'></i> Volver al Inicio"
+          ><i class="fas fa-th-large"></i> Back to Home</a
+        >
+        <a
+          href="nefer-museum.html"
+          class="project-nav-link"
+          data-en="Next Project <i class='fas fa-arrow-right'></i>"
+          data-es="Siguiente Proyecto <i class='fas fa-arrow-right'></i>"
+          >Next Project <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
     </nav>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
-                <ul>
-                    <li><a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a></li>
-                    <li><a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a></li>
-                    <li><a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a></li>
-                    <li><a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 data-en="Contact" data-es="Contacto">Contact</h4>
-                <ul>
-                    <li><a href="mailto:villadafelipe28@gmail.com"><i class="fas fa-envelope"></i> villadafelipe28@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/felipevillada/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://discord.com/users/gronfrog" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 data-en="Resources" data-es="Recursos">Resources</h4>
-                <ul>
-                    <li><a href="../Google-UX-Certificate.pdf" target="_blank"><i class="fas fa-certificate"></i> <span data-en="Google UX Certificate" data-es="Certificado UX de Google">Google UX Certificate</span></a></li>
-                    <li><a href="../cv/FelipeVillada-CV-En.pdf" target="_blank" data-link-en="../cv/FelipeVillada-CV-En.pdf" data-link-es="../cv/FelipeVillada-CV-Es.pdf"><i class="fas fa-file-alt"></i> <span data-en="My Resume" data-es="Mi CV">My Resume</span></a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 data-en="Case Studies" data-es="Casos de Estudio">Case Studies</h4>
-                <ul>
-                    <li><a href="../projects/tan-bonitos.html">Tan Bonitos!</a></li>
-                    <li><a href="../projects/casa-oro-real.html">Casa Oro Real</a></li>
-                    <li><a href="../projects/nefer-museum.html">Nefer Museum</a></li>
-                    <li><a href="../projects/theatron-app.html">Theatron App</a></li>
-                </ul>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
+          <ul>
+            <li>
+              <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
+            </li>
+            <li>
+              <a href="../index.html#work" data-en="Work" data-es="Trabajos"
+                >Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#skills"
+                data-en="Skills"
+                data-es="Habilidades"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#about" data-en="About" data-es="Sobre Mí"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../freelance/freelance.html"
+                data-en="Freelance"
+                data-es="Freelance"
+                >Freelance</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#contact"
+                data-en="Contact"
+                data-es="Contacto"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Felipe Villada. <span data-en="All Rights Reserved." data-es="Todos los Derechos Reservados.">All Rights Reserved.</span></p>
+        <div class="footer-column">
+          <h4 data-en="Contact" data-es="Contacto">Contact</h4>
+          <ul>
+            <li>
+              <a href="mailto:villadafelipe28@gmail.com"
+                ><i class="fas fa-envelope"></i> villadafelipe28@gmail.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/felipevillada/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i> LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="https://discord.com/users/gronfrog" target="_blank"
+                ><i class="fab fa-discord"></i> Discord</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="footer-column">
+          <h4 data-en="Resources" data-es="Recursos">Resources</h4>
+          <ul>
+            <li>
+              <a href="../Google-UX-Certificate.pdf" target="_blank"
+                ><i class="fas fa-certificate"></i>
+                <span
+                  data-en="Google UX Certificate"
+                  data-es="Certificado UX de Google"
+                  >Google UX Certificate</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="../cv/FelipeVillada-CV-En.pdf"
+                target="_blank"
+                data-link-en="../cv/FelipeVillada-CV-En.pdf"
+                data-link-es="../cv/FelipeVillada-CV-Es.pdf"
+                ><i class="fas fa-file-alt"></i>
+                <span data-en="My Resume" data-es="Mi CV">My Resume</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 data-en="Case Studies" data-es="Casos de Estudio">
+            Case Studies
+          </h4>
+          <ul>
+            <li><a href="../projects/tan-bonitos.html">Tan Bonitos!</a></li>
+            <li><a href="../projects/casa-oro-real.html">Casa Oro Real</a></li>
+            <li><a href="../projects/nefer-museum.html">Nefer Museum</a></li>
+            <li><a href="../projects/theatron-app.html">Theatron App</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Felipe Villada.
+          <span
+            data-en="All Rights Reserved."
+            data-es="Todos los Derechos Reservados."
+            >All Rights Reserved.</span
+          >
+        </p>
+      </div>
     </footer>
     <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>

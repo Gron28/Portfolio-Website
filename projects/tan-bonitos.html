@@ -1,221 +1,501 @@
 <!DOCTYPE html>
 <html lang="en" class="case-study-tb">
-<head>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ7HQD668Q"></script>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZJ7HQD668Q"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZJ7HQD668Q');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZJ7HQD668Q");
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case Study: Tan Bonitos!</title>
-    
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/case-study.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-</head>
-<body>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/case-study.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="loader-container">
-        <div class="loader-spinner"></div>
+      <div class="loader-spinner"></div>
     </div>
     <canvas id="galaxy-canvas"></canvas>
 
     <nav class="nav">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo" data-en="Felipe Villada" data-es="Felipe Villada">Felipe Villada</a>
-            <div class="nav-links">
-                <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
-                <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
-                <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
-                <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
-            </div>
-            <div class="nav-controls">
-                <button id="langToggle"><i class="fas fa-globe"></i> EN/ES</button>
-            </div>
+      <div class="nav-container">
+        <a
+          href="../index.html"
+          class="nav-logo"
+          data-en="Felipe Villada"
+          data-es="Felipe Villada"
+          >Felipe Villada</a
+        >
+        <div class="nav-links">
+          <a href="../index.html#work" data-en="Work" data-es="Trabajos"
+            >Work</a
+          >
+          <a href="../index.html#skills" data-en="Skills" data-es="Habilidades"
+            >Skills</a
+          >
+          <a href="../index.html#about" data-en="About" data-es="Sobre Mí"
+            >About</a
+          >
+          <a
+            href="../freelance/freelance.html"
+            data-en="Freelance"
+            data-es="Freelance"
+            >Freelance</a
+          >
+          <a href="../index.html#contact" data-en="Contact" data-es="Contacto"
+            >Contact</a
+          >
         </div>
+        <div class="nav-controls">
+          <button id="langToggle"><i class="fas fa-globe"></i> EN/ES</button>
+        </div>
+      </div>
     </nav>
     <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
     </button>
     <div class="mobile-menu-overlay">
-        <div class="mobile-menu-links">
-            <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
-            <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
-            <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
-            <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
-            <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
-        </div>
+      <div class="mobile-menu-links">
+        <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
+        <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
+        <a
+          href="../freelance/freelance.html"
+          data-en="Freelance"
+          data-es="Freelance"
+          >Freelance</a
+        >
+        <a href="../index.html#contact" data-en="Contact" data-es="Contacto"
+          >Contact</a
+        >
+      </div>
     </div>
 
     <header class="cs-hero">
-        <div class="hero-content">
-            <h1>TAN BONITOS!</h1>
-            <p class="hero-subtitle" data-en="<em>Crafting a Digital Showroom for an Artisanal Brand</em>" data-es="<em>Creando un Showroom Digital para una Marca Artesanal</em>"><em>Crafting a Digital Showroom for an Artisanal Brand</em></p>
-        </div>
+      <div class="hero-content">
+        <h1>TAN BONITOS!</h1>
+        <p
+          class="hero-subtitle"
+          data-en="<em>Crafting a Digital Showroom for an Artisanal Brand</em>"
+          data-es="<em>Creando un Showroom Digital para una Marca Artesanal</em>"
+        >
+          <em>Crafting a Digital Showroom for an Artisanal Brand</em>
+        </p>
+      </div>
     </header>
 
     <main class="main-container case-study-content">
+      <section class="cs-section cs-overview">
+        <div class="cs-intro-image">
+          <img
+            src="../images/TB/tanbonitos1.webp"
+            alt="Isometric mockup of the Tan Bonitos! website on various devices."
+            loading="lazy"
+          />
+        </div>
+        <h2 data-en="Project Overview" data-es="Resumen del Proyecto">
+          Project Overview
+        </h2>
+        <p class="cs-summary"
+      data-en="I led the digital transformation for a veteran artisanal brand. The goal: translate 15 years of experience into a cohesive brand and an interactive catalog to attract both retail (B2C) and wholesale (B2B) buyers."
+      data-es="Lideré la transformación digital de una marca artesanal veterana. El objetivo: traducir 15 años de experiencia en una marca cohesiva y un catálogo interactivo para atraer tanto a compradores minoristas (B2C) como mayoristas (B2B)."
+    ></p>
+        <div class="cs-at-a-glance">
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-user-circle'></i> MY ROLE"
+              data-es="<i class='fas fa-user-circle'></i> MI ROL"
+            >
+              <i class="fas fa-user-circle"></i> MY ROLE
+            </h4>
+            <p
+              data-en="Brand Strategist, UX/UI Designer, Frontend Developer"
+              data-es="Estratega de Marca, Diseñador UX/UI, Desarrollador Frontend"
+            >
+              Brand Strategist, UX/UI Designer, Frontend Developer
+            </p>
+          </div>
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-calendar-alt'></i> TIMELINE"
+              data-es="<i class='fas fa-calendar-alt'></i> CRONOGRAMA"
+            >
+              <i class="fas fa-calendar-alt"></i> TIMELINE
+            </h4>
+            <p
+              data-en="1.5 Weeks (Rapid Concept to Launch)"
+              data-es="1.5 Semanas (Concepto a Lanzamiento Rápido)"
+            >
+              1.5 Weeks (Rapid Concept to Launch)
+            </p>
+          </div>
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-tools'></i> DELIVERABLES"
+              data-es="<i class='fas fa-tools'></i> ENTREGABLES"
+            >
+              <i class="fas fa-tools"></i> DELIVERABLES
+            </h4>
+            <p
+              data-en="Brand Identity, Custom Website, B2B Sales Funnel"
+              data-es="Identidad de Marca, Sitio Web a Medida, Embudo de Ventas B2B"
+            >
+              Brand Identity, Custom Website, B2B Sales Funnel
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="cs-section cs-overview">
-            <div class="cs-intro-image">
-                <img src="../images/TB/tanbonitos1.webp" alt="Isometric mockup of the Tan Bonitos! website on various devices." loading="lazy">
-            </div>
-            <h2 data-en="Project Overview" data-es="Resumen del Proyecto">Project Overview</h2>
-            <p class="cs-summary" data-en="I partnered with Tan Bonitos!, a veteran artisanal brand, to lead their entire digital transformation. I served as the sole creator, translating the founder's 15 years of experience and core values into a cohesive brand identity, a professional product showcase, and a custom-coded &quot;interactive catalog&quot; designed to attract both high-end retail customers (B2C) and wholesale buyers (B2B)." data-es="Me asocié con Tan Bonitos!, una marca artesanal veterana, para liderar su transformación digital completa. Como único creador, traduje los 15 años de experiencia y los valores de la fundadora en una identidad de marca cohesiva, una exhibición de productos profesional y un &quot;catálogo interactivo&quot; codificado a medida, diseñado para atraer tanto a clientes minoristas (B2C) como a compradores mayoristas (B2B)."></p>
-            <div class="cs-at-a-glance">
-                <div class="glance-item">
-                    <h4 data-en="<i class='fas fa-user-circle'></i> MY ROLE" data-es="<i class='fas fa-user-circle'></i> MI ROL"><i class="fas fa-user-circle"></i> MY ROLE</h4>
-                    <p data-en="Brand Strategist, UX/UI Designer, Frontend Developer" data-es="Estratega de Marca, Diseñador UX/UI, Desarrollador Frontend">Brand Strategist, UX/UI Designer, Frontend Developer</p>
-                </div>
-                <div class="glance-item">
-                    <h4 data-en="<i class='fas fa-calendar-alt'></i> TIMELINE" data-es="<i class='fas fa-calendar-alt'></i> CRONOGRAMA"><i class="fas fa-calendar-alt"></i> TIMELINE</h4>
-                    <p data-en="1.5 Weeks (Rapid Concept to Launch)" data-es="1.5 Semanas (Concepto a Lanzamiento Rápido)">1.5 Weeks (Rapid Concept to Launch)</p>
-                </div>
-                <div class="glance-item">
-                    <h4 data-en="<i class='fas fa-tools'></i> DELIVERABLES" data-es="<i class='fas fa-tools'></i> ENTREGABLES"><i class="fas fa-tools"></i> DELIVERABLES</h4>
-                    <p data-en="Brand Identity, Custom Website, B2B Sales Funnel" data-es="Identidad de Marca, Sitio Web a Medida, Embudo de Ventas B2B">Brand Identity, Custom Website, B2B Sales Funnel</p>
-                </div>
-            </div>
-        </section>
+      <section class="cs-section">
+        <h2 data-en="The Strategic Foundation" data-es="La Base Estratégica"></h2>
+        <p
+          data-en="The challenge: a market-message mismatch. The client's premium, artisanal products were lost on generic, low-end platforms. The first step was not to build a website, but to define and amplify the brand's authentic voice."
+          data-es="El desafío: un desajuste entre el mercado y el mensaje. Los productos artesanales premium de la clienta se perdían en plataformas genéricas de baja gama. El primer paso no fue construir un sitio web, sino definir y amplificar la voz auténtica de la marca."
+        ></p>
 
-        <section class="cs-section">
-            <h2 data-en="The Strategic Foundation: From Market Mismatch to Brand Clarity" data-es="La Base Estratégica: Del Desajuste del Mercado a la Claridad de Marca">The Strategic Foundation: From Market Mismatch to Brand Clarity</h2>
-            <p data-en="The client was struggling to connect with customers on generic platforms like Facebook. My initial research and client interviews revealed the core business problem: a market-message mismatch. Their premium, artisanal products were lost in low-end marketplaces. The first step was not to build a website, but to define and amplify the brand's authentic voice." data-es="La clienta tenía dificultades para conectar con sus clientes en plataformas genéricas como Facebook. Mi investigación inicial y entrevistas revelaron el problema central: un desajuste entre el mercado y el mensaje. Sus productos artesanales de primera calidad se perdían en mercados de baja gama. El primer paso no fue construir un sitio web, sino definir y amplificar la voz auténtica de la marca."></p>
-            
-            <div class="cs-multi-module-section">
-                <div class="cs-module">
-                    <div class="module-visual">
-                        <img src="../images/TB/tanbonitos2.webp" alt="Brand identity for Tan Bonitos!, showing the giraffe logo, soft color palette, and typography." loading="lazy">
-                    </div>
-                    <div class="module-text">
-                        <h3 data-en="1. Translating Emotion into the Brand" data-es="1. Traduciendo la Emoción en la Marca">1. Translating Emotion into the Brand</h3>
-                        <p data-en="Through a deep-dive consultation, I extracted the brand's core emotional values: tenderness, hope, happiness. I translated these feelings into a tangible brand identity—a gentle giraffe logo, a soft pastel color palette, and a motherly, cloudy touch that finally gave the brand a professional and authentic voice." data-es="A través de una consulta profunda, extraje los valores emocionales centrales de la marca: ternura, esperanza, felicidad. Traduje estos sentimientos en una identidad de marca tangible: un tierno logo de jirafa, una paleta de colores pastel suaves y un toque maternal y etéreo que finalmente le dio a la marca una voz profesional y auténtica."></p>
-                    </div>
-                </div>
-                <div class="cs-module reverse">
-                    <div class="module-visual">
-                        <img src="../images/TB/sitemap-en.webp" 
-                            alt="Sitemap of the Tan Bonitos! website, showing dual paths for B2C and B2B users." 
-                            loading="lazy" 
-                            data-img-en="../images/TB/sitemap-en.webp" 
-                            data-img-es="../images/TB/sitemap-es.webp">
-                 </div>
-                    <div class="module-text">
-                        <h3 data-en="2. The UX Blueprint for a Dual Audience" data-es="2. El Plan UX para una Audiencia Dual">2. The UX Blueprint for a Dual Audience</h3>
-                        <p data-en="The site had to serve two distinct users. I designed a clear Information Architecture with dual paths: a familiar e-commerce style flow for retail customers, and a dedicated Wholesale section with a professional tone for B2B buyers. This structure ensures each audience finds what they need without friction." data-es="El sitio debía servir a dos usuarios distintos. Diseñé una Arquitectura de la Información clara con dos caminos: un flujo familiar estilo e-commerce para clientes minoristas, y una sección Mayorista dedicada con un tono profesional para compradores B2B. Esta estructura asegura que cada audiencia encuentre lo que necesita sin fricción."></p>
-                    </div>
-                </div>
+        <div class="cs-multi-module-section">
+          <div class="cs-module">
+            <div class="module-visual">
+              <img
+                src="../images/TB/tanbonitos2.webp"
+                alt="Brand identity for Tan Bonitos!, showing the giraffe logo, soft color palette, and typography."
+                loading="lazy"
+              />
             </div>
-        </section>
+            <div class="module-text">
+              <h3
+                data-en="1. Translating Emotion into the Brand"
+                data-es="1. Traduciendo la Emoción en la Marca"
+              >
+                1. Translating Emotion into the Brand
+              </h3>
+              <p
+                data-en="Through a deep dive consultation, I extracted the brand's core emotional values: tenderness, hope, happiness. I translated these feelings into a tangible brand identity: a gentle giraffe logo, a soft pastel color palette, and a motherly, cloudy touch that finally gave the brand a professional and authentic voice."
+                data-es="A través de una consulta profunda, extraje los valores emocionales centrales de la marca: ternura, esperanza, felicidad. Traduje estos sentimientos en una identidad de marca tangible: un tierno logo de jirafa, una paleta de colores pastel suaves y un toque maternal y etéreo que finalmente le dio a la marca una voz profesional y auténtica."
+              ></p>
+            </div>
+          </div>
+          <div class="cs-module reverse">
+            <div class="module-visual">
+              <img
+                src="../images/TB/sitemap-en.webp"
+                alt="Sitemap of the Tan Bonitos! website, showing dual paths for B2C and B2B users."
+                loading="lazy"
+                data-img-en="../images/TB/sitemap-en.webp"
+                data-img-es="../images/TB/sitemap-es.webp"
+              />
+            </div>
+            <div class="module-text">
+              <h3
+                data-en="2. The UX Blueprint for a Dual Audience"
+                data-es="2. El Plan UX para una Audiencia Dual"
+              >
+                2. The UX Blueprint for a Dual Audience
+              </h3>
+              <p
+                data-en="The site had to serve two distinct users. I designed a clear Information Architecture with dual paths: a familiar e-commerce style flow for retail customers, and a dedicated Wholesale section with a professional tone for B2B buyers. This structure ensures each audience finds what they need without friction."
+                data-es="El sitio debía servir a dos usuarios distintos. Diseñé una Arquitectura de la Información clara con dos caminos: un flujo familiar estilo e-commerce para clientes minoristas, y una sección Mayorista dedicada con un tono profesional para compradores B2B. Esta estructura asegura que cada audiencia encuentre lo que necesita sin fricción."
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="cs-section">
-            <h2 data-en="The Development Process: Building an Interactive Catalog" data-es="El Proceso de Desarrollo: Construyendo un Catálogo Interactivo">The Development Process: Building an Interactive Catalog</h2>
-            <p data-en="With a clear brand and UX strategy and tested designs, I moved to development. The goal was to build a site that felt like a premium e-commerce store but functioned as a lean, low-overhead sales tool. I designed the full website with Figma and I custom-coded the entire experience in HTML, CSS and JavaScript." data-es="Con una estrategia de marca y UX clara y diseños probados, pasé al desarrollo. El objetivo era construir un sitio que se sintiera como una tienda e-commerce premium pero que funcionara como una herramienta de ventas ágil y de bajo costo. Diseñé el sitio web completo con Figma y codifiqué toda la experiencia a medida en HTML, CSS y JavaScript."></p>
-            <div class="cs-comparison">
-                <div class="comparison-item">
-                    <h3 data-en="The Professional Product Showcase" data-es="La Exhibición de Productos Profesional">The Professional Product Showcase</h3>
-                    <p data-en="I developed a clean, categorized gallery system where users can explore the full product line, click into detail pages, and view multiple angles, just like a high-end online store." data-es="Desarrollé un sistema de galería limpio y categorizado donde los usuarios pueden explorar la línea completa de productos, ver páginas de detalle y múltiples ángulos, tal como en una tienda en línea de alta gama."></p>
-                    <video class="case-video" autoplay loop muted playsinline>
-                        <source src="../images/TB/tanbonitos.mp4" type="video/mp4" loading="lazy">
-                    </video>                
-                </div>
-                <div class="comparison-item">
-                    <h3 data-en="The Low-Friction WhatsApp Funnel" data-es="El Embudo de WhatsApp de Baja Fricción">The Low-Friction WhatsApp Funnel</h3>
-                    <p data-en="To match the client's high-touch sales model, I implemented a JavaScript-driven WhatsApp contact point on every product page, creating a simple, effective funnel for both B2C and B2B leads." data-es="Para coincidir con el modelo de ventas personalizado de la clienta, implementé un punto de contacto de WhatsApp en cada página de producto, creando un embudo simple y efectivo para leads B2C y B2B."></p>
-                    <img src="../images/TB/tanbonitos3.webp" alt="A product detail page showing the clear 'Contact via WhatsApp' call to action." loading="lazy">
-                </div>
-            </div>
-        </section>
-        
-        <section class="cs-section">
-            <h2 data-en="The Outcome: A Credible Brand with a Dual-Purpose Tool" data-es="El Resultado: Una Marca Creíble con una Herramienta de Doble Propósito">The Outcome: A Credible Brand with a Dual-Purpose Tool</h2>
-            <p data-en="The result is a complete digital ecosystem that gives the client a newfound professional confidence. The website elegantly serves both key audiences, functioning as a charming storefront for customers and a powerful B2B credibility engine that has transformed their sales process." data-es="El resultado es un ecosistema digital completo que le da a la clienta una nueva confianza profesional. El sitio web atiende elegantemente a ambas audiencias clave, funcionando como una encantadora vidriera para clientes y un potente motor de credibilidad B2B que ha transformado su proceso de ventas."></p>
-            <blockquote class="cs-testimonial">
-                <p data-en="&quot;He didn't just build a website, he built our brand. A single link to a page has completely changed our sales process. We finally look as professional as we feel.&quot;" data-es="&quot;No solo construyó un sitio web, construyó nuestra marca. Un solo enlace a una página ha cambiado completamente nuestro proceso de ventas. Finalmente nos vemos tan profesionales como nos sentimos.&quot;"></p>
-                <span data-en="Veronica P. Founder, Tan Bonitos!" data-es="Verónica P. Fundadora, Tan Bonitos!">Veronica P. Founder, Tan Bonitos!</span>
-            </blockquote>
-            <div class="cs-cta-container">
-                <a href="https://tanbonitos.com/" class="cta-button" target="_blank">TanBonitos.com</a>
-            </div>
-        </section>
-        
-        <section class="cs-section cs-final-thoughts">
-            <h2 data-en="Impact & Key Learnings" data-es="Impacto y Aprendizajes Clave">Impact & Key Learnings</h2>
-            <div class="takeaways-grid">
-                <div class="takeaway-item">
-                    <h4 data-en="Delivered Business Value" data-es="Valor de Negocio Entregado">Delivered Business Value</h4>
-                    <ul>
-                        <li data-en="Translated abstract brand values into a professional, market-ready identity." data-es="Traduje valores de marca abstractos en una identidad profesional lista para el mercado."></li>
-                        <li data-en="Solved the dual audience problem with a single, elegant solution." data-es="Resolví el problema de la audiencia dual con una solución única y elegante."></li>
-                        <li data-en="Provided a powerful B2B sales tool that elevated the client's professional standing." data-es="Proporcioné una potente herramienta de ventas B2B que elevó el prestigio profesional de la clienta."></li>
-                    </ul>
-                </div>
-                 <div class="takeaway-item">
-                    <h4 data-en="Personal Growth" data-es="Crecimiento Personal">Personal Growth</h4>
-                    <p data-en="This project was a test in empathy-driven design. It taught me how to listen deeply to a client's story and business frustrations, diagnose the root strategic problem (market mismatch), and prescribe a holistic solution that went far beyond a simple website build." data-es="Este proyecto fue una prueba de diseño impulsado por la empatía. Me enseñó a escuchar profundamente la historia y las frustraciones de una clienta, diagnosticar el problema estratégico raíz (desajuste de mercado) y prescribir una solución integral que fue mucho más allá de la simple construcción de un sitio web."></p>
-                </div>
-            </div>
-        </section>
-        <section class="final-cta-section">
-            <h2 data-en="For work or feedback, <br>contact me from here:" data-es="Para trabajos o feedback, <br>contáctame desde acá:">For work or feedback, <br>contact me from here:</h2>
-            <a href="../index.html#contact" class="cta-button" data-en="Contact Me" data-es="Contáctame">Contact Me</a>
-        </section>
+      <section class="cs-section">
+        <h2 data-en="The Development Process" data-es="El Proceso de Desarrollo"></h2>
+        <p
+          data-en="With a clear strategy, I moved to development. The goal was a site that felt like a premium e-commerce store but functioned as a lean, low-overhead sales tool. I custom-coded the experience using HTML, CSS, and JavaScript."
+          data-es="Con una estrategia clara, pasé al desarrollo. El objetivo era un sitio que se sintiera como una tienda e-commerce premium pero que funcionara como una herramienta de ventas ágil y de bajo costo. Codifiqué la experiencia a medida usando HTML, CSS y JavaScript."
+        ></p>
+        <div class="cs-comparison">
+          <div class="comparison-item">
+            <h3
+              data-en="The Professional Product Showcase"
+              data-es="La Exhibición de Productos Profesional"
+            >
+              The Professional Product Showcase
+            </h3>
+            <p
+              data-en="I developed a clean, categorized gallery system where users can explore the full product line, click into detail pages, and view multiple angles, just like a high-end online store."
+              data-es="Desarrollé un sistema de galería limpio y categorizado donde los usuarios pueden explorar la línea completa de productos, ver páginas de detalle y múltiples ángulos, tal como en una tienda en línea de alta gama."
+            ></p>
+            <video class="case-video" autoplay loop muted playsinline>
+              <source
+                src="../images/TB/tanbonitos.mp4"
+                type="video/mp4"
+                loading="lazy"
+              />
+            </video>
+          </div>
+          <div class="comparison-item">
+            <h3
+              data-en="The Low-Friction WhatsApp Funnel"
+              data-es="El Embudo de WhatsApp de Baja Fricción"
+            >
+              The Low-Friction WhatsApp Funnel
+            </h3>
+            <p
+              data-en="To match the client's high-touch sales model, I implemented a JavaScript-driven WhatsApp contact point on every product page, creating a simple, effective funnel for both B2C and B2B leads."
+              data-es="Para coincidir con el modelo de ventas personalizado de la clienta, implementé un punto de contacto de WhatsApp en cada página de producto, creando un embudo simple y efectivo para leads B2C y B2B."
+            ></p>
+            <img
+              src="../images/TB/tanbonitos3.webp"
+              alt="A product detail page showing the clear 'Contact via WhatsApp' call to action."
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2 data-en="The Outcome" data-es="El Resultado"></h2>
+        <p
+          data-en="The result is a complete digital ecosystem that gives the client newfound professional confidence. The site elegantly serves both audiences, acting as a charming storefront and a powerful B2B credibility engine."
+          data-es="El resultado es un ecosistema digital completo que le da a la clienta una nueva confianza profesional. El sitio atiende elegantemente a ambas audiencias, actuando como una encantadora vidriera y un potente motor de credibilidad B2B."
+        ></p>
+        <blockquote class="cs-testimonial">
+          <p
+            data-en='"He didn&apos;t just build a website, he built our brand. A single link to a page has completely changed our sales process. We finally look as professional as we feel."'
+            data-es='"No solo construyó un sitio web, construyó nuestra marca. Un solo enlace a una página ha cambiado completamente nuestro proceso de ventas. Finalmente nos vemos tan profesionales como nos sentimos."'
+          ></p>
+          <span
+            data-en="Veronica P. Founder, Tan Bonitos!"
+            data-es="Verónica P. Fundadora, Tan Bonitos!"
+            >Veronica P. Founder, Tan Bonitos!</span
+          >
+        </blockquote>
+        <div class="cs-cta-container">
+          <a href="https://tanbonitos.com/" class="cta-button" target="_blank"
+            >TanBonitos.com</a
+          >
+        </div>
+      </section>
+
+      <section class="cs-section cs-final-thoughts">
+        <h2
+          data-en="Impact & Key Learnings"
+          data-es="Impacto y Aprendizajes Clave"
+        >
+          Impact & Key Learnings
+        </h2>
+        <div class="takeaways-grid">
+          <div class="takeaway-item">
+            <h4
+              data-en="Delivered Business Value"
+              data-es="Valor de Negocio Entregado"
+            >
+              Delivered Business Value
+            </h4>
+            <ul>
+              <li
+                data-en="Translated abstract brand values into a professional, market-ready identity."
+                data-es="Traduje valores de marca abstractos en una identidad profesional lista para el mercado."
+              ></li>
+              <li
+                data-en="Solved the dual audience problem with a single, elegant solution."
+                data-es="Resolví el problema de la audiencia dual con una solución única y elegante."
+              ></li>
+              <li
+                data-en="Provided a powerful B2B sales tool that elevated the client's professional standing."
+                data-es="Proporcioné una potente herramienta de ventas B2B que elevó el prestigio profesional de la clienta."
+              ></li>
+            </ul>
+          </div>
+          <div class="takeaway-item">
+            <h4 data-en="Personal Growth" data-es="Crecimiento Personal">
+              Personal Growth
+            </h4>
+            <p
+            data-en="This project was a test in empathy-driven design. It taught me to diagnose the root strategic problem (market mismatch), not just the surface request, and to prescribe a holistic solution beyond a simple website build."
+            data-es="Este proyecto fue una prueba de diseño impulsado por la empatía. Me enseñó a diagnosticar el problema estratégico raíz (desajuste de mercado), no solo la solicitud superficial, y a prescribir una solución integral más allá de una simple construcción de sitio web."
+          ></p>
+          </div>
+        </div>
+      </section>
+      <section class="final-cta-section">
+        <h2
+          data-en="Ready to Build Something Meaningful?"
+          data-es="¿Listo para Construir Algo Significativo?"
+        ></h2>
+        <p
+          class="final-cta-subtitle"
+          data-en="Whether you have a custom project in mind or need a high-impact site launched quickly, I'm here to help."
+          data-es="Ya sea que tengas un proyecto a medida en mente o necesites un sitio de alto impacto lanzado rápidamente, estoy aquí para ayudar."
+        ></p>
+        <div class="final-cta-buttons">
+          <a
+            href="../freelance/freelance.html"
+            class="cta-button"
+            data-en="See 7-Day Launch Service"
+            data-es="Ver Servicio de 7 Días"
+          ></a>
+          <a
+            href="../index.html#contact"
+            class="cta-button-secondary"
+            data-en="Contact for Custom Work"
+            data-es="Contacto para Proyectos a Medida"
+          ></a>
+        </div>
+      </section>
     </main>
 
     <nav class="project-nav">
-        <div class="project-nav-container">
-            <a href="theatron-app.html" class="project-nav-link" data-en="<i class='fas fa-arrow-left'></i> Previous Project" data-es="<i class='fas fa-arrow-left'></i> Proyecto Anterior"><i class="fas fa-arrow-left"></i> Previous Project</a>
-            <a href="../index.html#work" class="project-nav-link home" data-en="<i class='fas fa-th-large'></i> Back to Home" data-es="<i class='fas fa-th-large'></i> Volver al Inicio"><i class="fas fa-th-large"></i> Back to Home</a>
-            <a href="casa-oro-real.html" class="project-nav-link" data-en="Next Project <i class='fas fa-arrow-right'></i>" data-es="Siguiente Proyecto <i class='fas fa-arrow-right'></i>">Next Project <i class="fas fa-arrow-right"></i></a>
-        </div>
+      <div class="project-nav-container">
+        <a
+          href="theatron-app.html"
+          class="project-nav-link"
+          data-en="<i class='fas fa-arrow-left'></i> Previous Project"
+          data-es="<i class='fas fa-arrow-left'></i> Proyecto Anterior"
+          ><i class="fas fa-arrow-left"></i> Previous Project</a
+        >
+        <a
+          href="../index.html#work"
+          class="project-nav-link home"
+          data-en="<i class='fas fa-th-large'></i> Back to Home"
+          data-es="<i class='fas fa-th-large'></i> Volver al Inicio"
+          ><i class="fas fa-th-large"></i> Back to Home</a
+        >
+        <a
+          href="casa-oro-real.html"
+          class="project-nav-link"
+          data-en="Next Project <i class='fas fa-arrow-right'></i>"
+          data-es="Siguiente Proyecto <i class='fas fa-arrow-right'></i>"
+          >Next Project <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
     </nav>
-
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
-                <ul>
-                    <li><a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a></li>
-                    <li><a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a></li>
-                    <li><a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a></li>
-                    <li><a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 data-en="Contact" data-es="Contacto">Contact</h4>
-                <ul>
-                    <li><a href="mailto:villadafelipe28@gmail.com"><i class="fas fa-envelope"></i> villadafelipe28@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/felipevillada/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://discord.com/users/gronfrog" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 data-en="Resources" data-es="Recursos">Resources</h4>
-                <ul>
-                    <li><a href="../Google-UX-Certificate.pdf" target="_blank"><i class="fas fa-certificate"></i> <span data-en="Google UX Certificate" data-es="Certificado UX de Google">Google UX Certificate</span></a></li>
-                    <li><a href="../cv/FelipeVillada-CV-En.pdf" target="_blank" data-link-en="../cv/FelipeVillada-CV-En.pdf" data-link-es="../cv/FelipeVillada-CV-Es.pdf"><i class="fas fa-file-alt"></i> <span data-en="My Resume" data-es="Mi CV">My Resume</span></a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 data-en="Case Studies" data-es="Casos de Estudio">Case Studies</h4>
-                <ul>
-                    <li><a href="../projects/tan-bonitos.html">Tan Bonitos!</a></li>
-                    <li><a href="../projects/casa-oro-real.html">Casa Oro Real</a></li>
-                    <li><a href="../projects/nefer-museum.html">Nefer Museum</a></li>
-                    <li><a href="../projects/theatron-app.html">Theatron App</a></li>
-                </ul>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
+          <ul>
+            <li>
+              <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
+            </li>
+            <li>
+              <a href="../index.html#work" data-en="Work" data-es="Trabajos"
+                >Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#skills"
+                data-en="Skills"
+                data-es="Habilidades"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#about" data-en="About" data-es="Sobre Mí"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../freelance/freelance.html"
+                data-en="Freelance"
+                data-es="Freelance"
+                >Freelance</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#contact"
+                data-en="Contact"
+                data-es="Contacto"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Felipe Villada. <span data-en="All Rights Reserved." data-es="Todos los Derechos Reservados.">All Rights Reserved.</span></p>
+        <div class="footer-column">
+          <h4 data-en="Contact" data-es="Contacto">Contact</h4>
+          <ul>
+            <li>
+              <a href="mailto:villadafelipe28@gmail.com"
+                ><i class="fas fa-envelope"></i> villadafelipe28@gmail.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/felipevillada/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i> LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="https://discord.com/users/gronfrog" target="_blank"
+                ><i class="fab fa-discord"></i> Discord</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="footer-column">
+          <h4 data-en="Resources" data-es="Recursos">Resources</h4>
+          <ul>
+            <li>
+              <a href="../Google-UX-Certificate.pdf" target="_blank"
+                ><i class="fas fa-certificate"></i>
+                <span
+                  data-en="Google UX Certificate"
+                  data-es="Certificado UX de Google"
+                  >Google UX Certificate</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="../cv/FelipeVillada-CV-En.pdf"
+                target="_blank"
+                data-link-en="../cv/FelipeVillada-CV-En.pdf"
+                data-link-es="../cv/FelipeVillada-CV-Es.pdf"
+                ><i class="fas fa-file-alt"></i>
+                <span data-en="My Resume" data-es="Mi CV">My Resume</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 data-en="Case Studies" data-es="Casos de Estudio">
+            Case Studies
+          </h4>
+          <ul>
+            <li><a href="../projects/tan-bonitos.html">Tan Bonitos!</a></li>
+            <li><a href="../projects/casa-oro-real.html">Casa Oro Real</a></li>
+            <li><a href="../projects/nefer-museum.html">Nefer Museum</a></li>
+            <li><a href="../projects/theatron-app.html">Theatron App</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Felipe Villada.
+          <span
+            data-en="All Rights Reserved."
+            data-es="Todos los Derechos Reservados."
+            >All Rights Reserved.</span
+          >
+        </p>
+      </div>
     </footer>
     <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>

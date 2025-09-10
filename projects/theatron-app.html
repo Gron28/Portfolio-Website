@@ -1,220 +1,496 @@
 <!DOCTYPE html>
 <html lang="en" class="case-study-theatron">
-<head>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ7HQD668Q"></script>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZJ7HQD668Q"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZJ7HQD668Q');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZJ7HQD668Q");
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case Study: Theatron App</title>
-    
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/case-study.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-</head>
-<body>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/case-study.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="loader-container">
-        <div class="loader-spinner"></div>
+      <div class="loader-spinner"></div>
     </div>
     <canvas id="galaxy-canvas"></canvas>
 
     <nav class="nav">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo" data-en="Felipe Villada" data-es="Felipe Villada">Felipe Villada</a>
-            
-            <div class="nav-links">
-                <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
-                <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
-                <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
-                <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
-            </div>
-    
-            <div class="nav-controls">
-                <button id="langToggle"><i class="fas fa-globe"></i> EN/ES</button>
-                <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+      <div class="nav-container">
+        <a
+          href="../index.html"
+          class="nav-logo"
+          data-en="Felipe Villada"
+          data-es="Felipe Villada"
+          >Felipe Villada</a
+        >
+        <div class="nav-links">
+          <a href="../index.html#work" data-en="Work" data-es="Trabajos"
+            >Work</a
+          >
+          <a href="../index.html#skills" data-en="Skills" data-es="Habilidades"
+            >Skills</a
+          >
+          <a href="../index.html#about" data-en="About" data-es="Sobre Mí"
+            >About</a
+          >
+          <a
+            href="../freelance/freelance.html"
+            data-en="Freelance"
+            data-es="Freelance"
+            >Freelance</a
+          >
+          <a href="../index.html#contact" data-en="Contact" data-es="Contacto"
+            >Contact</a
+          >
         </div>
+        <div class="nav-controls">
+          <button id="langToggle"><i class="fas fa-globe"></i> EN/ES</button>
+        </div>
+      </div>
     </nav>
-
-<div class="mobile-menu-overlay">
-    <div class="mobile-menu-links">
+    <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu-links">
         <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
         <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
-        <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
-        <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
-        <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
+        <a
+          href="../freelance/freelance.html"
+          data-en="Freelance"
+          data-es="Freelance"
+          >Freelance</a
+        >
+        <a href="../index.html#contact" data-en="Contact" data-es="Contacto"
+          >Contact</a
+        >
+      </div>
     </div>
-</div>
 
-<header class="cs-hero">
-    <div class="hero-content">
+    <header class="cs-hero">
+      <div class="hero-content">
         <h1>THEATRON</h1>
-        <p class="hero-subtitle" data-en="<em>A Mobile UX Case Study</em>" data-es="<em>Un Caso de Estudio de UX Móvil</em>"><em>A Mobile UX Case Study</em></p>
-    </div>
-</header>
+        <p
+          class="hero-subtitle"
+          data-en="<em>A Mobile UX Case Study</em>"
+          data-es="<em>Un Caso de Estudio de UX Móvil</em>"
+        >
+          <em>A Mobile UX Case Study</em>
+        </p>
+      </div>
+    </header>
 
-<main class="main-container case-study-content">
-
-    <section class="cs-section cs-overview">
+    <main class="main-container case-study-content">
+      <section class="cs-section cs-overview">
         <div class="cs-intro-image">
-            <img src="../images/Theatron/theatron.webp" alt="Isometric mockup of the Theatron app on several phone screens." loading="lazy">
+          <img
+            src="../images/Theatron/theatron.webp"
+            alt="Isometric mockup of the Theatron app on several phone screens."
+            loading="lazy"
+          />
         </div>
-        <h2 data-en="Project Overview" data-es="Resumen del Proyecto">Project Overview</h2>
-        <p class="cs-summary" data-en="Theatron is a conceptual project designed to showcase a rigorous, mobile-first UX process. The goal was to design a modern movie ticketing app from the ground up, moving from deep user research and empathy mapping through iterative prototyping and usability testing to a final, polished high-fidelity prototype." data-es="Theatron es un proyecto conceptual diseñado para mostrar un proceso de UX riguroso y enfocado en móviles. El objetivo fue diseñar una aplicación moderna de venta de entradas de cine desde cero, pasando por una profunda investigación de usuarios y mapeo de empatía, a través de prototipado iterativo y pruebas de usabilidad, hasta un prototipo final pulido de alta fidelidad."></p>
+        <h2 data-en="Project Overview" data-es="Resumen del Proyecto">
+          Project Overview
+        </h2>
+        <p class="cs-summary"
+      data-en="This was a rigorous, mobile-first UX project. The goal: design a modern movie ticketing app, moving from deep user research and empathy mapping to a final, polished high-fidelity prototype."
+      data-es="Este fue un riguroso proyecto de UX mobile-first. El objetivo: diseñar una aplicación moderna de venta de entradas de cine, pasando de una profunda investigación de usuarios y mapeo de empatía a un prototipo final pulido de alta fidelidad."
+    ></p>
         <div class="cs-at-a-glance">
-            <div class="glance-item">
-                <h4 data-en="<i class='fas fa-user-circle'></i> MY ROLE" data-es="<i class='fas fa-user-circle'></i> MI ROL"><i class="fas fa-user-circle"></i> MY ROLE</h4>
-                <p data-en="UX/UI Designer &amp; Researcher" data-es="Diseñador e Investigador UX/UI">UX/UI Designer & Researcher</p>
-            </div>
-            <div class="glance-item">
-                <h4 data-en="<i class='fas fa-calendar-alt'></i> TIMELINE" data-es="<i class='fas fa-calendar-alt'></i> CRONOGRAMA"><i class="fas fa-calendar-alt"></i> TIMELINE</h4>
-                <p data-en="4 Weeks" data-es="4 Semanas">4 Weeks</p>
-            </div>
-            <div class="glance-item">
-                <h4 data-en="<i class='fas fa-tools'></i> DELIVERABLES" data-es="<i class='fas fa-tools'></i> ENTREGABLES"><i class="fas fa-tools"></i> DELIVERABLES</h4>
-                <p data-en="User Research, High-Fidelity Prototype, Mobile-First Design" data-es="Investigación de Usuarios, Prototipo de Alta Fidelidad, Diseño Mobile-First">User Research, High-Fidelity Prototype, Mobile-First Design</p>
-            </div>
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-user-circle'></i> MY ROLE"
+              data-es="<i class='fas fa-user-circle'></i> MI ROL"
+            >
+              <i class="fas fa-user-circle"></i> MY ROLE
+            </h4>
+            <p
+              data-en="UX/UI Designer &amp; Researcher"
+              data-es="Diseñador e Investigador UX/UI"
+            >
+              UX/UI Designer & Researcher
+            </p>
+          </div>
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-calendar-alt'></i> TIMELINE"
+              data-es="<i class='fas fa-calendar-alt'></i> CRONOGRAMA"
+            >
+              <i class="fas fa-calendar-alt"></i> TIMELINE
+            </h4>
+            <p data-en="4 Weeks" data-es="4 Semanas">4 Weeks</p>
+          </div>
+          <div class="glance-item">
+            <h4
+              data-en="<i class='fas fa-tools'></i> DELIVERABLES"
+              data-es="<i class='fas fa-tools'></i> ENTREGABLES"
+            >
+              <i class="fas fa-tools"></i> DELIVERABLES
+            </h4>
+            <p
+              data-en="User Research, High-Fidelity Prototype, Mobile-First Design"
+              data-es="Investigación de Usuarios, Prototipo de Alta Fidelidad, Diseño Mobile-First"
+            >
+              User Research, High-Fidelity Prototype, Mobile-First Design
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="cs-section">
-        <h2 data-en="The Strategic Foundation: Uncovering the User's Anxiety" data-es="La Base Estratégica: Descubriendo la Ansiedad del Usuario">The Strategic Foundation: Uncovering the User's Anxiety</h2>
-        <p data-en="Initial research showed that the problem with existing ticketing apps wasn't just clunky interfaces; it was the anxiety they produced. Users felt stressed about making mistakes, choosing the wrong seats, and navigating confusing checkout flows. The strategic foundation of this project was to understand and directly solve for this emotional pain point." data-es="La investigación inicial mostró que el problema con las aplicaciones de venta de entradas existentes no eran solo las interfaces toscas, sino la ansiedad que producían. Los usuarios se sentían estresados por cometer errores, elegir los asientos equivocados y navegar por flujos de pago confusos. La base estratégica de este proyecto fue comprender y resolver directamente este punto de dolor emocional."></p>
+      <section class="cs-section">
+        <h2 data-en="The Strategic Foundation" data-es="La Base Estratégica"></h2>
+        <p
+          data-en="The challenge wasn't just clunky interfaces; it was the anxiety they produced. Users felt stressed about making mistakes and choosing the wrong seats. The strategy was to solve for this emotional pain point directly."
+          data-es="El desafío no eran solo las interfaces toscas, sino la ansiedad que producían. Los usuarios se sentían estresados por cometer errores y elegir los asientos equivocados. La estrategia fue resolver directamente este punto de dolor emocional."
+        ></p>
         <div class="cs-multi-module-section">
-
-            <div class="cs-module full-width">
-                 <div class="module-text">
-                    <h3 data-en="1. Evidence: Empathy Mapping" data-es="1. Evidencia: Mapeo de Empatía">1. Evidence: Empathy Mapping</h3>
-                    <p data-en="I synthesized my initial user interviews into an empathy map to create a holistic view of the user's emotional state. This revealed a clear conflict: users were excited about the movie but frustrated and annoyed by the process of buying a ticket. This became the core tension I needed to resolve." data-es="Sinteticé mis entrevistas iniciales con usuarios en un mapa de empatía para crear una visión holística de su estado emocional. Esto reveló un claro conflicto: los usuarios estaban emocionados por la película pero frustrados y molestos por el proceso de comprar la entrada. Esta se convirtió en la tensión central que necesitaba resolver."></p>
-                </div>
-                <div class="module-visual">
-                    <img src="../images/Theatron/empathy-en.webp" alt="Empathy map showing user's thoughts, feelings, and actions." loading="lazy" data-img-en="../images/Theatron/empathy-en.webp" data-img-es="../images/Theatron/empathy-es.webp">
-                </div>
+          <div class="cs-module full-width">
+            <div class="module-text">
+              <h3
+                data-en="1. Evidence: Empathy Mapping"
+                data-es="1. Evidencia: Mapeo de Empatía"
+              >
+                1. Evidence: Empathy Mapping
+              </h3>
+              <p
+                data-en="I synthesized my initial user interviews into an empathy map to create a holistic view of the user's emotional state. This revealed a clear conflict: users were excited about the movie but frustrated and annoyed by the process of buying a ticket. This became the core tension I needed to resolve."
+                data-es="Sinteticé mis entrevistas iniciales con usuarios en un mapa de empatía para crear una visión holística de su estado emocional. Esto reveló un claro conflicto: los usuarios estaban emocionados por la película pero frustrados y molestos por el proceso de comprar la entrada. Esta se convirtió en la tensión central que necesitaba resolver."
+              ></p>
             </div>
-
-            <div class="cs-module full-width">
-                <div class="module-text">
-                    <h3 data-en="2. Evidence: User Personas" data-es="2. Evidencia: User Personas">2. Evidence: User Personas</h3>
-                    <p data-en="Based on the research, I developed two key personas: Sarah, a frequent moviegoer who values efficiency, and David, a busy parent who values clarity and stress-free family outings. These personas provided a constant reference point, ensuring every design decision was grounded in the needs of real, distinct user groups." data-es="Basado en la investigación, desarrollé dos arquetipos clave: Sarah, una cinéfila frecuente que valora la eficiencia, y David, un padre ocupado que valora la claridad y las salidas familiares sin estrés. Estos arquetipos proporcionaron un punto de referencia constante, asegurando que cada decisión de diseño estuviera fundamentada en las necesidades de grupos de usuarios reales y distintos."></p>
-                </div>
-                <div class="module-visual">
-                     <img src="../images/Theatron/personas-en.webp" alt="User personas for Sarah, the frequent moviegoer, and David, the busy parent." loading="lazy" data-img-en="../images/Theatron/personas-en.webp" data-img-es="../images/Theatron/personas-es.webp">
-                </div>
+            <div class="module-visual">
+              <img
+                src="../images/Theatron/empathy-en.webp"
+                alt="Empathy map showing user's thoughts, feelings, and actions."
+                loading="lazy"
+                data-img-en="../images/Theatron/empathy-en.webp"
+                data-img-es="../images/Theatron/empathy-es.webp"
+              />
             </div>
+          </div>
+
+          <div class="cs-module full-width">
+            <div class="module-text">
+              <h3
+                data-en="2. Evidence: User Personas"
+                data-es="2. Evidencia: User Personas"
+              >
+                2. Evidence: User Personas
+              </h3>
+              <p
+                data-en="Based on the research, I developed two key personas: Sarah, a frequent moviegoer who values efficiency, and David, a busy parent who values clarity and stress-free family outings. These personas provided a constant reference point, ensuring every design decision was grounded in the needs of real, distinct user groups."
+                data-es="Basado en la investigación, desarrollé dos arquetipos clave: Sarah, una cinéfila frecuente que valora la eficiencia, y David, un padre ocupado que valora la claridad y las salidas familiares sin estrés. Estos arquetipos proporcionaron un punto de referencia constante, asegurando que cada decisión de diseño estuviera fundamentada en las necesidades de grupos de usuarios reales y distintos."
+              ></p>
+            </div>
+            <div class="module-visual">
+              <img
+                src="../images/Theatron/personas-en.webp"
+                alt="User personas for Sarah, the frequent moviegoer, and David, the busy parent."
+                loading="lazy"
+                data-img-en="../images/Theatron/personas-en.webp"
+                data-img-es="../images/Theatron/personas-es.webp"
+              />
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="cs-section">
-        <h2 data-en="The Design &amp; Iteration Process: Turning Friction into Flow" data-es="El Proceso de Diseño e Iteración: Convirtiendo la Fricción en Flujo">The Design & Iteration Process: Turning Friction into Flow</h2>
-        <p data-en="The project's success hinged on solving the single most stressful step in the user journey: seat selection. Early usability testing with a low-fidelity prototype immediately confirmed that my initial design was a point of high friction." data-es="El éxito del proyecto dependía de resolver el paso más estresante en el viaje del usuario: la selección de asientos. Las primeras pruebas de usabilidad con un prototipo de baja fidelidad confirmaron de inmediato que mi diseño inicial era un punto de alta fricción."></p>
+      <h2 data-en="Design & Iteration" data-es="Diseño e Iteración"></h2>
+      <p
+        data-en="Success hinged on solving the most stressful step: seat selection. Early usability testing immediately confirmed my initial design was a point of high friction, causing user confusion."
+        data-es="El éxito dependía de resolver el paso más estresante: la selección de asientos. Las primeras pruebas de usabilidad confirmaron de inmediato que mi diseño inicial era un punto de alta fricción que causaba confusión en el usuario."
+      ></p>
         <div class="cs-comparison">
-            <div class="comparison-item">
-                <h3 data-en="Before User Testing" data-es="Antes de las Pruebas de Usuario">Before User Testing</h3>
-                <p data-en="A generic, ambiguous seat map that caused user confusion and a lack of confidence in their selection." data-es="Un mapa de asientos genérico y ambiguo que causaba confusión al usuario y falta de confianza en su selección."></p>
-                <img src="../images/Theatron/Old-Wireframes.webp" alt="Initial design of the seat selection screen." loading="lazy">
-            </div>
-            <div class="comparison-item">
-                <h3 data-en="After User Testing" data-es="Después de las Pruebas de Usuario">After User Testing</h3>
-                <p data-en="A redesigned interface with clear contrast and shapes, explicit labeling, and screen orientation to provide instant clarity." data-es="Una interfaz rediseñada con contraste y formas claras, etiquetado explícito y orientación de la pantalla para proporcionar claridad instantánea."></p>
-                <img src="../images/Theatron/Wireframes.webp" alt="Redesigned seat selection screen after user feedback." loading="lazy">
-            </div>
+          <div class="comparison-item">
+            <h3
+              data-en="Before User Testing"
+              data-es="Antes de las Pruebas de Usuario"
+            >
+              Before User Testing
+            </h3>
+            <p
+              data-en="A generic, ambiguous seat map that caused user confusion and a lack of confidence in their selection."
+              data-es="Un mapa de asientos genérico y ambiguo que causaba confusión al usuario y falta de confianza en su selección."
+            ></p>
+            <img
+              src="../images/Theatron/Old-Wireframes.webp"
+              alt="Initial design of the seat selection screen."
+              loading="lazy"
+            />
+          </div>
+          <div class="comparison-item">
+            <h3
+              data-en="After User Testing"
+              data-es="Después de las Pruebas de Usuario"
+            >
+              After User Testing
+            </h3>
+            <p
+              data-en="A redesigned interface with clear contrast and shapes, explicit labeling, and screen orientation to provide instant clarity."
+              data-es="Una interfaz rediseñada con contraste y formas claras, etiquetado explícito y orientación de la pantalla para proporcionar claridad instantánea."
+            ></p>
+            <img
+              src="../images/Theatron/Wireframes.webp"
+              alt="Redesigned seat selection screen after user feedback."
+              loading="lazy"
+            />
+          </div>
         </div>
-    </section>
-    
-    <section class="cs-section">
-        <h2 data-en="The Final Product: A Polished &amp; Validated Prototype" data-es="El Producto Final: Un Prototipo Pulido y Validado">The Final Product: A Polished & Validated Prototype</h2>
-        <p data-en="The final result is a high-fidelity Figma prototype that demonstrates a complete, user-tested, and frictionless ticketing experience. The visual design uses a bold, dark-theme UI to evoke the feeling of a modern cinema, while the validated flow directly solves the core user pain points of anxiety and confusion." data-es="El resultado final es un prototipo de alta fidelidad en Figma que demuestra una experiencia de compra de entradas completa, probada por usuarios y sin fricciones. El diseño visual utiliza una interfaz de usuario audaz con tema oscuro para evocar la sensación de un cine moderno, mientras que el flujo validado resuelve directamente los puntos de dolor centrales del usuario: la ansiedad y la confusión."></p>
+      </section>
+
+      <section class="cs-section">
+        <h2 data-en="The Final Product" data-es="El Producto Final"></h2>
+    <p
+      data-en="The final result is a high-fidelity Figma prototype of a frictionless ticketing experience. The dark-theme UI evokes a modern cinema, while the user-tested flow solves the core pain points of anxiety and confusion."
+      data-es="El resultado final es un prototipo de alta fidelidad en Figma de una experiencia de compra de entradas sin fricciones. La interfaz de usuario de tema oscuro evoca un cine moderno, mientras que el flujo probado por el usuario resuelve los puntos de dolor centrales de ansiedad y confusión."
+    ></p>
         <div class="cs-gallery">
-            <img src="../images/Theatron/Final-Designs.webp" alt="Final UI of the Theatron app home screen." loading="lazy">
+          <img
+            src="../images/Theatron/Final-Designs.webp"
+            alt="Final UI of the Theatron app home screen."
+            loading="lazy"
+          />
         </div>
         <div class="cs-cta-container">
-            <a href="https://www.figma.com/proto/CvY2tSiDyU355ndpFCwGjf/Theatron-App?page-id=81%3A725&node-id=223-677&node-type=canvas&viewport=854%2C505%2C0.19&t=5DTiqVVWPsFqpK3n-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=223%3A692&show-proto-sidebar=1" 
-            class="cta-button" target="_blank" data-en="View Interactive Prototype (Figma)" data-es="Ver Prototipo Interactivo (Figma)">View Interactive Prototype (Figma)</a>
+          <a
+            href="https://www.figma.com/proto/CvY2tSiDyU355ndpFCwGjf/Theatron-App?page-id=81%3A725&node-id=223-677&node-type=canvas&viewport=854%2C505%2C0.19&t=5DTiqVVWPsFqpK3n-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=223%3A692&show-proto-sidebar=1"
+            class="cta-button"
+            target="_blank"
+            data-en="View Interactive Prototype (Figma)"
+            data-es="Ver Prototipo Interactivo (Figma)"
+            >View Interactive Prototype (Figma)</a
+          >
         </div>
-    </section>
-    
-    <section class="cs-section cs-final-thoughts">
-        <h2 data-en="Impact & Key Learnings" data-es="Impacto y Aprendizajes Clave">Impact & Key Learnings</h2>
+      </section>
+
+      <section class="cs-section cs-final-thoughts">
+        <h2
+          data-en="Impact & Key Learnings"
+          data-es="Impacto y Aprendizajes Clave"
+        >
+          Impact & Key Learnings
+        </h2>
         <div class="takeaways-grid">
-            <div class="takeaway-item">
-                <h4 data-en="Value Delivered (Concept)" data-es="Valor Entregado (Concepto)">Value Delivered (Concept)</h4>
-                <ul>
-                    <li data-en="A user-tested, frictionless ticketing flow that reduces user anxiety." data-es="Un flujo de compra de entradas sin fricciones y probado por usuarios que reduce su ansiedad."></li>
-                    <li data-en="A design solution for a critical user pain point: seat selection." data-es="Una solución de diseño para un punto de dolor crítico del usuario: la selección de asientos."></li>
-                    <li data-en="A polished, mobile-first visual design ready for development." data-es="Un diseño visual pulido, mobile-first y listo para el desarrollo."></li>
-                </ul>
-            </div>
-             <div class="takeaway-item">
-                <h4 data-en="Personal Growth" data-es="Crecimiento Personal">Personal Growth</h4>
-                <p data-en="This project taught me the power of a focused, problem-solving approach. By obsessively refining a single, critical user flow based on direct feedback, I was able to deliver more value than if I had designed a dozen mediocre features. It solidified my belief in a rigorous, evidence-based UX process." data-es="Este proyecto me enseñó el poder de un enfoque centrado en la resolución de problemas. Al refinar obsesivamente un único flujo de usuario crítico basándome en feedback directo, pude ofrecer más valor que si hubiera diseñado una docena de características mediocres. Solidificó mi creencia en un proceso de UX riguroso y basado en evidencia."></p>
-            </div>
+          <div class="takeaway-item">
+            <h4
+              data-en="Value Delivered (Concept)"
+              data-es="Valor Entregado (Concepto)"
+            >
+              Value Delivered (Concept)
+            </h4>
+            <ul>
+              <li
+                data-en="A user-tested, frictionless ticketing flow that reduces user anxiety."
+                data-es="Un flujo de compra de entradas sin fricciones y probado por usuarios que reduce su ansiedad."
+              ></li>
+              <li
+                data-en="A design solution for a critical user pain point: seat selection."
+                data-es="Una solución de diseño para un punto de dolor crítico del usuario: la selección de asientos."
+              ></li>
+              <li
+                data-en="A polished, mobile-first visual design ready for development."
+                data-es="Un diseño visual pulido, mobile-first y listo para el desarrollo."
+              ></li>
+            </ul>
+          </div>
+          <div class="takeaway-item">
+            <h4 data-en="Personal Growth" data-es="Crecimiento Personal">
+              Personal Growth
+            </h4>
+            <p
+          data-en="This project taught me the power of a focused, problem-solving approach. By obsessively refining a single, critical user flow based on direct feedback, I delivered more value than if I had designed a dozen mediocre features."
+          data-es="Este proyecto me enseñó el poder de un enfoque centrado en la resolución de problemas. Al refinar obsesivamente un único flujo de usuario crítico basado en feedback directo, entregué más valor que si hubiera diseñado una docena de características mediocres."
+        ></p>
+          </div>
         </div>
-    </section>
-    <section class="final-cta-section">
-        <h2 data-en="For work or feedback, <br>contact me from here:" data-es="Para trabajos o feedback, <br>contáctame desde acá:">For work or feedback, <br>contact me from here:</h2>        <a href="../index.html#contact" class="cta-button" data-en="Contact Me" data-es="Contáctame">Contact Me</a>
-    </section>
-</main>
+      </section>
+      <section class="final-cta-section">
+        <h2
+          data-en="Ready to Build Something Meaningful?"
+          data-es="¿Listo para Construir Algo Significativo?"
+        ></h2>
+        <p
+          class="final-cta-subtitle"
+          data-en="Whether you have a custom project in mind or need a high-impact site launched quickly, I'm here to help."
+          data-es="Ya sea que tengas un proyecto a medida en mente o necesites un sitio de alto impacto lanzado rápidamente, estoy aquí para ayudar."
+        ></p>
+        <div class="final-cta-buttons">
+          <a
+            href="../freelance/freelance.html"
+            class="cta-button"
+            data-en="See 7-Day Launch Service"
+            data-es="Ver Servicio de 7 Días"
+          ></a>
+          <a
+            href="../index.html#contact"
+            class="cta-button-secondary"
+            data-en="Contact for Custom Work"
+            data-es="Contacto para Proyectos a Medida"
+          ></a>
+        </div>
+      </section>
+    </main>
 
-<nav class="project-nav">
-    <div class="project-nav-container">
-        <a href="nefer-museum.html" class="project-nav-link" data-en="<i class='fas fa-arrow-left'></i> Previous Project" data-es="<i class='fas fa-arrow-left'></i> Proyecto Anterior"><i class="fas fa-arrow-left"></i> Previous Project</a>
-        <a href="../index.html#work" class="project-nav-link home" data-en="<i class='fas fa-th-large'></i> Back to Home" data-es="<i class='fas fa-th-large'></i> Volver al Inicio"><i class="fas fa-th-large"></i> Back to Home</a>
-        <a href="tan-bonitos.html" class="project-nav-link" data-en="Next Project <i class='fas fa-arrow-right'></i>" data-es="Siguiente Proyecto <i class='fas fa-arrow-right'></i>">Next Project <i class="fas fa-arrow-right"></i></a>
-    </div>
-</nav>
-
-<footer class="footer">
-    <div class="footer-container">
+    <nav class="project-nav">
+      <div class="project-nav-container">
+        <a
+          href="nefer-museum.html"
+          class="project-nav-link"
+          data-en="<i class='fas fa-arrow-left'></i> Previous Project"
+          data-es="<i class='fas fa-arrow-left'></i> Proyecto Anterior"
+          ><i class="fas fa-arrow-left"></i> Previous Project</a
+        >
+        <a
+          href="../index.html#work"
+          class="project-nav-link home"
+          data-en="<i class='fas fa-th-large'></i> Back to Home"
+          data-es="<i class='fas fa-th-large'></i> Volver al Inicio"
+          ><i class="fas fa-th-large"></i> Back to Home</a
+        >
+        <a
+          href="tan-bonitos.html"
+          class="project-nav-link"
+          data-en="Next Project <i class='fas fa-arrow-right'></i>"
+          data-es="Siguiente Proyecto <i class='fas fa-arrow-right'></i>"
+          >Next Project <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+    </nav>
+    <footer class="footer">
+      <div class="footer-container">
         <div class="footer-column">
-            <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
-            <ul>
-                <li><a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a></li>
-                <li><a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a></li>
-                <li><a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a></li>
-                <li><a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
-            </ul>
+          <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
+          <ul>
+            <li>
+              <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
+            </li>
+            <li>
+              <a href="../index.html#work" data-en="Work" data-es="Trabajos"
+                >Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#skills"
+                data-en="Skills"
+                data-es="Habilidades"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#about" data-en="About" data-es="Sobre Mí"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../freelance/freelance.html"
+                data-en="Freelance"
+                data-es="Freelance"
+                >Freelance</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#contact"
+                data-en="Contact"
+                data-es="Contacto"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
         <div class="footer-column">
-            <h4 data-en="Contact" data-es="Contacto">Contact</h4>
-            <ul>
-                <li><a href="mailto:villadafelipe28@gmail.com"><i class="fas fa-envelope"></i> villadafelipe28@gmail.com</a></li>
-                <li><a href="https://www.linkedin.com/in/felipevillada/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://discord.com/users/gronfrog" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-            </ul>
+          <h4 data-en="Contact" data-es="Contacto">Contact</h4>
+          <ul>
+            <li>
+              <a href="mailto:villadafelipe28@gmail.com"
+                ><i class="fas fa-envelope"></i> villadafelipe28@gmail.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/felipevillada/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i> LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="https://discord.com/users/gronfrog" target="_blank"
+                ><i class="fab fa-discord"></i> Discord</a
+              >
+            </li>
+          </ul>
         </div>
         <div class="footer-column">
-            <h4 data-en="Resources" data-es="Recursos">Resources</h4>
-            <ul>
-                <li><a href="../Google-UX-Certificate.pdf" target="_blank"><i class="fas fa-certificate"></i> <span data-en="Google UX Certificate" data-es="Certificado UX de Google">Google UX Certificate</span></a></li>
-                <li><a href="../cv/FelipeVillada-CV-En.pdf" target="_blank" data-link-en="../cv/FelipeVillada-CV-En.pdf" data-link-es="../cv/FelipeVillada-CV-Es.pdf"><i class="fas fa-file-alt"></i> <span data-en="My Resume" data-es="Mi CV">My Resume</span></a></li>
-            </ul>
+          <h4 data-en="Resources" data-es="Recursos">Resources</h4>
+          <ul>
+            <li>
+              <a href="../Google-UX-Certificate.pdf" target="_blank"
+                ><i class="fas fa-certificate"></i>
+                <span
+                  data-en="Google UX Certificate"
+                  data-es="Certificado UX de Google"
+                  >Google UX Certificate</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="../cv/FelipeVillada-CV-En.pdf"
+                target="_blank"
+                data-link-en="../cv/FelipeVillada-CV-En.pdf"
+                data-link-es="../cv/FelipeVillada-CV-Es.pdf"
+                ><i class="fas fa-file-alt"></i>
+                <span data-en="My Resume" data-es="Mi CV">My Resume</span></a
+              >
+            </li>
+          </ul>
         </div>
         <div class="footer-column">
-            <h4 data-en="Case Studies" data-es="Casos de Estudio">Case Studies</h4>
-            <ul>
-                <li><a href="../projects/tan-bonitos.html">Tan Bonitos!</a></li>
-                <li><a href="../projects/casa-oro-real.html">Casa Oro Real</a></li>
-                <li><a href="../projects/nefer-museum.html">Nefer Museum</a></li>
-                <li><a href="../projects/theatron-app.html">Theatron App</a></li>
-            </ul>
+          <h4 data-en="Case Studies" data-es="Casos de Estudio">
+            Case Studies
+          </h4>
+          <ul>
+            <li><a href="../projects/tan-bonitos.html">Tan Bonitos!</a></li>
+            <li><a href="../projects/casa-oro-real.html">Casa Oro Real</a></li>
+            <li><a href="../projects/nefer-museum.html">Nefer Museum</a></li>
+            <li><a href="../projects/theatron-app.html">Theatron App</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Felipe Villada. <span data-en="All Rights Reserved." data-es="Todos los Derechos Reservados.">All Rights Reserved.</span></p>
-    </div>
-</footer>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Felipe Villada.
+          <span
+            data-en="All Rights Reserved."
+            data-es="Todos los Derechos Reservados."
+            >All Rights Reserved.</span
+          >
+        </p>
+      </div>
+    </footer>
     <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>
