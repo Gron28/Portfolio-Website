@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async fetchAndUpdateARSPrice() {
       const priceContainer = document.getElementById("ars-price-container");
-      const usdPrice = 250; 
+      const usdPrice = 300; 
       if (!priceContainer) return;
 
       try {
