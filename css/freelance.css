@@ -19,11 +19,11 @@ html.page-freelance {
 }
 
 .hero h1 {
-  margin-top: 20px;
+  margin-top: 16px;
   font-size: calc(1.9rem + 1vw);
   color: var(--color-primary);
   text-align: center;
-  margin-bottom: calc(var(--spacing-unit) * 1);
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
   font-weight: 700;
 }
 .hero p {
@@ -89,7 +89,7 @@ html.page-freelance {
 
 .freelance-container .hero {
   text-align: center;
-  padding: calc(var(--spacing-unit) * 14) 0 calc(var(--spacing-unit) * 10) 0;
+  padding: calc(var(--spacing-unit) * 12) 0 calc(var(--spacing-unit) * 8) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,7 +97,7 @@ html.page-freelance {
 .freelance-container .hero p {
   font-size: 1.18rem;
   max-width: 650px;
-  margin: calc(var(--spacing-unit) * 3.5) auto calc(var(--spacing-unit) * 5.5) auto;
+  margin: calc(var(--spacing-unit) * 2.5) auto calc(var(--spacing-unit) * 4) auto;
 }
 .hero-availability {
   display: flex;
@@ -107,10 +107,10 @@ html.page-freelance {
   background-color: var(--color-surface);
   border-radius: 24px;
   border: 1px solid var(--color-border);
-  margin-top: calc(var(--spacing-unit) * 6);
+  margin-top: calc(var(--spacing-unit) * 4);
   color: var(--color-secondary-text);
   font-size: 1.08rem;
-  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  margin-bottom: calc(var(--spacing-unit) * 2);
 }
 .availability-dot {
   width: 12px;
@@ -565,15 +565,15 @@ html.page-freelance {
   }
 
   .page-freelance .hero p {
-    max-width: 95%;
-    font-size: 1.08rem;
+    max-width: 90%;
+    font-size: 1rem;
     color: var(--color-background);
-    margin-bottom: calc(var(--spacing-unit) * 3.5);
+    margin-bottom: calc(var(--spacing-unit) * 2);
   }
 
   .hero {
-    padding: calc(var(--spacing-unit) * 7) 0 calc(var(--spacing-unit) * 4) 0;
-    min-height: 60vh;
+    padding: calc(var(--spacing-unit) * 4) 0 calc(var(--spacing-unit) * 2) 0;
+    min-height: auto;
   }
 
   .hero h1 {
