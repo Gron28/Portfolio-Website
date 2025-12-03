@@ -1,12 +1,15 @@
 .case-study-theatron {
   --color-primary: var(--color-theatron);
 }
+
 .case-study-nefer {
   --color-primary: var(--color-nefer);
 }
+
 .case-study-cor {
   --color-primary: var(--color-casa-oro-real);
 }
+
 .case-study-tb {
   --color-primary: var(--color-tan-bonitos);
 }
@@ -63,6 +66,7 @@
   border-bottom: 1px solid var(--color-surface);
   padding-bottom: calc(var(--spacing-unit) * 8);
 }
+
 .cs-section:last-of-type {
   border-bottom: none;
 }
@@ -78,17 +82,23 @@
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: calc(var(--spacing-unit) * 3);
+  max-width: 70ch;
+  /* Improve readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cs-intro-image {
   margin-bottom: calc(var(--spacing-unit) * 6);
 }
+
 .cs-intro-image img {
   display: block;
   margin: 0 auto;
   max-height: 550px;
   max-width: 600px;
 }
+
 .cs-summary {
   font-size: 1.25rem !important;
   text-align: center;
@@ -96,6 +106,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .cs-at-a-glance {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -105,6 +116,7 @@
   text-align: center;
   margin-top: calc(var(--spacing-unit) * 6);
 }
+
 .glance-item h4 {
   color: var(--color-primary);
   font-size: 0.9rem;
@@ -117,18 +129,22 @@
   gap: calc(var(--spacing-unit) * 4);
   margin-top: calc(var(--spacing-unit) * 4);
 }
+
 .solution-item {
   padding: calc(var(--spacing-unit) * 2);
 }
+
 .solution-item img {
   width: 100%;
   height: auto;
   margin-bottom: calc(var(--spacing-unit) * 2);
 }
+
 .solution-item h4 {
   color: var(--color-primary);
   margin-bottom: var(--spacing-unit);
 }
+
 .cs-insight {
   background-color: var(--color-surface);
   padding: calc(var(--spacing-unit) * 3);
@@ -139,9 +155,11 @@
 .case-video {
   margin: auto;
   margin-bottom: 30px;
-  width: 600px;
+  width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
+  border-radius: var(--border-radius);
 }
 
 .cs-gallery {
@@ -150,11 +168,13 @@
   gap: calc(var(--spacing-unit) * 2);
   margin-top: calc(var(--spacing-unit) * 4);
 }
+
 .cs-gallery img {
   width: 100%;
   height: auto;
   border: 1px solid var(--color-surface);
 }
+
 .cs-cta-container {
   text-align: center;
   margin-top: calc(var(--spacing-unit) * 6);
@@ -165,10 +185,12 @@
   grid-template-columns: 1fr 1fr;
   gap: calc(var(--spacing-unit) * 3);
 }
+
 .takeaway-item {
   background-color: var(--color-surface);
   padding: calc(var(--spacing-unit) * 3);
 }
+
 .takeaway-item h4 {
   color: var(--color-primary);
   margin-bottom: var(--spacing-unit);
@@ -180,11 +202,13 @@
   padding: calc(var(--spacing-unit) * 4);
   margin: calc(var(--spacing-unit) * 6) 0;
 }
+
 .cs-testimonial p {
   font-style: italic;
   font-size: 1.2rem;
   margin: 0;
 }
+
 .cs-testimonial span {
   display: block;
   margin-top: var(--spacing-unit);
@@ -222,6 +246,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .gallery-item-full img {
   width: 100%;
   height: auto;
@@ -310,6 +335,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
+  gap: var(--spacing-unit);
 }
 
 .project-nav-link {
@@ -357,9 +385,11 @@
 .cs-module.reverse {
   grid-template-areas: "text visual";
 }
+
 .cs-module.reverse .module-visual {
   grid-area: visual;
 }
+
 .cs-module.reverse .module-text {
   grid-area: text;
 }
@@ -395,6 +425,7 @@
 }
 
 @media (max-width: 900px) {
+
   .cs-comparison,
   .takeaways-grid,
   .cs-module,
@@ -402,10 +433,12 @@
     grid-template-columns: 1fr;
     grid-template-areas: unset;
   }
+
   .cs-module.reverse .module-visual,
   .cs-module.reverse .module-text {
     grid-area: unset;
   }
+
   .module-text {
     text-align: center;
   }
@@ -415,9 +448,11 @@
   .cs-hero h1 {
     font-size: clamp(2rem, 12vw, 3.5rem);
   }
+
   .cs-section h2 {
     font-size: calc(1.3rem + 2vw);
   }
+
   .cs-summary {
     font-size: 1.1rem !important;
   }
@@ -427,6 +462,7 @@
     justify-content: flex-end;
     padding-bottom: 150px;
   }
+
   .cs-hero::before {
     width: 150vw;
     height: 150vw;
@@ -448,6 +484,7 @@
     max-width: 100%;
     height: auto;
   }
+
   .cs-intro-image,
   .module-visual {
     padding: 0;
@@ -462,6 +499,7 @@
   .takeaway-item li {
     text-align: left;
   }
+
   .cs-summary,
   .glance-item p,
   .comparison-item h3,
