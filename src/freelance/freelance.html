@@ -42,27 +42,53 @@
   </div>
   <canvas id="galaxy-canvas"></canvas>
 
-  <!-- @include nav -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" data-en="Felipe Villada" data-es="Felipe Villada">Felipe Villada</a>
+      <div class="nav-links">
+        <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
+        <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
+        <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
+        <a href="../freelance/freelance.html" data-en="Freelance" data-es="Freelance">Freelance</a>
+        <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <div class="nav-controls">
+        <button id="langToggle"><i class="fas fa-globe"></i> EN/ES</button>
+      </div>
+    </div>
+  </nav>
+  <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-links">
+      <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
+      <a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a>
+      <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
+      <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
+      <a href="../freelance/freelance.html" data-en="Freelance" data-es="Freelance">Freelance</a>
+      <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
 
   <header class="hero container">
-    <h1 data-en="Your Business is Thriving.<br>Let's Make it Official."
-      data-es="Tu Negocio Crece.<br>Hagámoslo Oficial.">
-      Your Business is Thriving.<br>Let's Make it Official.
+    <h1 data-en="Your Business Deserves<br>to Exist on the Web." data-es="Tu Negocio Merece<br>Existir en la Web.">
+      Your Business Deserves<br>to Exist on the Web.
     </h1>
-    <p data-en="You don't need a complex website to find new clients—you're already doing that. You need a professional headquarters to build trust, answer repetitive questions, and close the deal. Simple, effective, and ready in 7 days."
-      data-es="No necesitás una web compleja para conseguir clientes, eso ya lo hacés. Necesitás una sede profesional para generar confianza, responder preguntas repetitivas y cerrar ventas. Simple, efectivo y listo en 7 días."
+    <p data-en="Simple, professional, and fast websites for businesses that need a digital presence."
+      data-es="Sitios web simples, profesionales y rápidos para negocios que necesitan presencia digital."
       class="hero-subtitle-full">
-      You don't need a complex website to find new clients—you're already doing that. You need a professional
-      headquarters to build trust, answer repetitive questions, and close the deal. Simple, effective, and ready in 7
-      days.</p>
-    <p data-en="A professional site that builds trust and saves time. Ready in 7 days."
-      data-es="Un sitio profesional que genera confianza y ahorra tiempo. Listo en 7 días."
+      Simple, professional, and fast websites for businesses that need a digital presence.</p>
+
+    <p data-en="Simple, professional, and fast websites." data-es="Sitios web simples, profesionales y rápidos."
       class="hero-subtitle-mobile">
-      A professional site that builds trust and saves time. Ready in 7 days.</p>
+      Simple, professional, and fast websites.</p>
+
     <div class="hero-availability">
       <div class="availability-dot"></div>
-      <span data-en="Next 2 slots available this month" data-es="2 Cupos disponibles este mes">Next 2 slots available
-        this month</span>
+      <span data-en="Get a Free simple Mockup in 24hs" data-es="Pedí tu Mockup simple, Gratis y en 24hs">Get a Free
+        simple
+        Mockup in 24hs</span>
     </div>
     <br />
     <a href="#package" class="btn btn-primary hero-cta" data-en="See Packages & Book"
@@ -131,63 +157,90 @@
       <section id="package" class="section">
         <div class="container">
           <div class="section-header">
-            <h2 data-en="One Simple Package.<br>One Giant Leap." data-es="Un Paquete Simple.<br>Un Salto Gigante.">
-              One Simple Package.<br />One Giant Leap.
+            <h2 data-en="Transparent Pricing.<br>No Surprises." data-es="Precios Transparentes.<br>Sin Sorpresas.">
+              Transparent Pricing.<br>No Surprises.
             </h2>
-            <p data-en="An strategic investment to establish your online credibility. Professional quality with transparent pricing adapted to our market."
-              data-es="Inversión estratégica para establecer tu credibilidad online. Calidad profesional con un precio transparente y adaptado a nuestro mercado.">
-              An strategic investment to establish your online credibility. Professional quality with transparent
-              pricing
-              adapted to our market.</p>
+            <p data-en="Start with what you need. Scale when you're ready."
+              data-es="Empezá con lo que necesitás. Escalalo cuando estés listo.">
+              Start with what you need. Scale when you're ready.</p>
           </div>
-          <div class="offer-grid dual-package">
-            <div class="package featured">
-              <div class="popular-tag" data-en="Most Popular" data-es="Más Popular">Most Popular</div>
-              <h3 class="package-title" data-en="The Business Essential" data-es="El Esencial de Negocios">The Business
-                Essential</h3>
-              <div class="package-price">300.000 ARS</div>
-              <p data-en="Everything you need to look professional. No bloat. Just a solid foundation."
-                data-es="Todo lo que necesitás para verte profesional. Sin relleno. Solo una base sólida.">
-                Everything you need to look professional. No bloat. Just a solid foundation.</p>
+
+          <div class="offer-grid three-package">
+            <div class="package">
+              <h3 class="package-title" data-en="Presence" data-es="Presencia">Presence</h3>
+              <div class="package-price">$120.000</div>
+              <p data-en="Perfect for starting. A professional one-pager."
+                data-es="Perfecto para empezar. Una página simple y profesional.">
+                Perfect for starting. A professional one-pager.</p>
               <ul class="package-features">
-                <li data-en="Strategic Blueprint" data-es="Blueprint Estratégico">Strategic Blueprint</li>
-                <li data-en="Professional Brand Identity" data-es="Identidad de Marca Profesional">Professional Brand
-                  Identity</li>
-                <li data-en="One-Page Site (High Conversion)" data-es="Sitio de Una Página (Alta Conversión)">One-Page
-                  Site (High Conversion)</li>
-                <li data-en="Perfect on Phones" data-es="Perfecto en Celulares">Perfect on Phones</li>
-                <li data-en="Google-Friendly (SEO)" data-es="Amigable con Google (SEO)">Google-Friendly (SEO)</li>
-                <li data-en="WhatsApp Integration" data-es="Integración con WhatsApp">WhatsApp Integration
-                </li>
-                <li data-en="Full Ownership" data-es="Propiedad Total">Full Ownership</li>
+                <li data-en="One-Page Site" data-es="Sitio One-Page">One-Page Site</li>
+                <li data-en="The most Essential" data-es="Lo más Esencial">The most Essential</li>
+                <li data-en="3 Key Sections" data-es="3 Secciones Clave">3 Key Sections</li>
+                <li data-en="Delivery in 48hs" data-es="Entrega en 48hs">Delivery in 48hs</li>
+                <li data-en="1 Revision" data-es="1 Revisión">1 Revision</li>
               </ul>
-              <div class="reassurance-text" data-en="All-inclusive. No hidden fees."
-                data-es="Todo incluido. Sin costos ocultos.">All-inclusive. No hidden fees.</div>
+              <a href="#contact" class="btn btn-primary" style="margin-top: auto; width: 100%;"
+                data-en="Choose Presence" data-es="Elegir Presencia">Choose Presence</a>
+            </div>
+
+            <div class="package featured">
+              <div class="popular-tag" data-en="Best Value" data-es="Mejor Valor">Best Value</div>
+              <h3 class="package-title" data-en="Professional" data-es="Profesional">Professional</h3>
+              <div class="package-price">$380.000</div>
+              <p data-en="A complete website for established businesses."
+                data-es="Un sitio web completo para negocios establecidos.">
+                A complete website for established businesses.</p>
+              <ul class="package-features">
+                <li data-en="Multi-Page (3/4)" data-es="Multipágina (3/4)">Multi-Page (3/4)</li>
+                <li data-en="7/8 Sections" data-es="7/8 Secciones">7/8 Sections</li>
+                <li data-en="Custom Design" data-es="Diseño a medida">Custom Design</li>
+                <li data-en="Delivery in 7-10 Days" data-es="Entrega en 7-10 Días">Delivery in 7-10 Days</li>
+                <li data-en="Custom Branding" data-es="Branding Personalizado">Custom Branding</li>
+                <li data-en="3 Revisions" data-es="3 Revisions">3 Revisions</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary" style="margin-top: auto; width: 100%;"
+                data-en="Choose Professional" data-es="Elegir Profesional">Choose Professional</a>
             </div>
 
             <div class="package secondary">
-              <h3 class="package-title" data-en="Custom Build" data-es="Desarrollo a Medida">Custom Build</h3>
-              <div class="package-price"><span data-en="From" data-es="Desde">From</span> 700.000 ARS</div>
-              <p data-en="For businesses ready to scale with e-commerce or complex features."
-                data-es="Para negocios listos para escalar con e-commerce o funciones complejas.">
-                For businesses ready to scale with e-commerce or complex features.</p>
+              <h3 class="package-title" data-en="Advanced" data-es="Avanzado">Advanced</h3>
+              <div class="package-price"><span style="font-size: 1rem; opacity: 0.7;" data-en="from"
+                  data-es="desde">from</span> $800.000</div>
+              <p data-en="E-commerce or complex functionality." data-es="E-commerce o funcionalidades complejas.">
+                E-commerce or complex functionality.</p>
               <ul class="package-features">
-                <li data-en="Multi-Page / E-commerce" data-es="Multipágina / E-commerce">Multi-Page / E-commerce</li>
-                <li data-en="Advanced Functionality" data-es="Funcionalidad Avanzada">Advanced Functionality</li>
-                <li data-en="Deep Strategy Session" data-es="Sesión de Estrategia Profunda">Deep Strategy Session</li>
+                <li data-en="Online Store / Payments" data-es="Tienda Online / Pagos">Online Store / Payments</li>
+                <li data-en="User Accounts" data-es="Cuentas de Usuario">User Accounts</li>
+                <li data-en="Complex Logic" data-es="Lógica Compleja">Complex Logic</li>
+                <li data-en="Priority Support" data-es="Soporte Prioritario">Priority Support</li>
               </ul>
-              <div class="reassurance-text" data-en="Let's talk about your specific needs."
-                data-es="Hablemos de tus necesidades específicas.">Let's talk about your specific needs.</div>
+              <a href="#contact" class="btn btn-primary" style="margin-top: auto; width: 100%;" data-en="Let's Talk"
+                data-es="Hablemos">Let's Talk</a>
+            </div>
+          </div>
+
+          <div class="addon-card">
+            <div class="addon-content">
+              <h3 data-en="Want me to handle the technical stuff?" data-es="¿Querés que me encargue de lo técnico?">Want
+                me to handle the technical stuff?</h3>
+              <p data-en="Monthly management: Hosting, domain, security, backups, monthly updates and support. I handle the stress."
+                data-es="Gestión mensual: Hosting, dominio, seguridad, respaldos, actualizaciones mensuales y soporte. Yo me encargo del estrés.">
+                Monthly management: Hosting, domain, security, backups, monthly updates and support. I handle the
+                stress.</p>
+            </div>
+            <div class="addon-pricing">
+              <div class="price">$28.000 <small data-en="ARS/mo" data-es="ARS/mes">ARS/mo</small></div>
+              <div class="sub" data-en="Cancel anytime" data-es="Sin permanencia">Cancel anytime</div>
             </div>
           </div>
           <div class="tech-badges">
-            <span><i class="fab fa-html5"></i> <span data-en="Fast & Secure" data-es="Rápido y Seguro">Fast &
+            <span><i class="fas fa-bolt"></i> <span data-en="Fast & Secure" data-es="Rápido y Seguro">Fast &
                 Secure</span></span>
             <span><i class="fas fa-mobile-alt"></i> <span data-en="Perfect on Phones"
                 data-es="Perfecto en Celulares">Perfect on Phones</span></span>
-            <span><i class="fas fa-rocket"></i> <span data-en="Google-Friendly"
+            <span><i class="fab fa-google"></i> <span data-en="Google-Friendly"
                 data-es="Amigable con Google">Google-Friendly</span></span>
-            <span><i class="fas fa-unlock-alt"></i> <span data-en="100% Yours" data-es="100% Tuyo">100%
+            <span><i class="fas fa-file-code"></i> <span data-en="100% Yours" data-es="100% Tuyo">100%
                 Yours</span></span>
             <div class="cta-container" style="margin-top: 48px; text-align: center;">
               <a href="https://calendly.com/villadafelipe28/30min" class="cta-button btn-large"
@@ -206,202 +259,306 @@
       <section id="process" class="section">
         <div class="container">
           <div class="section-header">
-            <h2 data-en="Our 7-Day Sprint" data-es="Nuestro Sprint de 7 Días">Our 7-Day Sprint</h2>
-            <p data-en="A clear, guided process for fast results."
-              data-es="Un proceso claro y guiado para resultados rápidos.">A clear, guided process for fast results.</p>
+            <h2 data-en="How it Works" data-es="Cómo Funciona">How it Works</h2>
+            <p data-en="Simple. Transparent. Fast." data-es="Simple. Transparente. Rápido.">
+              Simple. Transparent. Fast.</p>
           </div>
 
-          <div class="timeline-onboarding">
-            <span class="tag" data-en="Phase 0" data-es="Fase 0">Phase 0</span>
-            <br /><br />
-            <h3 data-en="Blueprint & Onboarding" data-es="Plan & Comienzo">Blueprint & Onboarding</h3>
-            <br>
-            <p data-en="It starts with a simple brief and a 50% deposit to secure your spot. You share your goals, I guide you to buy your domain, and we have an optional alignment call. The 7 days start only when this is done."
-              data-es="Comienza con un brief simple y una seña del 50% para asegurar tu lugar. Compartís tus objetivos, te guío para comprar tu dominio y tenemos una llamada opcional. Los 7 días comienzan solo cuando esto esté listo.">
-              It starts with a simple brief and a 50% deposit to secure your spot. You share your goals, I guide you to
-              buy your domain, and we have an optional alignment call. The 7 days start only when this is done.</p>
-          </div>
+          <div class="process-steps">
+            <!-- Step 1 -->
+            <div class="process-step">
+              <div class="step-header">
+                <div class="step-number">1</div>
+                <h3 data-en="You Contact Me" data-es="Me Contactás">You Contact Me</h3>
+              </div>
+              <p data-en="Tell me about your business. What you do, who your clients are, what you need."
+                data-es="Contame sobre tu negocio. Qué hacés, quiénes son tus clientes, qué necesitás.">
+                Tell me about your business. What you do, who your clients are, what you need.</p>
+            </div>
 
-          <div class="timeline-grid">
-            <div class="timeline-item">
-              <span class="tag" data-en="Day 1-2" data-es="Día 1-2">Day 1-2</span>
-              <h3 data-en="Brand & Blueprint" data-es="Marca & Blueprint">Brand & Blueprint</h3>
-              <p data-en="I design your logo, colors, and site structure. You get a clear visual plan."
-                data-es="Diseño tu logo, colores y la estructura del sitio. Recibís un plan visual claro.">I design
-                your logo, colors, and site structure. You get a clear visual plan.</p>
-              <div class="timeline-proof-container">
-                <img src="../images/freelance/proof-1.webp" alt="Example of branding options and a website wireframe"
-                  class="proof-img" />
+            <!-- Step 2 -->
+            <div class="process-step">
+              <div class="step-header">
+                <div class="step-number">2</div>
+                <h3 data-en="Free Mockup in 24hs" data-es="Mockup Gratis en 24hs">Free Mockup in 24hs</h3>
+              </div>
+              <p data-en="I send you a visual preview. If you like the direction, we move forward. If not, I adjust it or we part ways. No cost either way."
+                data-es="Te envío una vista previa visual. Si te gusta la dirección, avanzamos. Si no, lo ajusto o nos despedimos. Sin costo de cualquier forma.">
+                I send you a visual preview. If you like the direction, we move forward. If not, I adjust it or we part
+                ways. No cost either way.</p>
+            </div>
+
+            <!-- Step 3 - THE DECISION POINT -->
+            <div class="process-step highlight-step">
+              <div class="step-header">
+                <div class="step-number">3</div>
+                <h3 data-en="You Decide to Start" data-es="Decidís Arrancar">You Decide to Start</h3>
+              </div>
+              <p data-en="Choose your package. Pay 50% deposit. I take the mockup and build the real site based on your final input."
+                data-es="Elegís tu paquete. Pagás el 50% de seña. Tomo el mockup y construyo el sitio real basado en tu input final.">
+                Choose your package. Pay 50% deposit. I take the mockup and build the real site based on your final
+                input.</p>
+              <div class="step-note"
+                data-en="The mockup adjustments don't count as revisions. Your revision count starts once the site is built."
+                data-es="Los ajustes del mockup no cuentan como revisiones. Tu cuenta de revisiones empieza una vez construido el sitio.">
+                <strong>Important:</strong> The mockup adjustments don't count as revisions. Your revision count starts
+                once the site is built.
               </div>
             </div>
 
-            <div class="timeline-item">
-              <span class="tag" data-en="Day 3-6" data-es="Día 3-6">Day 3-6</span>
-              <h3 data-en="Design & Build" data-es="Diseño & Desarrollo">Design & Build</h3>
-              <p data-en="I build your site on a private link. You watch it come to life."
-                data-es="Construyo tu sitio en un enlace privado. Ves cómo cobra vida.">
-                I build your site on a private link. You watch it come to life.</p>
-              <div class="timeline-proof-container">
-                <img src="../images/freelance/proof-2.webp" alt="Example of a high-fidelity Figma design"
-                  class="proof-img" />
+            <!-- Step 4 -->
+            <div class="process-step">
+              <div class="step-header">
+                <div class="step-number">4</div>
+                <h3 data-en="I Build + You Review" data-es="Construyo + Vos Revisás">I Build + You Review</h3>
+              </div>
+              <p data-en="You get a staging link to see progress. Request changes (within your revision limit). I refine until you approve."
+                data-es="Recibís un link de prueba para ver el progreso. Pedís cambios (dentro del límite de revisiones). Refino hasta que apruebes.">
+                You get a staging link to see progress. Request changes (within your revision limit). I refine until you
+                approve.</p>
+              <div class="step-note">
+                <span data-en="48 hours (Presence) or 7-10 days (Professional)"
+                  data-es="48 horas (Presencia) o 7-10 días (Profesional)">
+                  <strong>Timeline:</strong> 48 hours (Presence) or 7-10 days (Professional)
+                </span>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <span class="tag" data-en="Day 7" data-es="Día 7">Day 7</span>
-              <h3 data-en="Launch" data-es="Lanzamiento">Launch</h3>
-              <p data-en="We connect your domain and go live. Your business is officially online."
-                data-es="Conectamos tu dominio y salimos en vivo. Tu negocio está oficialmente online.">
-                We connect your domain and go live. Your business is officially online.</p>
-              <div class="timeline-proof-container">
-                <img src="../images/freelance/proof-3.webp" alt="Example of a final launched website"
-                  class="proof-img" />
+            <!-- Step 5 -->
+            <div class="process-step">
+              <div class="step-header">
+                <div class="step-number">5</div>
+                <h3 data-en="Final Payment + Handoff" data-es="Pago Final + Entrega">Final Payment + Handoff</h3>
+              </div>
+              <p data-en="You pay the remaining 50%. I deliver all files (HTML, CSS, images, etc.) and login credentials. The site is 100% yours."
+                data-es="Pagás el 50% restante. Te entrego todos los archivos (HTML, CSS, imágenes, etc.) y credenciales. El sitio es 100% tuyo.">
+                You pay the remaining 50%. I deliver all files (HTML, CSS, images, etc.) and login credentials. The site
+                is 100% yours.</p>
+            </div>
+
+            <!-- Step 6 - What happens next -->
+            <div class="process-step">
+              <div class="step-header">
+                <div class="step-number">6</div>
+                <h3 data-en="Getting it Online" data-es="Ponerlo Online">Getting it Online</h3>
+              </div>
+              <p data-en="Two options:" data-es="Dos opciones:">
+                Two options:</p>
+
+              <ul class="decision-list">
+                <li data-en="A) You handle hosting/domain yourself (I can guide you)"
+                  data-es="A) Lo manejás vos (te puedo guiar)">
+                  <strong>A)</strong> You handle hosting/domain yourself (I can guide you)
+                </li>
+                <li data-en="B) I manage everything for $28k/month (hosting, domain, updates, support)"
+                  data-es="B) Yo lo gestiono todo por $28k/mes (hosting, dominio, actualizaciones, soporte)">
+                  <strong>B)</strong> I manage everything for $28k/month (hosting, domain, updates, support)
+                </li>
+              </ul>
+
+              <div class="step-note" data-en="Either way, you own the site. You can switch from B to A anytime."
+                data-es="De cualquier forma, el sitio es tuyo. Podés cambiar de B a A cuando quieras.">
+                <strong>Either way, you own the site.</strong> You can switch from B to A anytime.
               </div>
             </div>
+
           </div>
+
         </div>
       </section>
+      </div>
+      </div>
+    </section>
 
-      <section id="faq" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2 data-en="Your Questions, Answered" data-es="Preguntas Frecuentes">Your Questions, Answered</h2>
-          </div>
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-en="Your Questions, Answered" data-es="Preguntas Frecuentes">Your Questions, Answered</h2>
+        </div>
 
-          <div class="faq-item">
-            <div class="faq-question" data-en="What do you need from me to get started?"
-              data-es="¿Qué necesitás de mí para empezar?">What do you need from me to get started?</div>
-            <div class="faq-answer">
-              <p data-en="After the short form, I’ll send you a simple Project Brief where you share your goals, contact info, and business details. The clearer the info, the closer we get to your vision."
-                data-es="Después del breve formulario, te enviaré un Brief de Proyecto donde compartís tus objetivos, datos de contacto y detalles del negocio. Cuanto más claro, más cerca estaremos de tu visión.">
-                After the short form, I’ll send you a simple Project Brief where you share your goals, contact info, and
-                business details. The clearer the info, the closer we get to your vision.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" data-en="What if my content (text/images) isn’t ready yet?"
-              data-es="¿Qué pasa si mi contenido (texto o imágenes) no está listo?">What if my content (text/images)
-              isn’t
-              ready yet?</div>
-            <div class="faq-answer">
-              <p data-en="No problem. The 7-day timeline only starts when the Brief is complete. I can help refine your text, but having good images ready is highly recommended."
-                data-es="No hay problema. El cronograma de 7 días empieza cuando el Brief está completo. Puedo ayudarte a ajustar textos, pero es muy recomendable tener buenas imágenes listas.">
-                No problem. The 7-day timeline only starts when the Brief is complete. I can help refine your text, but
-                having good images ready is highly recommended.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" data-en="What if I already have a logo or branding?"
-              data-es="¿Qué pasa si ya tengo un logo o branding?">What if I already have a logo or branding?</div>
-            <div class="faq-answer">
-              <p data-en="Great. We’ll integrate your brand for consistency, and use the saved time for another feature like a gallery or basic SEO."
-                data-es="Excelente. Integramos tu marca para mantener consistencia, y aprovechamos el tiempo para otra funcionalidad como galería o SEO básico.">
-                Great. We’ll integrate your brand for consistency, and use the saved time for another feature like a
-                gallery or basic SEO.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" data-en="Can the 7-day process be delayed?"
-              data-es="¿Se puede extender el proceso de 7 días?">Can the 7-day process be delayed?</div>
-            <div class="faq-answer">
-              <p data-en="It depends on our collaboration. To keep the speed, I’ll need your feedback within 24 hours in each revision round."
-                data-es="Depende de nuestra colaboración. Para mantener la velocidad, necesito tu feedback dentro de 24 horas en cada ronda de revisión.">
-                It depends on our collaboration. To keep the speed, I’ll need your feedback within 24 hours in each
-                revision round.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" data-en="What happens when the project is finished?"
-              data-es="¿Qué ocurre al finalizar el proyecto?">What happens when the project is finished?</div>
-            <div class="faq-answer">
-              <p data-en="The website is fully yours with 100% ownership and no lock-in. I include one week of technical support, and can offer optional maintenance plans afterward."
-                data-es="El sitio es totalmente tuyo, con 100% de propiedad y sin ataduras. Incluye una semana de soporte técnico y, si querés, planes opcionales de mantenimiento.">
-                The website is fully yours with 100% ownership and no lock-in. I include one week of technical support,
-                and can offer optional maintenance plans afterward.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" data-en="Do I really need a website if I have Instagram?"
-              data-es="¿Realmente necesito un sitio web si tengo Instagram?">Do I really need a website if I have
-              Instagram?</div>
-            <div class="faq-answer">
-              <p data-en="Instagram is for engagement. A website is for closing. It gives your business a permanent home that you own, where customers can trust you're not a 'here today, gone tomorrow' operation."
-                data-es="Instagram es para interactuar. Un sitio web es para cerrar ventas. Le da a tu negocio un hogar permanente que es tuyo, donde los clientes confían en que no sos una operación pasajera.">
-                Instagram is for engagement. A website is for closing. It gives your business a permanent home that you
-                own,
-                where customers can trust you're not a 'here today, gone tomorrow' operation.</p>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question" data-en="Is the Mockup really free?" data-es="¿El Mockup es realmente gratis?">Is
+            the Mockup really free?</div>
+          <div class="faq-answer">
+            <p data-en="Yes. I design a visual preview in 24hs. If you don't like it, you don't pay anything. No risk."
+              data-es="Sí. Diseño una vista previa visual en 24hs. Si no te gusta, no pagás nada. Sin riesgo.">
+              Yes. I design a visual preview in 24hs. If you don't like it, you don't pay anything. No risk.</p>
           </div>
         </div>
-      </section>
+
+        <div class="faq-item">
+          <div class="faq-question" data-en="What do you need from me to start?"
+            data-es="¿Qué necesitás de mí para empezar?">What do you need from me to start?</div>
+          <div class="faq-answer">
+            <p data-en="After you see and approve the mockup, I'll schedule a call or send a short brief (5 questions) and request a 50% deposit to reserve your date. Then we start building."
+              data-es="Después de que veas y apruebes el mockup, Agendamos una llamada o te envío un breve brief (5 preguntas) y te solicito un depósito del 50% para reservar tu fecha. Luego comenzamos a construir.">
+              After you see and approve the mockup, I'll schedule a call or send a short brief (5 questions) and request
+              a 50% deposit to reserve your date. Then we start building.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-en="Do I own the website?" data-es="¿El sitio web es mío?">Do I own the
+            website?</div>
+          <div class="faq-answer">
+            <p data-en="100%. If you choose the monthly management, I handle it. But if you want to leave, I give you all the files."
+              data-es="100%. Y si elegís la gestión mensual, yo lo administro. Pero si querés abandonar el mantenimiento, te entrego todos los archivos.">
+              100%. If you choose the monthly management, I handle it. But if you want to leave, I give you all the
+              files.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-en="Can we add more features later?"
+            data-es="¿Podemos agregar más funciones después?">Can we add more features later?</div>
+          <div class="faq-answer">
+            <p data-en="Absolutely. This is not a template. It can grow as much as your business needs."
+              data-es="Absolutamente. No es una plantilla. Puede crecer tanto como tu negocio necesite.">
+              Absolutely. This is not a template. It can grow as much as your business needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-      <section id="contact" class="section">
-        <div class="container" style="text-align: center">
-          <h2 data-en="Let's Talk About Your Project" data-es="Hablemos de Tu Proyecto">Let's Talk About Your Project
-          </h2>
-          <p style="max-width: 700px; margin: 0 auto 48px; font-size: 1.1rem;"
-            data-en="Choose how you'd like to connect:" data-es="Elegí cómo querés conectarte:">
-            Choose how you'd like to connect:</p>
+    <section id="contact" class="section">
+      <div class="container" style="text-align: center">
+        <h2 data-en="Let's Talk About Your Project" data-es="Hablemos de Tu Proyecto">Let's Talk About Your Project
+        </h2>
+        <p style="max-width: 700px; margin: 0 auto 48px; font-size: 1.1rem;" data-en="Choose how you'd like to connect:"
+          data-es="Elegí cómo querés conectarte:">
+          Choose how you'd like to connect:</p>
 
-          <div style="display: grid; grid-template-columns: 1fr; gap: 48px; max-width: 900px; margin: 0 auto;">
-            <!-- Option 1: Quick Call -->
-            <div
-              style="background: var(--color-surface); padding: 40px; border-radius: 12px; border: 2px solid var(--color-primary);">
-              <h3 style="color: var(--color-primary); margin-bottom: 16px; font-size: 1.5rem;"
-                data-en="📞 Option 1: Quick 15-Min Call" data-es="📞 Opción 1: Llamada Rápida de 15 Min">📞 Option 1:
-                Quick 15-Min Call</h3>
-              <p style="margin-bottom: 24px; opacity: 0.9;"
-                data-en="Perfect if you want to discuss your project live, ask questions in real-time, and get immediate feedback."
-                data-es="Perfecto si querés discutir tu proyecto en vivo, hacer preguntas en tiempo real y recibir respuesta inmediata.">
-                Perfect if you want to discuss your project live, ask questions in real-time, and get immediate
-                feedback.</p>
-              <a href="https://calendly.com/villadafelipe28/30min" class="cta-button btn-large"
+        <div class="contact-grid">
+          <div class="contact-col-left">
+            <div class="contact-card call-card">
+              <h3 data-en="Quick 15-Min Call" data-es="Llamada Rápida de 15 Min">Quick 15-Min Call</h3>
+              <p data-en="Perfect if you want to discuss your project live, ask questions in real-time."
+                data-es="Perfecto si querés discutir tu proyecto en vivo, y hacer preguntas en tiempo real.">
+                Perfect if you want to discuss your project live, ask questions in real-time.</p>
+              <a href="https://calendly.com/villadafelipe28/30min" class="cta-button btn-large btn-primary"
                 data-en="Schedule Your Call Now" data-es="Agenda Tu Llamada Ahora">Schedule Your Call Now</a>
             </div>
 
-            <!-- Option 2: Written Inquiry -->
-            <div
-              style="background: var(--color-surface); padding: 40px; border-radius: 12px; border: 1px solid var(--color-border);">
-              <h3 style="color: var(--color-text-light); margin-bottom: 16px; font-size: 1.5rem;"
-                data-en="✉️ Option 2: Send a Detailed Message" data-es="✉️ Opción 2: Enviá un Mensaje Detallado">✉️
-                Option 2: Send a Detailed Message</h3>
-              <p style="margin-bottom: 32px; opacity: 0.9;"
-                data-en="Prefer to write? Share your business details and goals below. I'll respond within 24 hours with next steps."
-                data-es="¿Preferís escribir? Compartí los detalles de tu negocio y objetivos abajo. Te respondo en 24 horas con los próximos pasos.">
-                Prefer to write? Share your business details and goals below. I'll respond within 24 hours with next
-                steps.</p>
-              <form class="contact-form" action="https://formspree.io/f/mblayvbg" method="POST"
-                style="text-align: left;">
-                <input type="hidden" name="_subject" value="New Project Inquiry!" />
-                <input type="text" name="name" placeholder="Your Name *" data-en-placeholder="Your Name *"
-                  data-es-placeholder="Tu Nombre *" required />
-                <input type="email" name="email" placeholder="Your Email *" data-en-placeholder="Your Email *"
-                  data-es-placeholder="Tu Email *" required />
-                <input type="text" name="contact_method" placeholder="Best way to reach you (WhatsApp, Email, etc.) *"
-                  data-en-placeholder="Best way to reach you (WhatsApp, Email, etc.) *"
-                  data-es-placeholder="Mejor forma de contactarte (WhatsApp, Email, etc.) *" required />
-                <textarea name="business_goal" rows="5"
-                  placeholder="Tell me about your business and what you're hoping to achieve with your website. The more details, the better! *"
-                  data-en-placeholder="Tell me about your business and what you're hoping to achieve with your website. The more details, the better! *"
-                  data-es-placeholder="Contame sobre tu negocio y qué esperás lograr con tu sitio web. ¡Cuantos más detalles, mejor! *"
-                  required></textarea>
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;"
-                  data-en="Send My Inquiry" data-es="Enviar Mi Consulta">Send My Inquiry</button>
-              </form>
+            <div class="contact-card whatsapp-card">
+              <h3 data-en="WhatsApp Chat" data-es="Chat de WhatsApp">WhatsApp Chat</h3>
+              <p data-en="Fastest way to reach me." data-es="La forma más rápida de contactarme.">Fastest way to reach
+                me.</p>
+              <a href="https://wa.me/5491158412805" class="btn btn-whatsapp btn-large" target="_blank">
+                <i class="fab fa-whatsapp"></i> <span data-en="Chat on WhatsApp" data-es="Chatear por WhatsApp">Chat on
+                  WhatsApp</span>
+              </a>
             </div>
           </div>
+
+          <div class="contact-card form-card">
+            <h3 data-en="Send a Detailed Email" data-es="Enviá un Email Detallado">Send a Detailed Email</h3>
+            <p data-en="Prefer to write? Share your business details. I'll respond within 24 hours."
+              data-es="¿Preferís escribir? Compartí los detalles de tu negocio. Te respondo en 24 horas.">
+              Prefer to write? Share your business details. I'll respond within 24 hours.</p>
+
+            <form class="contact-form" action="https://formspree.io/f/mblayvbg" method="POST">
+              <input type="hidden" name="_subject" value="New Project Inquiry!" />
+              <div class="form-group">
+                <input type="text" name="name" data-en-placeholder="Name *" data-es-placeholder="Nombre *" required />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" data-en-placeholder="Email *" data-es-placeholder="Email *" required />
+              </div>
+              <div class="form-group">
+                <input type="text" name="contact_method" data-en-placeholder="Preferred Method of Contact"
+                  data-es-placeholder="Método de Contacto Preferido" required />
+              </div>
+              <div class="form-group">
+                <textarea name="business_goal" rows="4" data-en-placeholder="Tell me about your project *"
+                  data-es-placeholder="Contame sobre tu proyecto *" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-large" style="width: 100%;" data-en="Send Inquiry"
+                data-es="Enviar Consulta">Send Inquiry</button>
+            </form>
+          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
   </main>
 
 
-  <!-- @include footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
+        <ul>
+          <li>
+            <a href="../index.html" data-en="Home" data-es="Inicio">Home</a>
+          </li>
+          <li><a href="../index.html#work" data-en="Work" data-es="Trabajos">Work</a></li>
+          <li>
+            <a href="../index.html#skills" data-en="Skills" data-es="Habilidades">Skills</a>
+          </li>
+          <li>
+            <a href="../index.html#about" data-en="About" data-es="Sobre Mí">About</a>
+          </li>
+          <li>
+            <a href="../freelance/freelance.html" data-en="Freelance" data-es="Freelance">Freelance</a>
+          </li>
+          <li>
+            <a href="../index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 data-en="Contact" data-es="Contacto">Contact</h4>
+        <ul>
+          <li>
+            <a href="mailto:villadafelipe28@gmail.com"><i class="fas fa-envelope"></i>
+              villadafelipe28@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/felipevillada/" target="_blank"><i class="fab fa-linkedin"></i>
+              LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://discord.com/users/gronfrog" target="_blank"><i class="fab fa-discord"></i>
+              Discord</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 data-en="Resources" data-es="Recursos">Resources</h4>
+        <ul>
+          <li>
+            <a href="../Google-UX-Certificate.pdf" target="_blank"><i class="fas fa-certificate"></i>
+              <span data-en="Google UX Certificate" data-es="Certificado UX de Google">Google UX
+                Certificate</span></a>
+          </li>
+          <li>
+            <a href="../cv/FelipeVillada-CV-En.pdf" target="_blank" data-link-en="../cv/FelipeVillada-CV-En.pdf"
+              data-link-es="../cv/FelipeVillada-CV-Es.pdf"><i class="fas fa-file-alt"></i>
+              <span data-en="My Resume" data-es="Mi CV">My Resume</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 data-en="Case Studies" data-es="Casos de Estudio">
+          Case Studies
+        </h4>
+        <ul>
+          <li><a href="../projects/tan-bonitos.html">Tan Bonitos!</a></li>
+          <li><a href="../projects/casa-oro-real.html">Casa Oro Real</a></li>
+          <li><a href="../projects/nefer-museum.html">Nefer Museum</a></li>
+          <li><a href="../projects/theatron-app.html">Theatron App</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        &copy; 2025 Felipe Villada.
+        <span data-en="All Rights Reserved." data-es="Todos los Derechos Reservados.">All Rights Reserved.</span>
+      </p>
+    </div>
+  </footer>
 
   <div class="whatsapp-float-container">
     <a href="https://wa.me/+5491158412805" class="whatsapp-float" target="_blank">
