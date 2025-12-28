@@ -67,6 +67,10 @@
   padding-bottom: calc(var(--spacing-unit) * 8);
 }
 
+.cs-section:first-of-type {
+  margin-top: calc(var(--spacing-unit) * 6);
+}
+
 .cs-section:last-of-type {
   border-bottom: none;
 }

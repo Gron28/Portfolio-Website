@@ -469,6 +469,34 @@ body.menu-open .mobile-menu-links a:nth-child(4) {
   flex-grow: 1;
 }
 
+.cta-box.featured {
+  position: relative;
+  border: 2px solid var(--color-primary);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+  color: var(--color-secondary-text);
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  font-weight: 400;
+}
+
 @media (min-width: 768px) {
   .dual-cta-container {
     grid-template-columns: 1fr 1fr;

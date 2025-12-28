@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     init() {
-      this.determineInitialLanguage(); 
+      this.determineInitialLanguage();
+      this.setupABTesting(); // Run A/B testing before language application
       this.applyLanguage();
       this.setupLoader();
       this.setupMobileNav();
@@ -22,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
       this.setupVideoObserver();
       this.setupGalaxyAnimation();
       this.setupFAQAccordion();
-      this.fetchAndUpdateARSPrice();
       this.setupWhatsAppFloat();
       console.log("App Initialized Successfully.");
     },
@@ -54,28 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     },
 
-    async fetchAndUpdateARSPrice() {
-      const priceContainer = document.getElementById("ars-price-container");
-      const usdPrice = 250; 
-      if (!priceContainer) return;
-
-      try {
-        const response = await fetch("https://api.bluelytics.com.ar/v2/latest");
-        if (!response.ok) throw new Error("API request failed");
-
-        const data = await response.json();
-        const blueRate = data.blue.value_sell;
-
-        let arsPrice = usdPrice * blueRate;
-        arsPrice = Math.round(arsPrice / 1000) * 1000;
-        const formattedPrice = new Intl.NumberFormat("es-AR").format(arsPrice);
-
-        priceContainer.innerHTML = `/ ARS ${formattedPrice} (aprox)`;
-      } catch (error) {
-        console.error("Could not fetch ARS price:", error);
-        priceContainer.style.display = "none";
-      }
-    },
     setupWhatsAppFloat() {
       const floatContainer = document.querySelector(
         ".whatsapp-float-container"
@@ -98,6 +76,51 @@ document.addEventListener("DOMContentLoaded", () => {
         isDismissed = true;
         floatContainer.classList.remove("visible");
       });
+    },
+
+    setupABTesting() {
+      // Simple A/B testing implementation
+      // Can be replaced with Google Optimize later
+      const abTestElements = document.querySelectorAll("[data-en-variant-a]");
+
+      abTestElements.forEach((element) => {
+        // Use a hash that includes language for consistent assignment per language
+        const testId = element.className + window.location.pathname + this.state.currentLanguage;
+        const hash = this.simpleHash(testId);
+        const variant = hash % 2 === 0 ? 'a' : 'b';
+
+        // Set data attributes for the language system to use with proper language-specific variants
+        const enVariant = element.getAttribute(`data-en-variant-${variant}`);
+        const esVariant = element.getAttribute(`data-es-variant-${variant}`);
+
+        if (enVariant) element.setAttribute(`data-en-ab-${variant}`, enVariant);
+        if (esVariant) element.setAttribute(`data-es-ab-${variant}`, esVariant);
+
+        // Mark this element as using A/B testing
+        element.dataset.abVariant = variant;
+
+        // Track click events for A/B testing
+        element.addEventListener('click', () => {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'ab_test_click', {
+              'custom_parameter_1': element.className,
+              'custom_parameter_2': variant,
+              'custom_parameter_3': this.state.currentLanguage,
+              'page_location': window.location.href
+            });
+          }
+        });
+      });
+    },
+
+    simpleHash(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32-bit integer
+      }
+      return Math.abs(hash);
     },
 
     setupLoader() {
@@ -144,6 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
       this.elements.langToggle.addEventListener("click", () => {
         this.state.currentLanguage =
           this.state.currentLanguage === "en" ? "es" : "en";
+        // Re-run A/B testing with new language context
+        this.setupABTesting();
         this.applyLanguage();
       });
 
@@ -154,7 +179,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const lang = this.state.currentLanguage;
 
       this.elements.translatableElements.forEach((element) => {
-        const text = element.getAttribute(`data-${lang}`);
+        // Check for A/B test variants first
+        const abVariant = element.dataset.abVariant;
+        let text = null;
+
+        if (abVariant) {
+          // Use A/B test variant if available
+          text = element.getAttribute(`data-${lang}-ab-${abVariant}`);
+        }
+
+        // Fall back to regular translation if no A/B variant
+        if (!text) {
+          text = element.getAttribute(`data-${lang}`);
+        }
+
         if (text !== null) {
           element.innerHTML = text;
         }
@@ -186,10 +224,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
+      // Handle mobile-specific text for small screens
+      const isMobile = window.innerWidth <= 768;
+      const mobileElements = document.querySelectorAll("[data-en-mobile]");
+      mobileElements.forEach((element) => {
+        if (isMobile) {
+          const mobileText = element.getAttribute(`data-${lang}-mobile`);
+          if (mobileText) {
+            element.innerHTML = mobileText;
+          }
+        } else {
+          const desktopText = element.getAttribute(`data-${lang}`);
+          if (desktopText) {
+            element.innerHTML = desktopText;
+          }
+        }
+      });
+
       document.documentElement.lang = lang;
       localStorage.setItem("siteLanguage", lang);
       this.updateSEOTags(lang);
-      this.fetchAndUpdateARSPrice();
     },
 
     setupFAQAccordion() {
