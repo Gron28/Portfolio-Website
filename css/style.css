@@ -91,7 +91,11 @@ body {
 }
 
 .section {
-  padding: calc(var(--spacing-unit) * 10) 0;
+  padding: calc(var(--spacing-unit) * 8) 0;
+}
+
+.section:first-of-type {
+  padding-top: calc(var(--spacing-unit) * 4) !important;
 }
 
 .section>h2 {
@@ -960,9 +964,9 @@ html {
   }
 
   body:not(.page-freelance) .hero:not(.cs-hero) {
-    height: 55vh;
+    height: 50vh;
     justify-content: center;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
   }
 
   body:not(.page-freelance) .hero:not(.cs-hero)::before {

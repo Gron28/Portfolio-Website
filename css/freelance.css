@@ -118,7 +118,7 @@ html.page-freelance {
   }
 
   .freelance-container .hero {
-    padding: calc(var(--spacing-unit) * 8) 0 calc(var(--spacing-unit) * 6) 0 !important;
+    padding: calc(var(--spacing-unit) * 6) 0 calc(var(--spacing-unit) * 3) 0 !important;
   }
 
   .freelance-container .hero p {
@@ -239,7 +239,7 @@ html.page-freelance {
 
 .freelance-container .hero {
   text-align: center;
-  padding: calc(var(--spacing-unit) * 12) 0 calc(var(--spacing-unit) * 8) 0;
+  padding: calc(var(--spacing-unit) * 10) 0 calc(var(--spacing-unit) * 4) 0 !important;
   display: flex;
   flex-direction: column;
   align-items: center;

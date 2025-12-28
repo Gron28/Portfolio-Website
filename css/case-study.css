@@ -68,7 +68,7 @@
 }
 
 .cs-section:first-of-type {
-  margin-top: calc(var(--spacing-unit) * 6);
+  margin-top: calc(var(--spacing-unit) * 2) !important;
 }
 
 .cs-section:last-of-type {
