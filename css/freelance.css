@@ -29,18 +29,18 @@ html.page-freelance {
 }
 
 .client-testimonials {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: calc(var(--spacing-unit) * 4);
-  margin-bottom: calc(var(--spacing-unit) * 4);
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+  gap: calc(var(--spacing-unit) * 4) !important;
+  margin-bottom: calc(var(--spacing-unit) * 4) !important;
 }
 
 .testimonial-card {
-  background-color: var(--color-surface);
-  padding: calc(var(--spacing-unit) * 4);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  position: relative;
+  background-color: var(--color-surface) !important;
+  padding: calc(var(--spacing-unit) * 4) !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--color-border) !important;
+  position: relative !important;
 }
 
 .testimonial-card blockquote {
@@ -49,11 +49,11 @@ html.page-freelance {
 }
 
 .testimonial-card blockquote p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: calc(var(--spacing-unit) * 3);
-  color: var(--color-text-light);
-  position: relative;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: calc(var(--spacing-unit) * 3) !important;
+  color: var(--color-text-light) !important;
+  position: relative !important;
 }
 
 .testimonial-card blockquote p::before {
@@ -68,24 +68,24 @@ html.page-freelance {
 }
 
 .testimonial-card cite {
-  font-size: 0.95rem;
-  color: var(--color-primary);
-  font-weight: 600;
-  font-style: normal;
+  font-size: 0.95rem !important;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
 }
 
 .trust-bar-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: calc(var(--spacing-unit) * 3);
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  margin-bottom: calc(var(--spacing-unit) * 3) !important;
 }
 
 .urgency-note {
-  font-size: 0.9rem;
-  color: var(--color-primary);
-  font-weight: 600;
-  margin-top: calc(var(--spacing-unit) * 2);
-  text-align: center;
+  font-size: 0.9rem !important;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  margin-top: calc(var(--spacing-unit) * 2) !important;
+  text-align: center !important;
 }
 
 @media (max-width: 768px) {
