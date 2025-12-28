@@ -90,52 +90,52 @@ html.page-freelance {
 
 @media (max-width: 768px) {
   .client-testimonials {
-    grid-template-columns: 1fr;
-    gap: calc(var(--spacing-unit) * 3);
+    grid-template-columns: 1fr !important;
+    gap: calc(var(--spacing-unit) * 3) !important;
   }
 
   .testimonial-card {
-    padding: calc(var(--spacing-unit) * 3);
+    padding: calc(var(--spacing-unit) * 3) !important;
   }
 
   .testimonial-card blockquote p {
-    font-size: 1rem;
-    margin-bottom: calc(var(--spacing-unit) * 2);
+    font-size: 1rem !important;
+    margin-bottom: calc(var(--spacing-unit) * 2) !important;
   }
 
   .testimonial-card cite {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 
   .trust-bar-title {
-    font-size: 1.5rem;
-    margin-bottom: calc(var(--spacing-unit) * 2);
+    font-size: 1.5rem !important;
+    margin-bottom: calc(var(--spacing-unit) * 2) !important;
   }
 
   .urgency-note {
-    font-size: 0.85rem;
-    margin-top: calc(var(--spacing-unit) * 1.5);
+    font-size: 0.85rem !important;
+    margin-top: calc(var(--spacing-unit) * 1.5) !important;
   }
 
   .freelance-container .hero {
-    padding: calc(var(--spacing-unit) * 8) 0 calc(var(--spacing-unit) * 6) 0;
+    padding: calc(var(--spacing-unit) * 8) 0 calc(var(--spacing-unit) * 6) 0 !important;
   }
 
   .freelance-container .hero p {
-    font-size: 1.1rem;
-    margin: calc(var(--spacing-unit) * 2) auto calc(var(--spacing-unit) * 3) auto;
+    font-size: 1.1rem !important;
+    margin: calc(var(--spacing-unit) * 2) auto calc(var(--spacing-unit) * 3) auto !important;
   }
 
   .hero-availability {
-    gap: calc(var(--spacing-unit) * 1.2);
-    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
-    font-size: 1rem;
-    margin-top: calc(var(--spacing-unit) * 3);
-    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    gap: calc(var(--spacing-unit) * 1.2) !important;
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2) !important;
+    font-size: 1rem !important;
+    margin-top: calc(var(--spacing-unit) * 3) !important;
+    margin-bottom: calc(var(--spacing-unit) * 1.5) !important;
   }
 
   .hero-cta {
-    margin-top: calc(var(--spacing-unit) * 2);
+    margin-top: calc(var(--spacing-unit) * 2) !important;
   }
 }
 
