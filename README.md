@@ -112,7 +112,7 @@ This combines navigation, footer, and content partials into complete HTML pages.
 
 ## License
 
-© 2025 Felipe Villada. All Rights Reserved.
+© 2026 Felipe Villada. All Rights Reserved.
 
 ---
 
